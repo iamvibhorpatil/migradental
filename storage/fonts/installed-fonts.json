@@ -1,0 +1,25 @@
+{
+    "open sans": {
+        "300": "C:\\xampp\\htdocs\\dental\\storage\\fonts\/\/open_sans_300_38aaef3a6f81e0869aefd29fb43eb15a",
+        "normal": "C:\\xampp\\htdocs\\dental\\storage\\fonts\/\/open_sans_normal_d26ccb22614ae36546477dab90017d0e",
+        "600": "C:\\xampp\\htdocs\\dental\\storage\\fonts\/\/open_sans_600_624d6e61f7711aa5830c80aa3bba1264",
+        "bold": "open_sans_bold_4238b33012be0cc2f17eea1b2179dc6e"
+    },
+    "font awesome 6 brands": {
+        "normal": "font_awesome_6_brands_normal_36faa0e194d3288643f7144dedd8e1b1"
+    },
+    "font awesome 6 free": {
+        "normal": "C:\\xampp\\htdocs\\dental\\storage\\fonts\/\/font_awesome_6_free_normal_cf2d7daaeabedac0226ae26fc7e4f075",
+        "900": "font_awesome_6_free_900_665c8d2ea728525da852b5cd3a1d51a5"
+    },
+    "font awesome 5 brands": {
+        "normal": "font_awesome_5_brands_normal_36faa0e194d3288643f7144dedd8e1b1"
+    },
+    "font awesome 5 free": {
+        "900": "C:\\xampp\\htdocs\\dental\\storage\\fonts\/\/font_awesome_5_free_900_665c8d2ea728525da852b5cd3a1d51a5",
+        "normal": "font_awesome_5_free_normal_cf2d7daaeabedac0226ae26fc7e4f075"
+    },
+    "fontawesome": {
+        "normal": "fontawesome_normal_6aa5cc0b95be2651581a2d7ad4a9d038"
+    }
+}

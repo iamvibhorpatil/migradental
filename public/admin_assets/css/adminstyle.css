@@ -1,0 +1,7 @@
+.elec-table {
+    display: none;
+  }
+  
+  .elec-table.active{
+    display: block;
+  }
