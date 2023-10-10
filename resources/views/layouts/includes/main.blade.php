@@ -20,37 +20,37 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    
+
 </head>
 
 <body>
-   
-   @include('layouts.includes.navbar')
 
-   @yield('content')
-    
-   @include('layouts.includes.footer')
-   
-   <!-- <a href="your-appointment-page.html" class="book-appointment-button">Book Appointment</a> -->
+    @include('layouts.includes.navbar')
 
-    <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery-migrate-3.0.1.min.js')}}"></script>
-    <script src="{{ asset('assets/js/popper.min.js')}}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.easing.1.3.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.waypoints.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.stellar.min.js')}}"></script>
-    <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{ asset('assets/js/aos.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.animateNumber.min.js')}}"></script>
-    <script src="{{ asset('assets/js/bootstrap-datepicker.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.timepicker.min.js')}}"></script>
-    <script src="{{ asset('assets/js/scrollax.min.js')}}"></script>
+    @yield('content')
+
+    @include('layouts.includes.footer')
+
+    <!-- <a href="your-appointment-page.html" class="book-appointment-button">Book Appointment</a> -->
+
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-migrate-3.0.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.stellar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/aos.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.timepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/js/scrollax.min.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets/js/google-map.js')}}"></script>
-    <script src="{{ asset('assets/js/main.js')}}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -68,10 +68,12 @@
 
         gtag('config', 'UA-23581568-13');
     </script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"80c33b5e1a04425a","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}'
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+        integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+        data-cf-beacon='{"rayId":"80c33b5e1a04425a","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}'
         crossorigin="anonymous"></script>
 
-        <script nonce="503b57c4-d103-41e4-afd3-2a7d15284981">
+    <script nonce="503b57c4-d103-41e4-afd3-2a7d15284981">
         (function(w, d) {
             ! function(a, b, c, d) {
                 a[c] = a[c] || {};
@@ -107,7 +109,8 @@
                     a[c].n = b.characterSet;
                     a[c].o = (new Date).getTimezoneOffset();
                     if (a.dataLayer)
-                        for (const n of Object.entries(Object.entries(dataLayer).reduce(((o, p) => ({ ...o[1],
+                        for (const n of Object.entries(Object.entries(dataLayer).reduce(((o, p) => ({
+                                ...o[1],
                                 ...p[1]
                             })), {}))) zaraz.set(n[0], n[1], {
                             scope: "page"
@@ -118,7 +121,8 @@
                         a[c].q.push(q)
                     }
                     i.defer = !0;
-                    for (const r of [localStorage, sessionStorage]) Object.keys(r || {}).filter((t => t.startsWith("_zaraz_"))).forEach((s => {
+                    for (const r of [localStorage, sessionStorage]) Object.keys(r || {}).filter((t => t.startsWith(
+                        "_zaraz_"))).forEach((s => {
                         try {
                             a[c]["z_" + s.slice(7)] = JSON.parse(r.getItem(s))
                         } catch {
@@ -129,7 +133,8 @@
                     i.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a[c])));
                     h.parentNode.insertBefore(i, h)
                 };
-                ["complete", "interactive"].includes(b.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init)
+                ["complete", "interactive"].includes(b.readyState) ? zaraz.init() : a.addEventListener(
+                    "DOMContentLoaded", zaraz.init)
             }(w, d, "zarazData", "script");
         })(window, document);
     </script>
