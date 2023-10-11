@@ -27,13 +27,8 @@
 
     <div class="container">
         <div class="row">
-<<<<<<< HEAD
-            <div class="col-8 ps-0 ps-4 ps-lg-2 ps-md-2"> 
-                <a class="navbar-brand" href="{{route('/')}}">
-=======
             <div class="col-8 ps-0 ps-lg-2 ps-md-2"> 
                 <a class="navbar-brand py-0" href="{{route('/')}}">
->>>>>>> 85e964abbca62309823fcfb813f9d03a72702bc8
                     <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" style="max-width: 180px;">
                 </a>
             </div>
