@@ -33,5 +33,11 @@ class HomeController extends Controller
     public function orofacial_pain(){
         return view('layouts.orofacial_pain');
     }
+    public function laser_dentistry(){
+        return view('layouts.laser_dentistry');
+    }
+    public function image(){
+        return view('layouts.image');
+    }
     
 }

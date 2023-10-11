@@ -53,6 +53,9 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('orofacial_pain', [HomeController::class, 'orofacial_pain'])->name('orofacial_pain');
 
+Route::get('laser_dentistry', [HomeController::class, 'laser_dentistry'])->name('laser_dentistry');
+
+Route::get('image', [HomeController::class, 'image'])->name('image');
 
 
 // Route::get('/', function () {
