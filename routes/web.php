@@ -53,7 +53,19 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('orofacial_pain', [HomeController::class, 'orofacial_pain'])->name('orofacial_pain');
 
-Route::get('blogs', [HomeController::class, 'blog'])->name('blogs');
+Route::get('laser_dentistry', [HomeController::class, 'laser_dentistry'])->name('laser_dentistry');
+
+Route::get('image', [HomeController::class, 'image'])->name('image');
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::get('logout', [DashboardController::class, 'logout']);
 

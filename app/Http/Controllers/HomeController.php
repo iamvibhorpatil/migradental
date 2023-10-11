@@ -36,5 +36,11 @@ class HomeController extends Controller
     public function blog(){
         return view('layouts.blogs');
     }
+    public function laser_dentistry(){
+        return view('layouts.laser_dentistry');
+    }
+    public function image(){
+        return view('layouts.image');
+    }
     
 }

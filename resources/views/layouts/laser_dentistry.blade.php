@@ -7,18 +7,17 @@
 <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/cmn-bg.jpg');background-size: cover;background-position: center;"  data-stellar-background-ratio="0.5">
     <div class="overlay" ></div>
         <div class="container">
-            <div class="row  slider-text align-items-center justify-content-center">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <h1 class="mb-2 bread" style="color:white;"> Orofacial Pain</h1>
+                    <h1 class="mb-2 bread" style="color:white;">Laser Dentistry</h1>
                 </div>
             </div>
         </div>
 </section>
 
 <section>
-<div class="container container-treatment">
-        <div class="left-side-treatment bg-white">
-            
+    <div class="container container-treatment">
+        <div class="left-side-treatment">
             <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -36,17 +35,17 @@
         <div class="right-side-treatment">
             <div class="right-side-content-treatment">
                 <div id="accordion">
-
                     <div class="card">
                         <div class="card-header">
                             <a class="card-link accordion-title" data-toggle="collapse" href="#collapseOne">
-                            What is Orofacial Pain?
+                            What is laser dentistry?
                             </a>
                         </div>
                         <div id="collapseOne" class="collapse show" data-parent="#accordion">
                             <div class="card-body">
-                            Orofacial pain refers to any discomfort or pain experienced in the mouth, jaw, face, or head region. It can be caused by various factors such as dental conditions, temporomandibular joint (TMJ) disorders, or even underlying medical conditions.
-                                            Understanding the underlying cause is crucial for effective diagnosis and treatment.
+                            Laser dentistry involves the use of advanced laser technology to perform a wide range of dental treatments with enhanced precision and efficiency.
+                             It minimizes discomfort, reduces healing time, and often eliminates the need for anesthesia. Laser dentistry is versatile and can be used for various procedures,
+                              including cavity treatment, gum surgeries, and teeth whitening.
                             </div>
                         </div>
                     </div>
@@ -54,13 +53,13 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseTwo">
-                            Why is Orofacial Pain Important?
+                            Why is laser dentistry beneficial?
                             </a>
                         </div>
                         <div id="collapseTwo" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                            Orofacial pain can significantly impact an individual's overall well-being, affecting their ability to speak, eat, and perform daily activities comfortably. Seeking professional evaluation and treatment for orofacial pain is crucial to alleviate discomfort, improve quality of life,
-                                        and address any underlying dental or medical conditions contributing to the pain.
+                            Laser dentistry offers numerous benefits, such as minimized discomfort during treatments, reduced healing time, precise and conservative procedure
+                            s, and often, less need for anesthesia. It also allows for efficient and effective treatment outcomes, enhancing patient comfort and satisfaction with dental care.
                             </div>
                         </div>
                     </div>
@@ -68,60 +67,55 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseThree">
-                            How is orofacial pain diagnosed?
+                            How is laser dentistry implemented?
                             </a>
                         </div>
                         <div id="collapseThree" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                            Orofacial pain diagnosis involves a comprehensive evaluation, including a thorough medical and dental history, physical examination, and possibly imaging tests. Identifying the underlying cause, such as dental infections, TMJ disorders, or nerve-related issues, enables the development of a personalized 
-                                        treatment plan for effective pain management.
+                            Laser dentistry involves using specific dental laser systems to perform various procedures. The laser energy is delivered precisely to the targeted area, allowing for the removal of diseased tissue, cavity preparation, gum reshaping, or other necessary dental interventions. The process is often quick, comfortable, and requires minimal recovery time.
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header">
                             <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseFour">
-                            When should I seek evaluation for orofacial pain?
+                            When is laser dentistry used in dental treatments?
                             </a>
                         </div>
                         <div id="collapseFour" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                            If you experience persistent or recurring orofacial pain, it's important to schedule an evaluation with a dental professional who specializes in orofacial pain management. Early intervention can help diagnose the underlying cause and provide timely treatment to alleviate discomfort
-                        and prevent potential complications.
+                            Laser dentistry can be used in various dental treatments, including cavity removal, gum disease treatment, gum reshaping, teeth whitening, and even oral surgeries. The specific application depends on the patient's dental needs, and the dentist will determine the most suitable use of laser technology for optimal treatment outcomes.
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header">
                             <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseFive">
-                            Orofacial pain is a normal part of aging.
+                            Myth: Laser treatments in dentistry are unsafe.
                             </a>
                         </div>
                         <div id="collapseFive" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                            Busted: While some age-related changes may contribute to orofacial pain, it is not a normal part of the aging process. Orofacial pain can indicate underlying dental or medical conditions that require evaluation and treatment. Ignoring or accepting orofacial pain as a natural consequence of aging may lead to 
-                            unnecessary discomfort and potential complications.
+                            Busted: Laser dentistry is a safe and well-established technique in modern dentistry. Dental lasers are designed to be highly precise, and dentists receive specialized training to ensure safe and effective use. When performed by a trained professional, laser treatments in dentistry offer excellent results with minimal risks and complications.
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header">
                             <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseSix">
-                            Orofacial pain will go away on its own.
+                            Why Choose Us (Dr. Sarrah at MIGRADENT)
                             </a>
                         </div>
                         <div id="collapseSix" class="collapse" data-parent="#accordion">
                             <div class="card-body">
-                            Busted: Orofacial pain should not be ignored, as it rarely resolves on its own without intervention. If you experience persistent or recurring orofacial pain, it's important to seek professional evaluation and treatment to address the underlying cause and alleviate 
-                        discomfort for improved quality of life.
+                            Dr. Sarrah Husain at MIGRADENT utilizes advanced laser technology to provide efficient, comfortable, and precise dental treatments. With extensive experience in laser dentistry, she ensures that patients receive exceptional care, benefiting from minimally invasive procedures, reduced healing time, and superior treatment outcomes.
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-</div>
+    </div>
 <section>
 
  @endsection
