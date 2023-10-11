@@ -53,16 +53,7 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('orofacial_pain', [HomeController::class, 'orofacial_pain'])->name('orofacial_pain');
 
-
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('blogs', [HomeController::class, 'blog'])->name('blogs');
 
 Route::get('logout', [DashboardController::class, 'logout']);
 

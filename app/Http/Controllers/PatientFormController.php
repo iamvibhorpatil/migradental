@@ -128,15 +128,18 @@ class PatientFormController extends Controller
     public function export($id)
     {
         // Fetch the data for the specific patient detail with the given ID
-        $patientDetail = PatientForm::findOrFail($id);
+        $patientDetail = PatientForm::all();
 
+        view()->share('patientDetail', $patientDetail);
         // Load the PDF view
         $pdf = PDF::loadView('admin.pages.patient_detail_view', compact('patientDetail'));
 
+
         // Specify a filename for the PDF (optional)
-        $filename = 'patient_detail.pdf';
+        // $filename = 'patient_detail.pdf';
 
         // Generate and return the PDF as a downloadable response
-        return $pdf->download($filename);
+        return $pdf->download("vibhor.pdf");
     }
+
 }
