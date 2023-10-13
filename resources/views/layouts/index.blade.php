@@ -515,56 +515,23 @@
         </div>
     </section>
     <section class="video-section">
-    <div class="video-column">
-        <video controls poster="placeholder-image.jpg">
-            <source src="video1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="video-column">
-        <video controls poster="placeholder-image.jpg">
-            <source src="video2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="video-column">
-        <video controls poster="placeholder-image.jpg">
-            <source src="video3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+            <div class="video-column">
+                <video controls poster="placeholder-image.jpg">
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-column">
+                <video controls poster="placeholder-image.jpg">
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-column">
+                <video controls poster="placeholder-image.jpg">
+                    <source src="video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
 </section>
-<style>/* Add CSS for the video section */
-.video-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.video-column {
-    flex: 1;
-    margin: 10px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-}
-
-.video-column:hover {
-    transform: scale(1.05); /* Add hover effect (increase size on hover) */
-}
-
-video {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-video:hover {
-    filter: brightness(90%); /* Add hover effect (adjust brightness on hover) */
-}
-
-    </style>
-
 @endsection
