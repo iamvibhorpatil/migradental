@@ -8,32 +8,34 @@
                             class="fa-regular fa-envelope px-1"></i>Email : info@migradent.com
                 </a>
             </div>
-            <div class="col-md-4 text-end">
+                <div class="col-md-4 end-sec-icon">
 
-                <a href="#" class="text-white  text-decoration-none px-2" style="border-left: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
-                        class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
-                        class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
-                        class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="text-white  text-decoration-none px-2" style="border-left: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white  text-decoration-none px-2" style="border-right: 1px solid rgba(250,250,250,0.3);padding-block: 10px;"><i
+                            class="fa-brands fa-youtube"></i></a>
 
-            </div>
+                </div>
+           
         </div>
     </div>
+    
 
     <div class="container">
         <div class="row">
-            <div class="col-8 ps-0 ps-lg-2 ps-md-2"> 
+            <div class="col-8 ps-0 ps-lg-2 ps-md-2 logo-padding"> 
                 <a class="navbar-brand py-0" href="{{route('/')}}">
                     <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" style="max-width: 180px;">
                 </a>
             </div>
 
-            <div class="col-4 align-self-center search_hide d-flex justify-content-end">
+            <div class="col-4 align-self-center search_hide d-flex justify-content-end request-call-padding">
                 <a href="#"><button class="btn btn-outline-info p-2" >Request a Callback</button></a>
             </div>
         </div>
@@ -46,8 +48,8 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-bars-staggered fa-xl"style="color:#ffffff;"></i></span>
             </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav justify-content-center">
+            <div class="collapse navbar-collapse justify-content-center" id="ftco-nav">
+                <ul class="navbar-nav">
 
                     <li class="nav-item {{ request()->is('about') ? 'active' : ''}}"><a href="{{route('about')}}" class="nav-link">About</a></li>
 
