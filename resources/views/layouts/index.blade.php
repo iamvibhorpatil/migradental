@@ -252,15 +252,17 @@
 
 
     <section class="ftco-section ftco-services">
+    <div class="card mr-5 ml-5" style="border-radius:50px;" >
     <div class="container">
         <div class="text-center mt-3">
             <h1>Our Clinic Services</h1>
         </div>
+       
         <div class="row services-row">
         <div class=" col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/6NKPrhO.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/orofacial-pain.png"> </div>
                         <h4><a href="{{route('orofacial_pain')}}">Orofacial Pain</a></h4>
                     </div>
                 </div>
@@ -268,7 +270,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/KMbnpFF.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/migrane-tmj.png"> </div>
                         <h4>Migraine & TMJ</h4>
                     </div>
                 </div>
@@ -276,7 +278,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/AgyneKA.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
                         <h4>TMD</h4>
                     </div>
                 </div>
@@ -284,7 +286,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/AgyneKA.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png"> </div>
                         <h4>Dental Sleep Medicine</h4>
                     </div>
                 </div>
@@ -294,31 +296,39 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/vdH9LKi.png"> </div>
-                        <h4>TMD</h4>
+                        <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
+                        <h4>Headaches</h4>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/v6OnUqu.png"> </div>
-                        <h4>Dental Sleep Medicine</h4>
+                        <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png"> </div>
+                        <h4>Dental Surgeries with laser</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3 col-xl-3">
+            <!-- <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
                         <h4>Laser Dentistry</h4>
                     </div>
                 </div>
+            </div> -->
+            <div class="col-sm-12 col-md-3 col-xl-3">
+                <div class="our-services-box">
+                    <div class="our-services speedup">
+                        <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
+                        <h4>Child Care Dentistry</h4>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/full-mouth-rehabilation.png"> </div>
                         <h4>Full Mouth Rehabilation</h4>
                     </div>
                 </div>
@@ -328,7 +338,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/vdH9LKi.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/veneers-laminates.png"> </div>
                         <h4>Veneers & Laminates</h4>
                     </div>
                 </div>
@@ -336,7 +346,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/v6OnUqu.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/smile-design.png"> </div>
                         <h4>Smile Designing</h4>
                     </div>
                 </div>
@@ -344,7 +354,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/dental-implant.png"> </div>
                         <h4>Dental Implants</h4>
                     </div>
                 </div>
@@ -352,7 +362,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/laser-teeth-whitening.png"> </div>
                         <h4>Laser Teeth Whitening</h4>
                     </div>
                 </div>
@@ -362,7 +372,7 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/vdH9LKi.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png"> </div>
                         <h4>Root Canal</h4>
                     </div>
                 </div>
@@ -370,28 +380,22 @@
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/v6OnUqu.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png"> </div>
                         <h4>Root Canal Treatment with Laser</h4>
                     </div>
                 </div>
             </div>
+            
             <div class="col-sm-12 col-md-3 col-xl-3">
                 <div class="our-services-box">
                     <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
-                        <h4>Child Care Dentistry</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3 col-xl-3">
-                <div class="our-services-box">
-                    <div class="our-services speedup">
-                        <div class="icon"> <img src="https://i.imgur.com/VzjZw9M.png"> </div>
+                        <div class="icon"> <img src="assets/images/services-img/img7.jpeg"> </div>
                         <h4>Orthodontics & Aligners</h4>
                     </div>
                 </div>
             </div>
         </div>
+        </div>    
     </div>
 </section>
     
