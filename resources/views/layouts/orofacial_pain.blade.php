@@ -15,9 +15,10 @@
         </div>
 </section>
 
-<section>
-<div class="container container-treatment">
-        <div class="left-side-treatment bg-white">
+
+<div class="container container-treatment mb-5">
+
+        <div class="left-side-treatment bg-white pt-5 align-self-baseline">
             
             <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -33,7 +34,8 @@
                 </div>
             </div>
         </div>
-        <div class="right-side-treatment">
+
+        <div class="right-side-treatment pt-0 my-4">
             <div class="right-side-content-treatment">
                 <div id="accordion">
 
@@ -122,7 +124,7 @@
             </div>
         </div>
 </div>
-<section>
+
 
  @endsection
  

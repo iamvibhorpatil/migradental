@@ -514,24 +514,16 @@
             </div>
         </div>
     </section>
-    <section class="video-section">
-            <div class="video-column">
-                <video controls poster="placeholder-image.jpg">
-                    <source src="video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+    <section class="video-section p-5">
+            <div class="">
+                <iframe width="400" height="250" src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="video-column">
-                <video controls poster="placeholder-image.jpg">
-                    <source src="video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="">
+                <iframe width="400" height="250" src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="video-column">
-                <video controls poster="placeholder-image.jpg">
-                    <source src="video3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="">
+                <iframe width="400" height="250" src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+            
 </section>
 @endsection

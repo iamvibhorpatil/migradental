@@ -4538,7 +4538,6 @@ background-color: #299eab;
 
 .container-treatment {
     display: flex;
-    height: 90vh;
 } 
 
 
@@ -4558,6 +4557,7 @@ background-color: #299eab;
     overflow-y: scroll; 
     padding: 30px;
     background-color: #ffffff;
+    height: 29rem;
 }
 
 
@@ -4703,3 +4703,8 @@ video:hover {
     filter: brightness(90%); 
 }
 /* video sec end*/
+
+/* accordian  */
+.card{
+    margin-block: 14px;
+}
