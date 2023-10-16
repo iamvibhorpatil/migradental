@@ -7,7 +7,7 @@
 
  
 
-:root {
+ :root {
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -4595,11 +4595,19 @@ background-color: #299eab;
 .our-services-box {
     transition: transform 0.3s;
     margin-bottom: 20px;
+    min-height:100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 1s ease-in-out;
 }
 
 .our-services-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #7ed3ed;
 }
 
 .services-row {
@@ -4609,12 +4617,7 @@ background-color: #299eab;
 }
 
 .our-services {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    
     
 }
 .our-services h4 a{
@@ -4623,11 +4626,11 @@ background-color: #299eab;
 }
 
 .our-services:hover {
-    background-color: #7ed3ed;
+   
 }
 
 
-.our-services .icon img {
+.our-services .icon img{
     max-width: 50px;
     max-height: 50px;
     margin: 0 auto 10px;
