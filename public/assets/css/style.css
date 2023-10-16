@@ -4720,7 +4720,9 @@ video:hover {
     padding:5px,3px,5px,3px;
    border-radius: 20px!important;
    box-shadow: 5px 10px #a3ddda;
-
+}
+.col-request-call-sec-left{
+    align-self: center;
 }
 .form-group-rc {
     margin-bottom: 20px;

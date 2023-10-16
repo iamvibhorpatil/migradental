@@ -274,20 +274,20 @@
 
 <div class="container-fluid" style="background-color:#47b0ab;box-shadow: 0 0 30px black; ">
     <div class="row">
-        <div class="col-md-7 col-lg-7 col-sm-12">
+        <div class="col-md-7 col-lg-7 col-sm-12 col-request-call-sec-left">
             <div class="title">
                 <h1>Get Expert Dental Advice at Your Convenience.</h1>
             </div>
-            <h5 class="sub-title">Our dental experts are here to help you with any questions or concerns.</h5>
-            </div>
-            <div class="col-md-5 col-lg-5 col-sm-12">
-                <div class=" pl-3 pr-3 pt-4 ">
-                    <form>
-                        <div class="form-group-rc d-flex">
-                            <input type="text" id="name" name="name" class="half-width" placeholder="Name" required>
+            <h5 class="sub-title">  Our dental experts are here to help you with any questions or concerns.</h5>
+        </div>
+        <div class="col-md-5 col-lg-5 col-sm-12">
+            <div class=" pl-3 pr-3 pt-4 ">
+                <form>
+                     <div class="form-group-rc d-flex">
+                        <input type="text" id="name" name="name" class="half-width" placeholder="Name" required>
 
-                            <input type="tel" id="phone" name="phone" class="half-width" placeholder="Phone Number" required>
-                        </div>
+                        <input type="tel" id="phone" name="phone" class="half-width" placeholder="Phone Number" required>
+                     </div>
                         <div class="form-group-rc">
                             <input type="email" id="email" name="email" class="full-width" placeholder="Email" required>
                         </div>
