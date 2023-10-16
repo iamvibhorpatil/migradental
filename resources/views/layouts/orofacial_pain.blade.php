@@ -19,20 +19,15 @@
 <div class="container container-treatment mb-5">
 
         <div class="left-side-treatment bg-white pt-5 align-self-baseline">
-            
-            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="assets/images/orofacial048ID.png" class="d-block w-100" alt="img">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="assets/images/orofacial096ID.png" class="d-block w-100" alt="img">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="assets/images/orofacial107ID.png" class="d-block w-100" alt="img">
-                    </div>
-                </div>
-            </div>
+        <div class="custom-images" style="height:500px; ">
+            <div class="image" id="image1"><img class="img-fluid" src="assets/images/orofacial-pain.png"></div>
+            <div class="image d-none" id="image2"><img class="img-fluid" src="assets/images/orofacial096ID.png"></div>
+            <div class="image d-none" id="image3"><img class="img-fluid" src="assets/images/orofacial107ID.png"></div>
+            <div class="image d-none" id="image4"><img class="img-fluid" src="assets/images/person_4.jpg"></div>
+            <div class="image d-none" id="image5"><img class="img-fluid" src="assets/images/person_1.jpg"></div>
+            <div class="image d-none" id="image6"><img class="img-fluid" src="assets/images/person_2.jpg"></div>
+            <div class="image d-none" id="image7"><img class="img-fluid" src="assets/images/person_3.jpg"></div>
+        </div>
         </div>
 
         <div class="right-side-treatment pt-0 my-4">
@@ -124,8 +119,25 @@
             </div>
         </div>
 </div>
+          
+            <script>
+                const accordionCards = document.querySelectorAll('.card');
+                    accordionCards.forEach((card, index) => {
+                        card.addEventListener('click', () => {
+                            
+                            const allImages = document.querySelectorAll('.image');
+                            allImages.forEach(image => {
+                                image.classList.add('d-none');
+                            });
 
-
+                            const imageElement = document.getElementById(`image${index + 1}`);
+                            if (imageElement) {
+                                imageElement.classList.remove('d-none');
+                            }
+                        });
+                    });
+            </script>
+           
  @endsection
  
 
