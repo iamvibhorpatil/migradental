@@ -28,6 +28,11 @@
 
                             <form action="store_patient_form" method="POST" enctype="multipart/form-data">
                                 @csrf
+                                <div class="form-group">
+                                    <label for="form_date">Date:</label>
+                                    <input type="date" class="form-control w-25" id="form_date" name="form_date" required
+                                        value="{{ now()->setTimezone('Asia/Kolkata')->format('Y-m-d') }}">
+                                </div>
                                 <div class="row input_field" style="">
                                     <div class="col-sm-12 col-md-6">
                                         <label for="patient_number">Patient Number:</label>
@@ -49,7 +54,7 @@
                                 <div class="row" style="">
                                     <div class="col-sm-12 col-md-6">
                                         <label for="dob">Date of Birth:</label>
-                                        <input type="date" class="form-control" id="dob" name="dob" required>
+                                        <input type="date" class="form-control" id="dob" name="dob" onchange="calculateAge()" required>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="age">Age:</label>
@@ -185,8 +190,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-primary mx-auto mx-md-0 text-white">Add
-                                            Appointment</button>
+                                        <button type="submit" class="btn btn-primary mx-auto mx-md-0 text-white">Save</button>
                                     </div>
                                 </div>
                             </form>
@@ -209,5 +213,26 @@
                 ]
             });
         });
+    </script>
+    <script>
+        function calculateAge() {
+            const dobInput = document.getElementById('dob');
+            const ageInput = document.getElementById('age');
+
+            // Get the selected date of birth
+            const dobValue = new Date(dobInput.value);
+
+            // Calculate age based on the selected date of birth
+            const today = new Date();
+            const age = today.getFullYear() - dobValue.getFullYear();
+            const monthDiff = today.getMonth() - dobValue.getMonth();
+
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dobValue.getDate())) {
+                age--;
+            }
+
+            // Set the calculated age in the "Age" input field
+            ageInput.value = age;
+        }
     </script>
 @endsection

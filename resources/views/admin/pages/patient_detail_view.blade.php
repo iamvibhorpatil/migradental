@@ -24,7 +24,7 @@
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <h5>Patient Details</h5>
+                            <h5>Patient Details <span class="fs-6 fw-light">Date:{{ $patientDetail->form_date }}</span></h5>
                         </div>
                         <div class="card-body px-0 pt-0 pb-2">
                             <form class="px-4">

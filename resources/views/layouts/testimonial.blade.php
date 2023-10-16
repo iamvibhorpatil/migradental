@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <h1 class="mb-2 bread" style="color:white;"> Testimonial </h1>
+                    <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Testimonial </h2>
                 </div>
             </div>
         </div>
