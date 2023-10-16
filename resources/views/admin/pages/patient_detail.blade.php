@@ -26,7 +26,7 @@
                         <div class="card-header pb-0">
                             <h6>Patient Details</h6>
                         </div>
-                        <div class="card-body px-0 pt-0 pb-2 table-responsive">
+                        <div class="card-body px-3 pt-0 pb-2 table-responsive">
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">

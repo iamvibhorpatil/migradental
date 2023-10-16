@@ -32,6 +32,7 @@ class PatientFormController extends Controller
     public function store(Request $request)
     {
         $patientForm = new PatientForm();
+        $patientForm->form_date = $request->form_date;
         $patientForm->patient_number = $request->patient_number;
         $patientForm->family_card_number = $request->family_card_number;
         $patientForm->patient_name = $request->patient_name;
@@ -91,6 +92,7 @@ class PatientFormController extends Controller
     public function update(Request $request, PatientForm $patientForm, $id)
     {
         $patientForm = PatientForm::find($id);
+        $patientForm->form_date = $request->form_date;
         $patientForm->patient_number = $request->patient_number;
         $patientForm->family_card_number = $request->family_card_number;
         $patientForm->patient_name = $request->patient_name;

@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row  slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <h1 class="mb-2 bread" style="color:white;"> Orofacial Pain</h1>
+                    <h2 class="bread font-weight-normal mb-2" style="color:white;"> Orofacial Pain</h2>
                 </div>
             </div>
         </div>

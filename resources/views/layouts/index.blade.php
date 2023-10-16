@@ -64,9 +64,9 @@
         </section> -->
 
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
+    <section class="ftco-section ftco-no-pt ftco-no-pb pt-4">
         <div class="container">
-            <div class="card mb-3 shadow-lg">
+            <div class="card mb-3 shadow-lg animated fadeInLeft ">
                 <div class="row g-0">
                     <div class="col-md-7">
                         <div class="card-body what-who-sec">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 mt-5 shadow-lg">
+            <div class="card mb-3 mt-5 shadow-lg animated fadeInRight">
                 <div class="row g-0">
                     <div class="col-md-5 d-flex align-items-center">
                         <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="Our Team" />

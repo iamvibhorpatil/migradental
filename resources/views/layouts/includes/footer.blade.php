@@ -2,19 +2,20 @@
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
         <div class="container">
+            <ul class="circles">
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+                <li><i class="fa-solid fa-tooth fs-1 clr"></i></li>
+            </ul>
             <div class="row">
-                 <div class="col-md">
-                    <div class="ftco-footer-widget mb-5">
-                        <h2 class="ftco-heading-2">Opening Hours</h2>
-                        <h3 class="open-hours pl-4"><i class="fa-regular fa-clock" style="color: #f5f5f5;"></i> We are open 24/7</h3>
-                    </div>
-                    <div class="ftco-footer-widget mb-5">
-                        <h2 class="ftco-heading-2">Address</h2>
-                        <div class="pr-md-4 pl-md-0 pl-3 text">
-                            <p class="con">198 West 21th Street, Suite 721 New York NY 10016</p>
-                        </div>
-                    </div>   
-                </div>
+                 
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-5 ml-md-4">
                         <h2 class="ftco-heading-2">Links</h2>
@@ -34,7 +35,7 @@
                     <div class="ftco-footer-widget mb-5">
                         <h2 class="ftco-heading-2">Myths</h2>
                             <div class="text">
-                                <ul class="footer-ul-myths">
+                                <ul class="footer-ul-myths pl-4">
                                         <li>Flossing Is Not Really Necessary</li>
                                         <li>White Teeth Are Healthy Teeth</li>
                                         <li>Charcoal Toothpaste Is Better</li>
@@ -42,7 +43,20 @@
                                         <li>Bleeding gums are normal</li>
                                 </ul>        
                             </div>
+                        <h2 class="ftco-heading-2">Blogs</h2>
                     </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Opening Hours</h2>
+                        <h3 class="open-hours pl-2"><i class="fa-regular fa-clock" style="color: #f5f5f5;"></i> We are open 24/7</h3>
+                    </div>
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Address</h2>
+                        <div class="pr-md-4 pl-md-0 pl-3 text">
+                            <p class="con">Migradent, 3rd Floor Manorama Towers, Opp Bharat Mata Chowk, Itwari, NAGPUR 440002</p>
+                        </div>
+                    </div>   
                 </div>
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-5">
@@ -58,7 +72,7 @@
                         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                         <script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </script> All rights reserved 
                     </p>
                 </div>
             </div>

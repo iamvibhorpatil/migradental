@@ -1,55 +1,64 @@
 @extends('layouts.includes.main')
 
 @section('content')
+    <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg-common-img-slider.jpg');" data-stellar-background-ratio="0.5">
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                                <div class="col-md-9 ftco-animate text-center">
+                                    <h1 class="mb-2 bread">Contact Us</h1>
 
-<!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg-common-img-slider.jpg');" data-stellar-background-ratio="0.5">
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/cmn-bg.jpg');background-size: cover;"
+        data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    <h1 class="mb-2 bread">Contact Us</h1>
-
+                    <h2 class="mb-2 bread font-weight-normal"> Contact Us</h2>
                 </div>
             </div>
         </div>
-    </section> -->
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/cmn-bg.jpg');background-size: cover;"  data-stellar-background-ratio="0.5">
-    <div class="overlay" ></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
-                    <h1 class="mb-2 bread"> Contact Us</h1>
-                </div>
-            </div>
-        </div>
-</section>
+    </section>
 
 
 
     <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
         <div class="container">
             <div class="row d-flex align-items-stretch no-gutters">
-                <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
+                <div class="col-md-7 p-4 p-md-4 bg-light">
                     <form action="#">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        <div class="d-flex form-group justify-content-between">
+                            <div class="pr-3 w-50">
+                                <label for="name" class="font-weight-normal text-uppercase">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Name" required="">
+                            </div>
+                            <div class="pr-3 w-50">
+                                <label for="email" class="font-weight-normal text-uppercase">Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email" required="">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email"required>
+                        <div class="form-group pr-3">
+                            <label for="subject" class="font-weight-normal text-uppercase">Subject</label>
+                            <input type="text" class="form-control" placeholder="Subject" required="">
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject"required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name id cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        <div class="form-group pr-3">
+                            <label for="message" class="font-weight-normal text-uppercase">Message</label>
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div id=""><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14885.932699891773!2d79.11575369460763!3d21.1331613533537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c75b851f8e67%3A0xd5f4762b665a36ce!2sNandanvan%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1696224597338!5m2!1sen!2sin" width="600" height="450" style="border:0;" alt="wait loading..!" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="col-md-5 d-flex align-items-stretch">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.55550850929333!2d79.10666979137251!3d21.156849611477455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0cd9e822dc9%3A0x9629aed98fbc52e!2sManorama%20Tower!5e0!3m2!1sen!2sin!4v1697445535202!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -60,25 +69,32 @@
                 <div class="col-md-12 mb-4">
                     <h2 class="h4">Contact Information</h2>
                 </div>
-                <div class="w-100"></div>
-                <div class="col-md-3 d-flex">
-                    <div class="bg-light d-flex align-self-stretch box p-4">
-                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                <div class="col-md-3 text-center">
+                    <i class="bg-info fa-solid fa-location-dot p-3 rounded-circle text-white"></i>
+                    <div class="align-self-stretch box d-flex p-4">
+                        <p><span class="font-weight-bold">Address:</span>Migradent, 3rd Floor Manorama Towers, Opp Bharat Mata Chowk, Itwari, NAGPUR 440002
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-3 d-flex">
-                    <div class="bg-light d-flex align-self-stretch box p-4">
-                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                <div class="col-md-3 text-center">
+                    <i class="bg-info fa-solid fa-phone p-3 rounded-circle text-white"></i>
+                    <div class="align-self-stretch box d-flex p-4 justify-content-center">
+                        <p><span class="font-weight-bold pr-1">Phone:</span>1234567890
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-3 d-flex">
-                    <div class="bg-light d-flex align-self-stretch box p-4">
-                        <p><span>Email:</span> <a href="/cdn-cgi/l/email-protection#640d0a020b241d0b1116170d10014a070b09"><span class="__cf_email__" data-cfemail="80e9eee6efc0f9eff5f2f3e9f4e5aee3efed">[email&#160;protected]</span></a></p>
+                <div class="col-md-3 text-center">
+                    <i class="bg-info fa-solid fa-envelope p-3 rounded-circle text-white"></i>
+                    <div class="align-self-stretch box d-flex p-4 justify-content-center">
+                        <p><span class="font-weight-bold pr-1">Email:</span>migradent.info
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-3 d-flex">
-                    <div class="bg-light d-flex align-self-stretch box p-4">
-                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                <div class="col-md-3 text-center">
+                    <i class="bg-info fa-solid fa-globe p-3 rounded-circle text-white"></i>
+                    <div class="align-self-stretch box d-flex p-4 justify-content-center">
+                        <p><span class="font-weight-bold pr-1">Website:</span>migradent.com
+                        </p>
                     </div>
                 </div>
             </div>
