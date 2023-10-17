@@ -22,7 +22,7 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
+    <section class="ftco-section ftco-no-pt ftco-no-pb pb-0">
     <!-- <section class="ftco-section ftco-no-pt ftco-no-pb">
             <div class="container">
                 <div class="card mb-3" style="box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);">
@@ -127,7 +127,7 @@
     </section>
 
     <section class="ftco-section ftco-services">
-        <div class="card mr-5 ml-5" style="border-radius:50px;">
+        <div class="card mr-5 ml-5" style="border-radius:50px; background-image:url({{asset('assets/images/dental_background.jpg')}})">
             <div class="container">
                 <div class="text-center mt-3">
                     <h1>Our Clinic Services</h1>
