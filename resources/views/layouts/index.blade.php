@@ -2,27 +2,28 @@
 
 
 @section('content')
+
     <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image:url(assets/images/slider-img1.jpg);"
+        <div class="slider-item" style="background-image:url(assets/images/slider-img-1.jpg);"
             data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-                    <!-- catchy lines -->
+                     catchy lines 
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="slider-item" style="background-image:url(assets/images/slider-img2.jpg);">
             <div class="overlay"></div>
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-                    <!-- catchy lines -->
+                    catchy lines 
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb pb-0">
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
     <!-- <section class="ftco-section ftco-no-pt ftco-no-pb">
             <div class="container">
                 <div class="card mb-3" style="box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);">
@@ -80,7 +81,7 @@
                                     compassionate advocate for those who suffer from debilitating conditions. Here's a glimpse
                                     of who we are and what we stand for:
                                 </p>
-                                <p>We are committed to providing top-notch dental care and improving your oral health.</p>
+                                <!-- <p>We are committed to providing top-notch dental care and improving your oral health.</p> -->
                             </div>
                         </div>
                     </div>
@@ -99,13 +100,13 @@
                             <div class="text-center mb-4">
                                 <h5 class="card-title" style="font-size: 32px; font-weight: 700;">Who We Are?</h5>
                             </div>
-                            <!-- <div class="pl-md-5 ml-md-5 mb-5">
+                            <div class="pl-md-5 ml-md-5 mb-5">
                                 <p>Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an unwavering
                                     commitment to excellence in patient care and professional growth. With 17 years of
                                     dedicated practice as a conservative dentist, she has recently taken a significant leap in her
                                     career by pursuing a specialized Orofacial Pain Fellowship.
                                 </p>
-                                <p>Education and Specialization:
+                                <!-- <p>Education and Specialization:
                                     Dr. Sarrah Husain has dedicated herself to advancing her expertise and knowledge in the fiel
                                     d of dentistry. Her recent accomplishment includes completing an Orofacial Pain Fellowship,
                                     Temporomandibular Disorder, and Dental Sleep Medicine program at Roseman University,
@@ -116,8 +117,8 @@
                                     community in Nagpur, as she stands as the first professional in the region to pursue this
                                     super-specialization. Her trailblazing efforts have also positioned her among the select few in
                                     India who have taken this advanced route in the field of Orofacial Pain and Dental Sleep
-                                    Medicine</p>
-                            </div> -->
+                                    Medicine</p> -->
+                            </div>
                             
                         </div>
                     </div>
@@ -272,153 +273,38 @@
     </section>
 
 
-<div class="container-fluid" style="background-color:#47b0ab;box-shadow: 0 0 30px black; ">
-    <div class="row">
-        <div class="col-md-7 col-lg-7 col-sm-12 col-request-call-sec-left">
-            <div class="title">
-                <h1>Get Expert Dental Advice at Your Convenience.</h1>
-            </div>
-            <h5 class="sub-title">  Our dental experts are here to help you with any questions or concerns.</h5>
-        </div>
-        <div class="col-md-5 col-lg-5 col-sm-12">
-            <div class=" pl-3 pr-3 pt-4 ">
-                <form>
-                     <div class="form-group-rc d-flex">
-                        <input type="text" id="name" name="name" class="half-width" placeholder="Name" required>
-
-                        <input type="tel" id="phone" name="phone" class="half-width" placeholder="Phone Number" required>
-                     </div>
-                        <div class="form-group-rc">
-                            <input type="email" id="email" name="email" class="full-width" placeholder="Email" required>
-                        </div>
-                        <div class="form-group-rc">
-                            <textarea id="message" name="message" class="full-width" placeholder="Brief Description of Dental Concern." required></textarea>
-                        </div>
-                        <div class="form-group-rc">
-                            <button type="submit" class="submit-button">Request a Callback</button>
-                        </div>
-                    </form>   
+    <div class="container-fluid" style="background-color:#47b0ab;">
+        <div class="row">
+            <div class="col-md-7 col-lg-7 col-sm-12 col-request-call-sec-left pl-5">
+                <div class="title">
+                    <h2 class="text-light">Get Expert Dental Advice at Your Convenience.</h2>
                 </div>
+                <p class="sub-title text-light">Our dental experts are here to help you with any questions or concerns.</p>
+            </div>
+            <div class="col-md-5 col-lg-5 col-sm-12 pr-5">
+                <div class=" pl-3 pr-3 pt-4 ">
+                    <form>
+                        <div class="form-group-rc d-flex">
+                            <input type="text" id="name" name="name" class="half-width" placeholder="Your Name *" required>
+
+                            <input type="tel" id="phone" name="phone" class="half-width" placeholder="Mobile No *" required>
+                        </div>
+                            <div class="form-group-rc">
+                                <input type="email" id="email" name="email" class="full-width" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group-rc">
+                                <textarea id="message" name="message" class="full-width" placeholder="Brief Description of Dental Concern." required></textarea>
+                            </div>
+                            <div class="form-group-rc">
+                                <button type="submit" class="submit-button">Request a Callback</button>
+                            </div>
+                        </form>   
+                    </div>
+            </div>
         </div>
     </div>
-</div>
 
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="tel"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-group .half-width {
-            width: 48%;
-            display: inline-block;
-            margin-right: 2%;
-        }
-
-        .form-group .full-width {
-            width: 100%;
-        }
-
-        .form-group textarea {
-            height: 100px;
-        }
-
-        .form-group .submit-button {
-            width: 100%;
-            background-color: #0074cc;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .form-group .submit-button:hover {
-            background-color: #005aa7;
-        }
-
-        @media (max-width: 768px) {
-            .form-group .half-width,
-            .form-group .full-width {
-                width: 100%;
-                display: block;
-                margin-right: 0;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <form>
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" class="half-width" required>
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="half-width" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" class="full-width" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" class="full-width" required></textarea>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="submit-button">Submit</button>
-        </div>
-    </form>
-</div>
-
-</body>
-</html> -->
-
-
-
-
-
-
-
-
-
-
-
-    <section class="ftco-section mt-3" style="background-color: #f3f2f2;">
+    <section class="ftco-section" style="background-color: #f3f2f2;">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10 col-xl-8 text-center">

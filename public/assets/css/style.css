@@ -3537,9 +3537,9 @@ textarea.form-control {
     padding-top: 64px;
 }
 
-.ftco-no-pb {
+/* .ftco-no-pb {
     padding-bottom: 3rem;
-}
+} */
 
 .ftco-bg-dark {
     background: #3c312e;
@@ -3555,6 +3555,7 @@ background-color: #299eab;
     background: #47b0ab;
     /* padding: 2em 0; */
     padding-top:2em;
+    /* padding-bottom: 0px!important; */
 }
 
 
@@ -4719,10 +4720,13 @@ video:hover {
 .request-call-card{
     padding:5px,3px,5px,3px;
    border-radius: 20px!important;
-   box-shadow: 5px 10px #a3ddda;
+   /* box-shadow: 5px 10px #a3ddda; */
 }
 .col-request-call-sec-left{
     align-self: center;
+}
+.col-request-call-sec-left title{
+    font-weight:700;
 }
 .form-group-rc {
     margin-bottom: 20px;
@@ -4758,18 +4762,19 @@ video:hover {
 
 .form-group-rc .submit-button {
     width: 100%;
-    background-color: #f0f1f3;
-    color: rgb(6, 6, 6);
-    outline-color: #05fcb2;
-    border: none;
+    font-size: larger;
+    font-weight: 600;
+    background-color: #47b0ab;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .form-group-rc .submit-button:hover {
-    background-color: #286a68;
-    color:#ffffff;
+    background-color: #66e1dd;
+    color:#000000;
 }
 
 @media (max-width: 768px) {
@@ -4915,3 +4920,29 @@ video:hover {
 iframe{
     min-height: 100%;
 }
+
+
+/* scroll to top */
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    bottom: 20px; 
+    right: 25px; 
+    z-index: 99;
+    border: none; 
+    outline: none; 
+    background-color: #409f99; 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    /* border-radius: 10px; */
+    font-size: 18px;
+  }
+  
+  #myBtn:hover {
+    background-color: #41b6b6; 
+  }
