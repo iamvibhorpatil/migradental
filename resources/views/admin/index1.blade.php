@@ -98,6 +98,33 @@
                 </li>
                 {{-- @endif --}}
 
+                <li class="nav-item">
+                    <a href="#" class="nav-link " onclick="togglecategory()">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-user text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Treatment</span>
+                    </a>
+                    <ul class="navbar-nav ps-5" id="Treatment" style="display: none;">
+                        {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{Route('patient_form')}}">
+                                <span class="nav-link-text ms-1">Treatment<i
+                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                        {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{Route('detail')}}">
+                                <span class="nav-link-text ms-1">Treatment Types<i
+                                        class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('logout') }}">
@@ -325,7 +352,7 @@
         }
 
         function togglecategory() {
-            var content1 = document.getElementById("cats");
+            var content1 = document.getElementById("Treatment");
             if (content1.style.display === "none") {
                 content1.style.display = "block";
             } else {

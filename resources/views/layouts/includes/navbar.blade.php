@@ -36,7 +36,7 @@
             </div>
 
             <div class="col-4 align-self-center search_hide d-flex justify-content-end request-call-padding">
-                <a href="#"><button class="btn btn-outline-info p-2" >Request a Callback</button></a>
+                <button class="btn btn-outline-info p-2 rounded-0 w-100" >Request a Callback</button>
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item {{ request()->is('blogs') ? 'active' : ''}}"><a href="#" class="nav-link">Blogs</a></li>
+                    <li class="nav-item {{ request()->is('blogs') ? 'active' : ''}}"><a href="{{route('blog')}}" class="nav-link">Blogs</a></li>
                     
                     <li class="nav-item {{ request()->is('contact') ? 'active' : ''}}"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
                 </ul>
