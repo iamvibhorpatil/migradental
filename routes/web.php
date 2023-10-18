@@ -57,6 +57,10 @@ Route::get('laser_dentistry', [HomeController::class, 'laser_dentistry'])->name(
 
 Route::get('image', [HomeController::class, 'image'])->name('image');
 
+Route::get('blog', [HomeController::class, 'blog'])->name('blog');
+
+Route::get('blog_info', [HomeController::class, 'blog_info'])->name('blog_info');
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -84,6 +88,12 @@ Route::middleware('auth')->group(function () {
     Route::get('patient_detail/export/{id}', [PatientFormController::class, 'export'])->name('export');
     Route::get('patient_form/edit/{id}', [PatientFormController::class, 'edit']);
     Route::post('patient_form/update/{id}', [PatientFormController::class, 'update']);
+
+    //treatment 
+    Route::get('adm_treatment', [PatientFormController::class, 'index'])->name('adm_treatment');
+    
+
+
 });
 
 require __DIR__ . '/auth.php';
