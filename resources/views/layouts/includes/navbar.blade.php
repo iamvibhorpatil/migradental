@@ -43,7 +43,7 @@
    
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark  ftco-navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark  ftco-navbar-light ">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fa-solid fa-bars-staggered fa-xl"style="color:#ffffff;"></i></span>
