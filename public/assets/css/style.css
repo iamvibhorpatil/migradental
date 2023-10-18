@@ -2585,7 +2585,7 @@ h4,
     bottom: 0;
     content: '';
     opacity: 0.8;
-    background: #373333;
+    background: grey;
 }
 
 .hero-wrap.hero-wrap-2 {
@@ -4809,7 +4809,7 @@ video:hover {
 
 }
 .clr{
-    color: rgba(255, 255, 255, 0.5)!important;
+    color: rgba(255, 255, 255, 0.7)!important;
 }
 
 .circles li:nth-child(1) {
