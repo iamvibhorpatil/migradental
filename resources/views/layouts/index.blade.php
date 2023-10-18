@@ -285,7 +285,7 @@
                     <i class="fa-solid fa-heart-circle-check" style="color: #47b0ab;"></i>
                 </div>
                 <div class="counter-wrap font-weight-bold">
-                    <span class="counter fa-xl" data-start-number="0" data-end-number="10000" data-speed="900">0</span>
+                    <span class="counter fa-xl" data-start-number="0" data-end-number="10000" data-speed="2000">0</span>
                     <span class="fa-xl">+</span>
                 </div>
                 <h6>SATISFIED PATIENTS</h6>
@@ -305,7 +305,7 @@
                     <i class="fa-solid fa-file-circle-plus" style="color: #47b0ab;"></i>
                 </div>
                 <div class="counter-wrap font-weight-bold">
-                    <span class="counter fa-xl" data-start-number="0" data-end-number="100" data-speed="10000">0</span>
+                    <span class="counter fa-xl" data-start-number="0" data-end-number="100" data-speed="2000">0</span>
                     <span class="fa-xl">+</span>
                 </div>
                 <h6>KIND OF RESEARCH</h6>
@@ -315,7 +315,7 @@
                     <i class="fa-solid fa-award" style="color: #47b0ab;"></i>
                 </div>
                 <div class="counter-wrap font-weight-bold">
-                    <span class="counter fa-xl" data-start-number="0" data-end-number="25" data-speed="10000">0</span>
+                    <span class="counter fa-xl" data-start-number="0" data-end-number="25" data-speed="2000">0</span>
                     <span class="fa-xl">+</span>
                 </div>
                 <h6>AWARD WINNING</h6>
@@ -338,7 +338,7 @@
                         concerns.</p>
                 </div>
 
-                <div class="col-md-5 col-lg-5 col-sm-12 pr-5">
+                <div class="col-md-6 col-lg-6 col-sm-12 pr-5">
                     <div class="pl-3 pr-3 pt-4">
                         <form>
                             <div class="form-group-rc">
