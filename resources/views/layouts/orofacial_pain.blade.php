@@ -120,23 +120,6 @@
         </div>
 </div>
           
-            <script>
-                const accordionCards = document.querySelectorAll('.card');
-                    accordionCards.forEach((card, index) => {
-                        card.addEventListener('click', () => {
-                            
-                            const allImages = document.querySelectorAll('.image');
-                            allImages.forEach(image => {
-                                image.classList.add('d-none');
-                            });
-
-                            const imageElement = document.getElementById(`image${index + 1}`);
-                            if (imageElement) {
-                                imageElement.classList.remove('d-none');
-                            }
-                        });
-                    });
-            </script>
            
  @endsection
  
