@@ -29,6 +29,11 @@
                             <form action="{{ url('patient_form/update/' . $patientForm->id) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
+                                @if (session('success'))
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
                                 <div class="form-group">
                                     <label for="form_date">Date:</label>
                                     <input type="text" class="form-control" id="form_date" name="form_date" required
@@ -53,18 +58,23 @@
                                     <input type="text" class="form-control" id="patient_name" name="patient_name"
                                         required value="{{ $patientForm->patient_name }}">
                                 </div>
+
+
+
                                 <div class="row" style="">
                                     <div class="col-sm-12 col-md-6">
                                         <label for="dob">Date of Birth:</label>
-                                        <input type="date" class="form-control" id="dob" name="dob" required
-                                            value="{{ $patientForm->dob }}" onchange="calculateAge()">
+                                        <input type="date" class="form-control" value="{{ $patientForm->dob }}"
+                                            id="dob" name="dob" oninput="calculateAge()" required>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="age">Age:</label>
-                                        <input type="number" class="form-control" id="age" name="age" required
-                                            value="{{ $patientForm->age }}">
+                                        <input type="number" value="{{ $patientForm->age }}" class="form-control"
+                                            id="age" name="age" oninput="calculateDOB()" required>
                                     </div>
                                 </div>
+
+
                                 <div class="form-group">
                                     <label for="mobile_no">Mobile Number:</label>
                                     <input type="tel" class="form-control" id="mobile_no" name="mobile_no" required
@@ -104,6 +114,29 @@
                                     <input type="text" class="form-control" id="country" name="country" required
                                         value="{{ $patientForm->country }}">
                                 </div>
+
+                                <div>
+                                    <label>Gender</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefaultMale" value="Male"
+                                            {{ $patientForm->gender === 'Male' ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="flexRadioDefaultMale">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefaultFemale" value="Female"
+                                            {{ $patientForm->gender === 'Female' ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="flexRadioDefaultFemale">Female</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefaultOther" value="Other"
+                                            {{ $patientForm->gender === 'Other' ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="flexRadioDefaultOther">Other</label>
+                                    </div>
+                                </div>
+
 
                                 <h4>Guardian for Reference if:Minor/ Old Age / spouse</h4>
 
@@ -201,18 +234,21 @@
                                     <label>Do you prefer appointment on sunday</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="appointment_sunday"
-                                            id="flexRadioDefault1" value="Yes">
+                                            id="flexRadioDefault1" value="Yes"
+                                            {{ $patientForm->appointment_sunday === 'Yes' ? 'checked' : '' }}>
                                         <label class="form-check-label" for="flexRadioDefault1">Yes</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="appointment_sunday"
-                                            id="flexRadioDefault2" value="No" checked>
+                                            id="flexRadioDefault2" value="No"
+                                            {{ $patientForm->appointment_sunday === 'No' ? 'checked' : '' }}>
                                         <label class="form-check-label" for="flexRadioDefault2">No</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-primary mx-auto mx-md-0 text-white">Update</button>
+                                        <button type="submit"
+                                            class="btn btn-primary mx-auto mx-md-0 text-white">Update</button>
                                     </div>
                                 </div>
                             </form>
@@ -255,6 +291,21 @@
 
             // Set the calculated age in the "Age" input field
             ageInput.value = age;
+        }
+
+        function calculateDOB() {
+            const dobInput = document.getElementById('dob');
+            const ageInput = document.getElementById('age');
+
+            // Get the entered age
+            const age = parseInt(ageInput.value, 10);
+
+            // Calculate the date of birth based on the entered age
+            const today = new Date();
+            const dobYear = today.getFullYear() - age;
+
+            // Set the calculated date of birth to January 1st of the birth year
+            dobInput.value = dobYear + '-01-01';
         }
     </script>
 @endsection

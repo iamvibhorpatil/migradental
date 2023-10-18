@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section class="ftco-section ftco-no-pt ftco-no-pb">
+
     <!-- <section class="ftco-section ftco-no-pt ftco-no-pb">
             <div class="container">
                 <div class="card mb-3" style="box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);">
@@ -87,14 +87,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center">
+                    <div class="col-md-5 d-flex">
                         <img src="assets/images/image_5.jpg" class="img-fluid rounded-start" alt="Our Services" />
                     </div>
                 </div>
             </div>
             <div class="card mb-3 mt-5 shadow-lg animated fadeInRight">
                 <div class="row g-0">
-                    <div class="col-md-5 d-flex align-items-center">
+                    <div class="col-md-5 d-flex">
                         <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="Our Team" />
                     </div>
                     <div class="col-md-7">
@@ -132,9 +132,9 @@
     </section>
 
     <section class="ftco-section ftco-services">
-        <div class="card mr-5 ml-5" style="border-radius:50px;">
+        <div class="shadow bg-light pb-5 mr-5 ml-5" style="border-radius:50px;">
             <div class="container">
-                <div class="text-center mt-3">
+                <div class="text-center my-3">
                     <h1>Our Clinic Services</h1>
                 </div>
 
@@ -327,7 +327,7 @@
 
 
     <!-- //request form -->
-    <div class="container-fluid" style="background-color:#47b0ab;">
+    <div class="container-fluid rounded-pill" style="background-color:#47b0ab;">
         <div class="">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-sm-12 col-request-call-sec-left pl-5">

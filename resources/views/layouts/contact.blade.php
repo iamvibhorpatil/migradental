@@ -65,35 +65,34 @@
     </section>
     <section class="ftco-section contact-section">
         <div class="container">
-            <div class="row d-flex mb-5 contact-info">
-                <div class="col-md-12 mb-4">
-                    <h2 class="h4">Contact Information</h2>
-                </div>
+            <div class="row d-flex mb-5 mt-3 contact-info">
+              
                 <div class="col-md-3 text-center">
                     <i class="bg-info fa-solid fa-location-dot p-3 rounded-circle text-white"></i>
                     <div class="align-self-stretch box d-flex p-4">
-                        <p><span class="font-weight-bold">Address:</span>Migradent, 3rd Floor Manorama Towers, Opp Bharat Mata Chowk, Itwari, NAGPUR 440002
+                        <p><span class="">Migradent, 3rd Floor Manorama Towers, Opp Bharat Mata Chowk, Itwari, NAGPUR 440002</span>
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <i class="bg-info fa-solid fa-phone p-3 rounded-circle text-white"></i>
                     <div class="align-self-stretch box d-flex p-4 justify-content-center">
-                        <p><span class="font-weight-bold pr-1">Phone:</span>1234567890
+                        <p  class="font-weight-bold pr-1">7030468548
+                            <img src="{{asset('assets/images/qr.svg')}}" class="w-50 mx-auto d-block" alt="">
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <i class="bg-info fa-solid fa-envelope p-3 rounded-circle text-white"></i>
                     <div class="align-self-stretch box d-flex p-4 justify-content-center">
-                        <p><span class="font-weight-bold pr-1">Email:</span>migradent.info
+                        <p><span class=" pr-1">migradent.info@gmail.com</span>
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center">
                     <i class="bg-info fa-solid fa-globe p-3 rounded-circle text-white"></i>
                     <div class="align-self-stretch box d-flex p-4 justify-content-center">
-                        <p><span class="font-weight-bold pr-1">Website:</span>migradent.com
+                        <p><span class="pr-1">migradent.com</span>
                         </p>
                     </div>
                 </div>

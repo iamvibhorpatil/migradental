@@ -28,6 +28,11 @@
 
                             <form action="store_patient_form" method="POST" enctype="multipart/form-data">
                                 @csrf
+                                @if (session('success'))
+                                    <div class="text-white alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
                                 <div class="form-group">
                                     <label for="form_date">Date:</label>
                                     <input type="date" class="form-control w-25" id="form_date" name="form_date" required
@@ -51,16 +56,23 @@
                                     <input type="text" class="form-control" id="patient_name" name="patient_name"
                                         required>
                                 </div>
+
+
                                 <div class="row" style="">
                                     <div class="col-sm-12 col-md-6">
                                         <label for="dob">Date of Birth:</label>
-                                        <input type="date" class="form-control" id="dob" name="dob" onchange="calculateAge()" required>
+                                        <input type="date" class="form-control" id="dob" name="dob"
+                                            oninput="calculateAge()" required>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="age">Age:</label>
-                                        <input type="number" class="form-control" id="age" name="age" required>
+                                        <input type="number" class="form-control" id="age" name="age"
+                                            oninput="calculateDOB()" required>
                                     </div>
                                 </div>
+
+
+
                                 <div class="form-group">
                                     <label for="mobile_no">Mobile Number:</label>
                                     <input type="tel" class="form-control" id="mobile_no" name="mobile_no" required>
@@ -83,15 +95,37 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="city">City:</label>
-                                    <input type="text" class="form-control" id="city" name="city" required>
+                                    <input type="text" class="form-control" id="city" name="city" value="Nagpur"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="state">State:</label>
-                                    <input type="text" class="form-control" id="state" name="state" required>
+                                    <input type="text" class="form-control" id="state" name="state"
+                                        value="Maharashtra" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="country">Country:</label>
-                                    <input type="text" class="form-control" id="country" name="country" required>
+                                    <input type="text" class="form-control" id="country" name="country"
+                                        value="India" required>
+                                </div>
+
+                                <div>
+                                    <label>Gender</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefaultMale" value="Male">
+                                        <label class="form-check-label" for="flexRadioDefaultMale">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefaultFemale" value="Female">
+                                        <label class="form-check-label" for="flexRadioDefaultFemale">Female</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefaultOther" value="Other">
+                                        <label class="form-check-label" for="flexRadioDefaultOther">Other</label>
+                                    </div>
                                 </div>
 
                                 <h4>Guardian for Reference if:Minor/ Old Age / spouse</h4>
@@ -109,7 +143,7 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="guardian_city">City:</label>
-                                        <input type="text" class="form-control" id="guardian_city"
+                                        <input type="text" class="form-control" value="Nagpur" id="guardian_city"
                                             name="guardian_city" required>
                                     </div>
                                 </div>
@@ -190,7 +224,8 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-primary mx-auto mx-md-0 text-white">Save</button>
+                                        <button type="submit"
+                                            class="btn btn-primary mx-auto mx-md-0 text-white">Save</button>
                                     </div>
                                 </div>
                             </form>
@@ -233,6 +268,21 @@
 
             // Set the calculated age in the "Age" input field
             ageInput.value = age;
+        }
+
+        function calculateDOB() {
+            const dobInput = document.getElementById('dob');
+            const ageInput = document.getElementById('age');
+
+            // Get the entered age
+            const age = parseInt(ageInput.value, 10);
+
+            // Calculate the date of birth based on the entered age
+            const today = new Date();
+            const dobYear = today.getFullYear() - age;
+
+            // Set the calculated date of birth to January 1st of the birth year
+            dobInput.value = dobYear + '-01-01';
         }
     </script>
 @endsection

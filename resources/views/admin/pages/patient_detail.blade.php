@@ -24,6 +24,16 @@
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
+                            @if (session('success'))
+                                <div class="text-white alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                            @if (session('delete'))
+                                <div class="text-white alert alert-danger">
+                                    {{ session('delete') }}
+                                </div>
+                            @endif
                             <h6>Patient Details</h6>
                         </div>
                         <div class="card-body px-3 pt-0 pb-2 table-responsive">

@@ -155,26 +155,77 @@
     </section>
 
 
-    <div class="container">
-        <h3>Who We Are</h3>
+    <div class="container bg-light py-3 my-3">
+        <h3 class="text-center mb-4">Who We Are</h3>
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an unwavering
-                commitment to excellence in patient care and professional growth. With 17 years of
-                dedicated practice as a conservative dentist, she has recently taken a significant leap in her
-                career by pursuing a specialized Orofacial Pain Fellowship.
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <p class="text-justify">Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an
+                    unwavering
+                    commitment to excellence in patient care and professional growth. With 17 years of
+                    dedicated practice as a conservative dentist, she has recently taken a significant leap in her
+                    career by pursuing a specialized Orofacial Pain Fellowship.</p>
+                <p class="text-justify">
+                    <span class="text-monospace">A Pioneer in Orofacial Pain :</span><br />
+                    Dr. Sarrah Husain's unwavering commitment to patient care and her relentless pursuit of
+                    excellence led her to pursue an Orofacial Pain Fellowship at Roseman University, Smile-USA.
+                    This prestigious program, undertaken on January 23, 2023, represents a groundbreaking
+                    development in her already illustrious career. Her passion for enhancing the quality of life for
+                    her patients and her determination to stay at the forefront of dental innovation have driven
+                    her to become a trailblazer in Nagpur and the broader Indian dental landscape.
+
+                </p>
+           
+                <span class="text-monospace"> A Pioneer in Nagpur and India:</span><br />
+                Dr. Husain's achievement is a source of immense pride and accomplishment for the dental
+                community in Nagpur, as she stands as the first professional in the region to pursue this
+                super-specialization. Her trailblazing efforts have also positioned her among the select few in
+                India who have taken this advanced route in the field of Orofacial Pain and Dental Sleep
+                Medicin
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6"></div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12"></div>
         </div>
     </div>
 
-    <div class="container">
-        <h3>What We Are</h3>
+
+    <div class="container bg-light py-3 my-3">
+        <h3 class="text-center mb-4">What We Are</h3>
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6"></div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6"></div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12"></div>
+           
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <p class="text-justify">At the core of our mission is a profound dedication to improving lives and fostering
+                    healthier
+                    communities. Dr. Sarrah Husain is not only a skilled dental practitioner but also a
+                    compassionate advocate for those who suffer from debilitating conditions. Here's a glimpse
+                    of who we are and what we stand for:</p>
+                <p class="text-justify">
+                    <span class="text-monospace">Mission #MigraineFreeLife:</span><br />
+
+                    Dr. Sarrah Husain's passion lies in alleviating the excruciating pain of migraine sufferers. She
+                    firmly believes that migraine is one of the most life-altering pains one can experience. With a
+                    mission to offer a #MigraineFreeLife for all, her goal is to help 10,000 migraineurs regain
+                    control over their lives. Through her expertise and experience, she seeks to provide relief
+                    and support to those battling this debilitating condition.
+
+                </p>
+                <p class="text-justify">
+                    <span class="text-monospace"> Bharat Mission #SpitFreeIndia:</span><br />
+
+                    Beyond her dedication to orofacial health, Dr. Sarrah Husain is a staunch advocate for oral
+                    hygiene and cleanliness in public spaces. She champions the cause of #SpitFreeIndia, raising
+                    awareness about the harmful effects of spitting in public places. She recognizes that such
+                    behavior not only undermines public hygiene but also diminishes the efforts of initiatives like
+                    Swachh Bharat Abhiyan. Dr. Husain strives to educate and inspire individuals to adopt
+                    responsible and respectful habits for the betterment of our nation.
+
+                </p>
+            
+                <span class="text-monospace"> Orofacial Pain Fellowship and Expertise:</span><br />
+                
+                Dr. Sarrah Husain's pursuit of an Orofacial Pain Fellowship reflects her unwavering
+                commitment to providing world-class care. Her expertise in neuromuscular dentistry,
+                orofacial pain, and temporomandibular disorders positions her as an invaluable asset to the
+                healthcare community. Her commitment to continuous learning and staying at the forefront
+                of dental healthcare ensures that she can offer comprehensive care to her patients.
+            </div>
         </div>
     </div>
 @endsection

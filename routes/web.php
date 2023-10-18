@@ -33,6 +33,14 @@ Route::get('/optimize', function () {
 });
 
 
+
+Route::get('/add_column', function () {
+    DB::statement('ALTER TABLE patient_forms ADD gender VARCHAR(255) AFTER country');
+       
+        return 'Column added successfully.';
+     
+});
+
 // Home Controller
 
 Route::get('/', [HomeController::class, 'index'])->name('/');

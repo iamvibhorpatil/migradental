@@ -46,6 +46,7 @@ class PatientFormController extends Controller
         $patientForm->city = $request->city;
         $patientForm->state = $request->state;
         $patientForm->country = $request->country;
+        $patientForm->gender = $request->gender;
         $patientForm->guardian_name = $request->guardian_name;
         $patientForm->guardian_no = $request->guardian_no;
         $patientForm->guardian_city = $request->guardian_city;
@@ -55,7 +56,7 @@ class PatientFormController extends Controller
         $patientForm->appointment_sunday = $request->appointment_sunday;
 
         $patientForm->save();
-        return redirect('patient_form')->with('success', 'Patient Appointment Added Success');
+        return redirect('patient_form')->with('success', 'Patient Details Added successfully');
     }
 
     /**
@@ -106,6 +107,7 @@ class PatientFormController extends Controller
         $patientForm->city = $request->city;
         $patientForm->state = $request->state;
         $patientForm->country = $request->country;
+        $patientForm->gender = $request->gender;
         $patientForm->guardian_name = $request->guardian_name;
         $patientForm->guardian_no = $request->guardian_no;
         $patientForm->guardian_city = $request->guardian_city;
@@ -115,7 +117,7 @@ class PatientFormController extends Controller
         $patientForm->appointment_sunday = $request->appointment_sunday;
 
         $patientForm->update();
-        return redirect('patient_detail')->with('success', 'Patient Appointment Updated Success');
+        return redirect('patient_detail')->with('success', 'Patient Details Updated successfully');
     }
     /**
      * Remove the specified resource from storage.
@@ -124,7 +126,7 @@ class PatientFormController extends Controller
     {
         $patientForm = PatientForm::find($id);
         $patientForm->delete();
-        return redirect('patient_detail');
+        return redirect('patient_detail')->with('delete', 'Patient deleted successfully');;
     }
 
     public function export($id)
