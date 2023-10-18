@@ -4720,7 +4720,7 @@ video:hover {
 .request-call-card{
     padding:5px,3px,5px,3px;
    border-radius: 20px!important;
-   /* box-shadow: 5px 10px #a3ddda; */
+   
 }
 .col-request-call-sec-left{
     align-self: center;
@@ -4728,7 +4728,7 @@ video:hover {
 .col-request-call-sec-left title{
     font-weight:700;
 }
-.form-group-rc {
+ .form-group-rc {
     margin-bottom: 20px;
 }
 
@@ -4740,7 +4740,7 @@ video:hover {
 .form-group-rc input[type="tel"],
 .form-group-rc input[type="email"],
 .form-group-rc textarea {
-    width: 100%;
+    
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -4775,7 +4775,42 @@ video:hover {
 .form-group-rc .submit-button:hover {
     background-color: #66e1dd;
     color:#000000;
-}
+} 
+
+/* Additional custom CSS styles */
+    .form-group-rc {
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .form-group-rc input[type="text"],
+    .form-group-rc input[type="tel"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+    }
+    .form-group-rc input[type="text"]:focus,
+    .form-group-rc input[type="tel"]:focus {
+        border-color: #007bff;
+    }
+    .submit-button {
+        width: 100%;
+        font-size: larger;
+        font-weight: 600;
+        background-color: #47b0ab;
+        color: rgb(255, 255, 255);
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .submit-button:hover {
+        background-color: #47b0ab;
+    }
 
 @media (max-width: 768px) {
     
@@ -4946,3 +4981,27 @@ iframe{
   #myBtn:hover {
     background-color: #41b6b6; 
   }
+
+/* icons section */
+
+.icons-land-4{
+    font-size:54px;
+    text-align: center;
+}
+
+.counter-wrap {
+    font-size: 24px;
+    display: inline-block;
+}
+.counter {
+    animation: count-up 2s ease-in-out forwards;
+}
+@keyframes count-up {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* icons section */
