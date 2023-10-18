@@ -4993,6 +4993,7 @@ iframe{
 .counter-wrap {
     font-size: 24px;
     display: inline-block;
+    color: #47b0ab;
 }
 .counter {
     animation: count-up 2s ease-in-out forwards;

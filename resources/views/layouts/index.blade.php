@@ -3,27 +3,27 @@
 
 @section('content')
 
-    <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image:url(assets/images/slider-img-1.jpg);"
-            data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <!-- <div class="container">
+<section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image:url(assets/images/slider-img-1.jpg);"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <!-- <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
                      catchy lines 
                 </div>
             </div> -->
-        </div>
-        <div class="slider-item" style="background-image:url(assets/images/slider-img2.jpg);">
-            <div class="overlay"></div>
-            <!-- <div class="container">
+    </div>
+    <div class="slider-item" style="background-image:url(assets/images/slider-img2.jpg);">
+        <div class="overlay"></div>
+        <!-- <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
                     catchy lines 
                 </div>
             </div> -->
-        </div>
-    </section>
+    </div>
+</section>
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
+<section class="ftco-section ftco-no-pt ftco-no-pb">
     <!-- <section class="ftco-section ftco-no-pt ftco-no-pb">
             <div class="container">
                 <div class="card mb-3" style="box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);">
@@ -76,9 +76,11 @@
                                 <h5 class="card-title" style="font-size: 32px; font-weight: 700;">What We Are?</h5>
                             </div>
                             <div class="pl-md-5 ml-md-5 mb-5">
-                                <p>At the core of our mission is a profound dedication to improving lives and fostering healthier
+                                <p>At the core of our mission is a profound dedication to improving lives and fostering
+                                    healthier
                                     communities. Dr. Sarrah Husain is not only a skilled dental practitioner but also a
-                                    compassionate advocate for those who suffer from debilitating conditions. Here's a glimpse
+                                    compassionate advocate for those who suffer from debilitating conditions. Here's a
+                                    glimpse
                                     of who we are and what we stand for:
                                 </p>
                                 <!-- <p>We are committed to providing top-notch dental care and improving your oral health.</p> -->
@@ -101,9 +103,11 @@
                                 <h5 class="card-title" style="font-size: 32px; font-weight: 700;">Who We Are?</h5>
                             </div>
                             <div class="pl-md-5 ml-md-5 mb-5">
-                                <p>Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an unwavering
+                                <p>Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an
+                                    unwavering
                                     commitment to excellence in patient care and professional growth. With 17 years of
-                                    dedicated practice as a conservative dentist, she has recently taken a significant leap in her
+                                    dedicated practice as a conservative dentist, she has recently taken a significant
+                                    leap in her
                                     career by pursuing a specialized Orofacial Pain Fellowship.
                                 </p>
                                 <!-- <p>Education and Specialization:
@@ -119,7 +123,7 @@
                                     India who have taken this advanced route in the field of Orofacial Pain and Dental Sleep
                                     Medicine</p> -->
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -128,7 +132,7 @@
     </section>
 
     <section class="ftco-section ftco-services">
-        <div class="card mr-5 ml-5" style="border-radius:50px; background-image:url({{asset('assets/images/dental_background.jpg')}})">
+        <div class="card mr-5 ml-5" style="border-radius:50px;">
             <div class="container">
                 <div class="text-center mt-3">
                     <h1>Our Clinic Services</h1>
@@ -272,37 +276,82 @@
         </div>
     </section>
 
+    <!-- why choose us -->
 
-    <div class="container-fluid" style="background-color:#47b0ab;">
-        <div class="row">
-            <div class="col-md-7 col-lg-7 col-sm-12 col-request-call-sec-left pl-5">
-                <div class="title">
-                    <h2 class="text-light">Get Expert Dental Advice at Your Convenience.</h2>
+    <div class="container">
+        <div class="row text-center mt-4 mb-4">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="icons-land-4">
+                    <i class="fa-solid fa-heart-circle-check" style="color: #47b0ab;"></i>
                 </div>
-                <p class="sub-title text-light">Our dental experts are here to help you with any questions or concerns.</p>
+                <div class="counter-wrap font-weight-bold">
+                    <span class="counter fa-xl" data-start-number="0" data-end-number="10000" data-speed="900">0</span>
+                    <span class="fa-xl">+</span>
+                </div>
+                <h6>SATISFIED PATIENTS</h6>
             </div>
-            <div class="col-md-5 col-lg-5 col-sm-12 pr-5">
-                <div class=" pl-3 pr-3 pt-4 ">
-                    <form>
-                        <div class="form-group-rc d-flex">
-                            <input type="text" id="name" name="name" class="half-width" placeholder="Your Name *" required>
-
-                            <input type="tel" id="phone" name="phone" class="half-width" placeholder="Mobile No *" required>
-                        </div>
-                            <div class="form-group-rc">
-                                <input type="email" id="email" name="email" class="full-width" placeholder="Email *" required>
-                            </div>
-                            <div class="form-group-rc">
-                                <textarea id="message" name="message" class="full-width" placeholder="Brief Description of Dental Concern."
-                                    required></textarea>
-                            </div>
-                            <div class="form-group-rc">
-                                <button type="submit" class="submit-button">Request a Callback</button>
-                            </div>
-                        </form>   
-                    </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="icons-land-4">
+                    <i class="fa-solid fa-kit-medical" style="color: #47b0ab;"></i>
+                </div>
+                <div class="counter-wrap font-weight-bold">
+                    <span class="counter fa-xl" data-start-number="0" data-end-number="25" data-speed="2000">0</span>
+                    <span class="fa-xl">+</span>
+                </div>
+                <h6>HEALTH SECTIONS</h6>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="icons-land-4">
+                    <i class="fa-solid fa-file-circle-plus" style="color: #47b0ab;"></i>
+                </div>
+                <div class="counter-wrap font-weight-bold">
+                    <span class="counter fa-xl" data-start-number="0" data-end-number="100" data-speed="10000">0</span>
+                    <span class="fa-xl">+</span>
+                </div>
+                <h6>KIND OF RESEARCH</h6>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="icons-land-4">
+                    <i class="fa-solid fa-award" style="color: #47b0ab;"></i>
+                </div>
+                <div class="counter-wrap font-weight-bold">
+                    <span class="counter fa-xl" data-start-number="0" data-end-number="25" data-speed="10000">0</span>
+                    <span class="fa-xl">+</span>
+                </div>
+                <h6>AWARD WINNING</h6>
             </div>
         </div>
+    </div>
+
+
+
+
+    <!-- //request form -->
+    <div class="container-fluid" style="background-color:#47b0ab;">
+        <div class="">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-request-call-sec-left pl-5">
+                    <div class="title">
+                        <h2 class="text-light">Get Expert Dental Advice at Your Convenience.</h2>
+                    </div>
+                    <p class="sub-title text-light">Our dental experts are here to help you with any questions or
+                        concerns.</p>
+                </div>
+
+                <div class="col-md-5 col-lg-5 col-sm-12 pr-5">
+                    <div class="pl-3 pr-3 pt-4">
+                        <form>
+                            <div class="form-group-rc">
+                                <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                                <input type="tel" id="phone" name="phone" placeholder="Mobile No *" required>
+                                <button type="submit" class="submit-button">Request a Callback</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <section class="ftco-section" style="background-color: #f3f2f2;">
@@ -445,4 +494,4 @@
         </div>
 
     </section>
-@endsection
+    @endsection
