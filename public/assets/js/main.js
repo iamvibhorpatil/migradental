@@ -286,6 +286,52 @@ function topFunction() {
 
  
 
+//count number aos and js
+
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-end-number');
+                const count = +counter.innerText;
+                const speed = +counter.getAttribute('data-speed');
+
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+
+
+
+ // accordion
+ 
+
+ const accordionCards = document.querySelectorAll('.card');
+     accordionCards.forEach((card, index) => {
+         card.addEventListener('click', () => {
+             
+             const allImages = document.querySelectorAll('.image');
+             allImages.forEach(image => {
+                 image.classList.add('d-none');
+             });
+
+             const imageElement = document.getElementById(`image${index + 1}`);
+             if (imageElement) {
+                 imageElement.classList.remove('d-none');
+             }
+         });
+     });
+
+
+
 
 
 
