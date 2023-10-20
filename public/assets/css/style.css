@@ -1146,6 +1146,19 @@ fieldset:disabled a.btn {
     cursor: default;
 }
 
+
+/*header */
+.header-1-block{
+    border-right: 1px solid #47b0ab;
+    padding-block: 32px;
+    color:#47b0ab
+}
+.header-2-block{
+    border-left: 1px solid #47b0ab;
+    padding-block: 32px;
+    color:#47b0ab
+}
+
  .navbar {
     /* font-family: 'Poppins', sans-serif; */
     position: relative;
@@ -2224,58 +2237,10 @@ a {
 }
 
 
-/* .orofacial_pain-h2-shadow{
-    text-shadow: 2px 2px 4px rgba(135, 186, 228, 0.1),
-               3px 4px 4px rgba(135, 186, 228, 0.15),
-               4px 6px 4px rgba(135, 186, 228, 0.2),
-               5px 8px 4px rgba(135, 186, 228, 0.25);
-} */
+
 
 
 /* orofacial page css */
-
-/* #accordion{
-    margin:100px auto;
-    width:70%;
- }
- #accordion li {
-    list-style: none;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius:4px;
-    background:#fff;
- }
- #accordion li label{
-    padding: 10px;
-    display:flex;
-    align-items: center;
-    justify-content:space-between;
-    font-size:18px;
-    font-weight:500;
-    cursor:pointer;
- }
- #accordion li label span{
-    transform: rotate(90deg);
-    font-size:22px;
-    color:#333;
- }
-
-#accordion label + input[type="radio"]{
-    display:none;
-}
-#accordion .content{
-    padding: 0 10px;
-    line-height:26px;
-    max-height:0;
-    overflow: hidden;
-    transition:max-height 0.5s;
-}
-#accordion label + input[type="radio"]:checked + .content{
-    max-height:400px;
-} */
-
-
 
 a:hover,
 a:focus {
@@ -2589,13 +2554,13 @@ h4,
 }
 
 .hero-wrap.hero-wrap-2 {
-    height: 105px;
+    height: 70px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .hero-wrap.hero-wrap-2 .slider-text {
-    height: 100px;
+    height: 70px;
 }
 
 .hero-wrap.hero-wrap-2 .slider-text .bread {
@@ -4503,14 +4468,18 @@ background-color: #299eab;
 }
 /* navbar  */
 
-.btn-outline-info{
-    color: #1d6f7f!important;
-    outline-color:#47b0ab;
-    padding:10px 30px 10px 30px!important;
+.custom-btn {
+    background-color: #47b0ab!important; /* Button background color */
+    color: #fff!important; /* Text color */
+    border: 1px solid white!important;
+    padding: 10px 20px;
+    border-radius: 0!important;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
 }
-.btn-outline-info:hover{
-    color:#ffffff!important;
-    background-color: #47b0ab!important;
+
+.custom-btn:hover {
+    background-color: #359693!important; /* Button background color on hover */
 }
 
 
@@ -4531,6 +4500,13 @@ background-color: #299eab;
     text-decoration: none;
     font-weight: 700;
     color:#47b0ab;
+}
+#accordion .card{
+    margin-top:0!important;
+}
+.card{
+    margin-block: 14px;
+    
 }
 
 /* //accordion end*/
@@ -4563,7 +4539,7 @@ background-color: #299eab;
 
 
 .right-side-content-treatment {
-    height: 500px; 
+    height: 484px; 
 }
 
 /* treatments end*/
@@ -4668,7 +4644,7 @@ background-color: #299eab;
 /* Logo */
 
 .logo-padding{
-    padding-left:32px!important;
+    padding-left:39px!important;
 }
 .request-call-padding{
     padding-right:32px!important;
@@ -4707,13 +4683,6 @@ video:hover {
     filter: brightness(90%); 
 }
 /* video sec end*/
-
-/* accordian  */
-.card{
-    margin-block: 14px;
-    
-}
-/* accordian  end*/
 
 /* Enquiry form sec */
 

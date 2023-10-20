@@ -18,19 +18,19 @@
 
 <div class="container container-treatment mb-5">
 
-        <div class="left-side-treatment bg-white pt-5 align-self-baseline">
-        <div class="custom-images" style="height:500px; ">
-            <div class="image" id="image1"><img class="img-fluid" src="assets/images/orofacial-pain.png"></div>
-            <div class="image d-none" id="image2"><img class="img-fluid" src="assets/images/orofacial096ID.png"></div>
-            <div class="image d-none" id="image3"><img class="img-fluid" src="assets/images/orofacial107ID.png"></div>
-            <div class="image d-none" id="image4"><img class="img-fluid" src="assets/images/person_4.jpg"></div>
-            <div class="image d-none" id="image5"><img class="img-fluid" src="assets/images/person_1.jpg"></div>
-            <div class="image d-none" id="image6"><img class="img-fluid" src="assets/images/person_2.jpg"></div>
-            <div class="image d-none" id="image7"><img class="img-fluid" src="assets/images/person_3.jpg"></div>
+        <div class="left-side-treatment bg-white align-self-baseline">
+        <div class="custom-images" style="max-width-100%;max-height:484px;">
+            <div class="image" id="image1"><img src="assets/images/orofacial-pain.png"></div>
+            <div class="image d-none" id="image2"><img src="assets/images/orofacial096ID.png"></div>
+            <div class="image d-none" id="image3"><img src="assets/images/orofacial107ID.png"></div>
+            <div class="image d-none" id="image4"><img src="assets/images/person_4.jpg"></div>
+            <div class="image d-none" id="image5"><img src="assets/images/person_1.jpg"></div>
+            <div class="image d-none" id="image6"><img src="assets/images/person_2.jpg"></div>
+            <div class="image d-none" id="image7"><img src="assets/images/person_3.jpg"></div>
         </div>
         </div>
 
-        <div class="right-side-treatment pt-0 my-4">
+        <div class="right-side-treatment pt-0">
             <div class="right-side-content-treatment">
                 <div id="accordion">
 
@@ -119,46 +119,7 @@
             </div>
         </div>
 </div>
-         
-
-<div class="container-fluid mb-4" style="background-color:grey;">
-        <div class="">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-sm-12 col-request-call-sec-left pl-5">
-                    <div class="title">
-                        <h2 class="text-light">Get in Touch for More Information</h2>
-                    </div>
-                    <p class="sub-title text-light">Contact us for details about this treatment or to schedule an appointment. We're here to help!</p>
-                </div>
-
-                <div class="col-md-6 col-lg-6 col-sm-12 pr-5">
-                    <div class="pl-3 pr-3 pt-4">
-                    <form action="#">
-                        <div class="d-flex form-group justify-content-between">
-                            <div class="pr-3 w-50">
-                                <input type="text" class="form-control" placeholder="Name *" required="">
-                            </div>
-                            <div class="pr-3 w-50">
-                                <input type="tel" class="form-control" placeholder="Mobile No *" required="">
-                            </div>
-                        </div>
-                        <div class="form-group pr-3">
-                                <input type="email" class="form-control" placeholder="Email *" required="">
-                        </div>
-                        <div class="form-group pr-3">
-                            <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-group text-center">
-                            <input type="submit" class="submit-button" value="Send Message" class="btn btn-primary py-3 px-5">
-                        </div>
-                    </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
+  
            
  @endsection
  

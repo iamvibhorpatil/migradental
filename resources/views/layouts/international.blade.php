@@ -72,7 +72,43 @@
             </div>
         </div>
 </div>
+<div class="container-fluid mb-4" style="background-color:grey;">
+        <div class="">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-request-call-sec-left pl-5">
+                    <div class="title">
+                        <h2 class="text-light">Connect with Us for Global Dental Care</h2>
+                    </div>
+                    <p class="sub-title text-light">If you're an international visitor, get in touch for personalized service. We're here to assist you!</p>
+                </div>
 
+                <div class="col-md-6 col-lg-6 col-sm-12 pr-5">
+                    <div class="pl-3 pr-3 pt-4">
+                    <form action="#">
+                        <div class="d-flex form-group justify-content-between">
+                            <div class="pr-3 w-50">
+                                <input type="text" class="form-control" placeholder="Name *" required="">
+                            </div>
+                            <div class="pr-3 w-50">
+                                <input type="tel" class="form-control" placeholder="Mobile No *" required="">
+                            </div>
+                        </div>
+                        <div class="form-group pr-3">
+                                <input type="email" class="form-control" placeholder="Email *" required="">
+                        </div>
+                        <div class="form-group pr-3">
+                            <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" class="submit-button" value="Send Your Message" class="btn btn-primary py-3 px-5">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
  @endsection
  
