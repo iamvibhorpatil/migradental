@@ -143,7 +143,7 @@
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/orofacial-pain.png"> </div>
-                                <h4><a href="{{ route('orofacial_pain') }}">Orofacial Pain</a></h4>
+                                <h4><a href="">Orofacial Pain</a></h4>
                             </div>
                         </div>
                     </div>

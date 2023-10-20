@@ -61,8 +61,6 @@ Route::get('about', [HomeController::class, 'about'])->name('about');
 
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 
-Route::get('orofacial_pain', [HomeController::class, 'orofacial_pain'])->name('orofacial_pain');
-
 Route::get('laser_dentistry', [HomeController::class, 'laser_dentistry'])->name('laser_dentistry');
 
 Route::get('image', [HomeController::class, 'image'])->name('image');
@@ -71,17 +69,15 @@ Route::get('blog', [HomeController::class, 'blog'])->name('blog');
 
 Route::get('blog_info', [HomeController::class, 'blog_info'])->name('blog_info');
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-
 Route::get('logout', [DashboardController::class, 'logout']);
+
+// view tretment 
+Route::get('view_treatment', [TreatmentController::class, 'view_treatment'])->name('view_treatment');
+Route::get('get_view_treatment_id', [TreatmentController::class, 'get_view_treatment_id']);
+
+
+
+// admin routes 
 
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');

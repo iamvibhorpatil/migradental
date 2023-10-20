@@ -333,7 +333,7 @@
                  image.classList.add('d-none');
              });
 
-             const imageElement = document.getElementById(`image${index + 1}`);
+             const imageElement = document.getElementById(`image${index}`);
              if (imageElement) {
                  imageElement.classList.remove('d-none');
              }
