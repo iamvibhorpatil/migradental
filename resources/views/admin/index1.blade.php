@@ -109,7 +109,7 @@
                     <ul class="navbar-nav ps-5" id="Treatment" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{Route('patient_form')}}">
+                            <a class="nav-link " href="{{Route('adm_treatment')}}">
                                 <span class="nav-link-text ms-1">Treatment<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -117,7 +117,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{Route('detail')}}">
+                            <a class="nav-link " href="{{Route('treatment_type')}}">
                                 <span class="nav-link-text ms-1">Treatment Types<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>

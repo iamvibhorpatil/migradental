@@ -26,46 +26,45 @@
                     <div class="card">
                         <div class="mt-3 px-4">
 
-                            <form action="store_treatment" method="POST" enctype="multipart/form-data">
+                            <form action="{{ url('treatment/update/' . $treatment->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @if (session('success'))
                                 <div class="text-white alert alert-success">
                                     {{ session('success') }}
                                 </div>
                             @endif
-                            @if (session('delete'))
+                            @if (session('error'))
                                 <div class="text-white alert alert-danger">
-                                    {{ session('delete') }}
+                                    {{ session('error') }}
                                 </div>
                             @endif
                                 <div class="row input_field" style="">
 
                                     <div class="col-sm-12 col-md-12">
                                         <label for="treatment_type">Treatment Type</label>
-                                        <input type="text" class="form-control" id="treatment_type" name="treatment_type"
+                                        <input type="text" class="form-control" value="{{$treatment->treatment_type}}" id="treatment_type" name="treatment_type"
                                             required>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category">Category</label>
                                         <select class="form-select" name="category" aria-label="Default select example" required>
-                                            <option selected>Select Category</option>
-                                            <option value="Treatment">Treatment</option>
-                                            <option value="Special Treatment">Special Treatment</option>
+                                            <option value="Treatment" {{$treatment->category === 'Treatment' ? 'selected':''}}>Treatment</option>
+                                            <option value="Special Treatment"{{$treatment->category === 'Special Treatment' ? 'selected':''}}>Special Treatment</option>
                                           </select>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>
                                         <select class="form-select" name="status" aria-label="Default select example" required>
-                                            <option selected>Select Status</option>
-                                            <option value="Active">Active</option>
-                                            <option value="Deactive">Deactive</option>
+                                            <option value="Active"{{$treatment->status === 'Active' ? 'selected':''}}>Active</option>
+                                            <option value="Deactive"{{$treatment->status === 'Deactive' ? 'selected':''}}>Deactive</option>
                                           </select>
                                     </div>
                                     
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
-                                       
+                                        <a href="{{route('adm_treatment')}}" class="mx-3"><button type="button"
+                                            class="btn btn-dark mx-auto mx-md-0 text-white">Back</button></a>
                                             <button type="submit"
-                                                class="btn btn-primary mx-auto mx-md-0 text-white">Submit</button>
+                                                class="btn btn-primary mx-auto mx-md-0 text-white">Update</button>
                                         
                                     </div>
                                 </div>
@@ -78,48 +77,7 @@
             </div>
         </div>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card mb-4">
-                        <div class="card-header pb-0">
-                            <h6>Treatment List</h6>
-                        </div>
-                        <div class="card-body px-3 pt-0 pb-2 table-responsive">
-                            <table class="table" id="myTable8">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th scope="col">Sr.No</th>
-                                        <th scope="col">Category</th>
-                                        <th scope="col">Treatment Type</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $p = 1; ?>
-                                    @foreach ($treatment as $item)
-                                        <tr class="align-baseline">
-                                            <td><?php echo $p++; ?></td>
-                                            <td>{{ $item->category }}</td>
-                                            <td>{{ $item->treatment_type }}</td>
-                                            <td>{{ $item->status }}</td>
-                                            <td>
-                                                <a href="{{ url('treatment/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Treatment') "
-                                                    class="btn btn-behance badge mx-2">Edit</a>
-                                                <a href="{{ url('treatment/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Treatment') "
-                                                    class="btn btn-danger badge mx-2">Delete</a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -12,54 +12,56 @@ class TreatmentController extends Controller
      */
     public function index()
     {
-        //
+        $treatment = Treatment::latest()->get();
+
+        return view('admin.pages.adm_treatment',compact('treatment'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+    
     public function store(Request $request)
     {
-        //
+        
+       $treatment = new Treatment();
+
+       $treatment->category = $request->category;
+       $treatment->treatment_type = $request->treatment_type;
+       $treatment->status = $request->status;
+        
+       $treatment->save();
+
+       return redirect()->back()->with('success','Treatment Added Successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Treatment $treatment)
+    public function edit(Treatment $treatment,$id)
     {
-        //
-    }
+        $treatment = Treatment::find($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Treatment $treatment)
-    {
-        //
+        return view('admin.pages.update_treatment',compact('treatment'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Treatment $treatment)
+    public function update(Request $request, Treatment $treatment,$id)
     {
-        //
+        $treatment =  Treatment::find($id);
+
+        $treatment->category = $request->category;
+        $treatment->treatment_type = $request->treatment_type;
+        $treatment->status = $request->status;
+         
+        $treatment->update();
+ 
+        return redirect('/adm_treatment')->with('success','Treatment Updated Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Treatment $treatment)
+    public function destroy(Treatment $treatment,$id)
     {
-        //
+        $treatment = Treatment::find($id);
+        $treatment->delete();
+        return redirect()->back()->with('delete','Treatment Deleted Successfully');
     }
 }

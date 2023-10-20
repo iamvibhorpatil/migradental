@@ -4,6 +4,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientFormController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TreatmentController;
+use App\Http\Controllers\TreatmentTypeController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -34,12 +36,12 @@ Route::get('/optimize', function () {
 
 
 
-Route::get('/add_column', function () {
-    DB::statement('ALTER TABLE patient_forms ADD gender VARCHAR(255) AFTER country');
+// Route::get('/add_column', function () {
+//     DB::statement('ALTER TABLE treatments ADD status VARCHAR(255) AFTER treatment_type');
        
-        return 'Column added successfully.';
+//         return 'Column added successfully.';
      
-});
+// });
 
 // Home Controller
 
@@ -98,8 +100,19 @@ Route::middleware('auth')->group(function () {
     Route::post('patient_form/update/{id}', [PatientFormController::class, 'update']);
 
     //treatment 
-    Route::get('adm_treatment', [PatientFormController::class, 'index'])->name('adm_treatment');
-    
+    Route::get('adm_treatment', [TreatmentController::class, 'index'])->name('adm_treatment');  
+    Route::post('store_treatment', [TreatmentController::class, 'store']);
+    Route::get('treatment/edit/{id}', [TreatmentController::class, 'edit']);
+    Route::post('treatment/update/{id}', [TreatmentController::class, 'update']);
+    Route::get('treatment/delete/{id}', [TreatmentController::class, 'destroy']);
+
+    //treatment  type
+    Route::get('treatment_type', [TreatmentTypeController::class, 'index'])->name('treatment_type');  
+    Route::post('store_treatment_type', [TreatmentTypeController::class, 'store']);
+    Route::get('treatment_type/edit/{id}', [TreatmentTypeController::class, 'edit']);
+    Route::post('treatment_type/update/{id}', [TreatmentTypeController::class, 'update']);
+    Route::get('treatment_type/delete/{id}', [TreatmentTypeController::class, 'destroy']);
+    Route::get('get_treatment_type', [TreatmentTypeController::class, 'get_treatment_type']);
 
 
 });

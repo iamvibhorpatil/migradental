@@ -247,6 +247,8 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 d-flex justify-content-center">
+                                        <a href="{{route('patient_form')}}" class="mx-3"><button type="button"
+                                            class="btn btn-dark mx-auto mx-md-0 text-white">Back</button></a>
                                         <button type="submit"
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Update</button>
                                     </div>
