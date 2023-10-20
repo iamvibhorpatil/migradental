@@ -156,7 +156,7 @@
 
 
     <div class="container bg-light py-3 my-3">
-        <h3 class="text-center mb-4">Who We Are</h3>
+        <h3 class="text-center mb-4" id="Who_we_are">Who We Are</h3>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <p class="text-justify">Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an
@@ -187,7 +187,7 @@
 
 
     <div class="container bg-light py-3 my-3">
-        <h3 class="text-center mb-4">What We Are</h3>
+        <h3 class="text-center mb-4" id="What_we_are">What We Are</h3>
         <div class="row">
            
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">

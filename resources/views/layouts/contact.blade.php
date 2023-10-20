@@ -37,13 +37,19 @@
                                 <input type="text" class="form-control" placeholder="Name" required="">
                             </div>
                             <div class="pr-3 w-50">
-                                <label for="email" class="font-weight-normal text-uppercase">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email" required="">
+                                <label for="number" class="font-weight-normal text-uppercase">Mobile No.</label>
+                                <input type="tel" class="form-control" placeholder="Mobile No." required="">
                             </div>
                         </div>
-                        <div class="form-group pr-3">
-                            <label for="subject" class="font-weight-normal text-uppercase">Subject</label>
-                            <input type="text" class="form-control" placeholder="Subject" required="">
+                        <div class="d-flex form-group justify-content-between">
+                            <div class="pr-3 w-50">
+                                <label for="number" class="font-weight-normal text-uppercase">Whastaap No.</label>
+                                <input type="tel" class="form-control" placeholder="Whastaap No." required="">
+                            </div>
+                            <div class="pr-3 w-50">
+                                <label for="subject" class="font-weight-normal text-uppercase">Subject</label>
+                                <input type="text" class="form-control" placeholder="Subject" required="">
+                            </div>
                         </div>
                         <div class="form-group pr-3">
                             <label for="message" class="font-weight-normal text-uppercase">Message</label>

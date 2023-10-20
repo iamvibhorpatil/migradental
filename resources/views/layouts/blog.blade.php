@@ -22,10 +22,10 @@
             </div>
         </div>
     </section>
-    <div class="container-fluid">
-        <div class="row p-5">
+    <div class="container my-2">
+        <div class="row testi-img-video-blog-cmn">
             <div class="col-md-3 col-sm-12 col-lg-3">
-                <button type="button" class="btn web_bg px-5 py-2 mt-3 rounded-0 w-100 wow fadeInLeft">Button</button>
+                <button type="button" class="btn web_bg px-5 rounded-0 w-100 wow fadeInLeft">Button</button>
                 <hr class="m-0">
 
 
