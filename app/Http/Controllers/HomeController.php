@@ -30,9 +30,7 @@ class HomeController extends Controller
     public function contact(){
         return view('layouts.contact');
     }
-    public function orofacial_pain(){
-        return view('layouts.orofacial_pain');
-    }
+   
     
     public function laser_dentistry(){
         return view('layouts.laser_dentistry');

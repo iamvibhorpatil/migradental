@@ -15,7 +15,260 @@
 </section>
 
 
-<section class="ftco-section ftco-no-pt ftco-no-pb pt-4">
+    <!-- <section class="ftco-section ftco-no-pt ftco-no-pb">
+            <div class="container">
+                <div class="card mb-3" style="box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                                <div class="card-body">
+                                    <div class="pl-md-5 ml-md-5">
+                                        <h5 class="card-title"style="font-size: 32px;font-weight: 700;">What We Are?</h5>
+                                    </div>
+                                    <div class="pl-md-5 ml-md-5 mb-5"style="font-weight:600;">
+                                        <p>Welcome to Migradent! We are your trusted source for all things related to migration.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit delectus, quisquam dolore beatae quod soluta cupiditate, eum facere quidem odit quia illum repudiandae quos id!</p>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-md-5 align-self-center">
+                                <img src="assets/images/image_5.jpg" class="img-fluid rounded-start" alt="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 mt-5" style="box-shadow:0 7px 30px -10px rgba(150,170,180,0.5);">
+                   <div class="row g-0">
+                        <div class="col-md-5 align-self-center">
+                             <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="img">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <div class="pl-md-5 ml-md-5">
+                                    <h5 class="card-title"style="font-size: 32px;font-weight: 700;">Who We Are?</h5>
+                                </div>
+                                <div class="pl-md-5 ml-md-5 mb-5"style="font-weight:600;">
+                                    <p>Welcome to Migradent! We are your trusted source for all things related to migration.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit delectus, quisquam dolore beatae quod soluta cupiditate, eum facere quidem odit quia illum repudiandae quos id!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb pt-4">
+        <div class="container">
+            <div class="card mb-3 shadow-lg animated fadeInLeft ">
+                <div class="row g-0">
+                    <div class="col-md-7">
+                        <div class="card-body what-who-sec">
+                            <div class="text-center mb-4">
+                                <h5 class="card-title" style="font-size: 32px; font-weight: 700;">What We Are?</h5>
+                            </div>
+                            <div class="pl-md-5 ml-md-5 mb-5">
+                                <p>At the core of our mission is a profound dedication to improving lives and fostering
+                                    healthier
+                                    communities. Dr. Sarrah Husain is not only a skilled dental practitioner but also a
+                                    compassionate advocate for those who suffer from debilitating conditions. Here's a
+                                    glimpse
+                                    of who we are and what we stand for:
+                                </p>
+                                <!-- <p>We are committed to providing top-notch dental care and improving your oral health.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 d-flex">
+                        <img src="assets/images/image_5.jpg" class="img-fluid rounded-start" alt="Our Services" />
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 mt-5 shadow-lg animated fadeInRight">
+                <div class="row g-0">
+                    <div class="col-md-5 d-flex">
+                        <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="Our Team" />
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body what-who-sec">
+                            <div class="text-center mb-4">
+                                <h5 class="card-title" style="font-size: 32px; font-weight: 700;">Who We Are?</h5>
+                            </div>
+                            <div class="pl-md-5 ml-md-5 mb-5">
+                                <p>Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an
+                                    unwavering
+                                    commitment to excellence in patient care and professional growth. With 17 years of
+                                    dedicated practice as a conservative dentist, she has recently taken a significant
+                                    leap in her
+                                    career by pursuing a specialized Orofacial Pain Fellowship.
+                                </p>
+                                <!-- <p>Education and Specialization:
+                                    Dr. Sarrah Husain has dedicated herself to advancing her expertise and knowledge in the fiel
+                                    d of dentistry. Her recent accomplishment includes completing an Orofacial Pain Fellowship,
+                                    Temporomandibular Disorder, and Dental Sleep Medicine program at Roseman University,
+                                    Smile-USA. This prestigious program has equipped her with the skills and insights necessary
+                                    to address complex orofacial pain and sleep-related dental issues.
+                                    A Pioneer in Nagpur and India:
+                                    Dr. Husain's achievement is a source of immense pride and accomplishment for the dental
+                                    community in Nagpur, as she stands as the first professional in the region to pursue this
+                                    super-specialization. Her trailblazing efforts have also positioned her among the select few in
+                                    India who have taken this advanced route in the field of Orofacial Pain and Dental Sleep
+                                    Medicine</p> -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-services">
+        <div class="shadow bg-light pb-5 mr-5 ml-5" style="border-radius:50px;">
+            <div class="container">
+                <div class="text-center my-3">
+                    <h1>Our Clinic Services</h1>
+                </div>
+
+                <div class="row services-row">
+                    <div class=" col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/orofacial-pain.png"> </div>
+                                <h4><a href="">Orofacial Pain</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/migrane-tmj.png"> </div>
+                                <h4>Migraine & TMJ</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
+                                <h4>TMD</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png">
+                                </div>
+                                <h4>Dental Sleep Medicine</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
+                                <h4>Headaches</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png">
+                                </div>
+                                <h4>Dental Surgeries with laser</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
+                                <h4>Child Care Dentistry</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/full-mouth-rehabilation.png">
+                                </div>
+                                <h4>Full Mouth Rehabilation</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 col-xl-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/veneers-laminates.png"> </div>
+                                <h4>Veneers & Laminates</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/smile-design.png"> </div>
+                                <h4>Smile Designing</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/dental-implant.png"> </div>
+                                <h4>Dental Implants</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/laser-teeth-whitening.png">
+                                </div>
+                                <h4>Laser Teeth Whitening</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png">
+                                </div>
+                                <h4>Root Canal</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png">
+                                </div>
+                                <h4>Root Canal Treatment with Laser</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-xl-3 py-3">
+                        <div class="our-services-box">
+                            <div class="our-services speedup">
+                                <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
+                                <h4>Orthodontics & Aligners</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- why choose us -->
+
     <div class="container">
         <div class="card mb-3 shadow-lg animated fadeInLeft ">
             <div class="row g-0">
