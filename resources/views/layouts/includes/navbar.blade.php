@@ -1,33 +1,3 @@
-<!-- <div class="container-fluid" style="background-color:#fff;">
-    <div class="row">
-        <div class="col-md-3 ps-0 ps-lg-2 ps-md-2 text-center"> <a class="navbar-brand py-0"
-            href="{{ route('/') }}">
-            <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" style="max-width: 180px;">
-            </a>
-        </div>
-
-        <div class="col-md-6 align-self-center text-center" style="color: #47b0ab;">
-            <a href="#" target="_blank" class="text-decoration-none px-3 header-2-block" style="border-left: 1px solid rgba(250,250,250,0.3);padding: 10px 20px;color:#47b0ab">
-              <i class="fa fa-phone px-1"></i>Call:+91 0000444400
-            </a>
-            <a href=" #" class=" text-decoration-none px-3" style="border-left: 1px solid rgba(250,250,250,0.3);padding: 10px 20px;border-right: 1px solid rgba(250,250,250,0.3);color:#47b0ab">
-              <i class="fa-brands fa-whatsapp px-1"></i>Whatsaap No. : xxx-xx-xx-xxx
-            </a>
-        </div>
-        <div class="col-md-3 end-sec-icon align-self-center">
-            <a href="#" class="text-decoration-none px-2 pr-2 header-1-block header-2-block">
-               <i class="fa-brands fa-facebook-f" style="color:#47b0ab"></i></a>
-            <a href=" #" class="text-decoration-none px-2 header-1-block">
-              <i class="fa-brands fa-twitter" style="color:#47b0ab"></i></a>
-            <a href="#" class="text-decoration-none px-2 header-1-block">
-              <i class="fa-brands fa-linkedin" style="color:#47b0ab"></i></a>
-            <a href="#" class="text-decoration-none px-2 header-1-block">
-              <i class="fa-brands fa-instagram" style="color:#47b0ab"></i></a>
-            <a href="#" class="text-decoration-none px-2 header-1-block">
-              <i class="fa-brands fa-youtube" style="color:#47b0ab"></i></a>
-        </div>
-    </div>
-</div> -->
 
 <div class="container-fluid" style="background-color: #fff;">
     <div class="row align-items-center">
