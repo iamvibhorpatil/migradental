@@ -59,7 +59,7 @@
         <div class="col-md">
             <div class="ftco-footer-widget mb-5">
                     <h2 class="ftco-heading-2">Location</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119064.9002760463!2d78.99010801661113!3d21.16122599688192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1696572067195!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.8869983294258!2d79.1040910747995!3d21.156894883366142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0cd9e822dc9%3A0x9629aed98fbc52e!2sManorama%20Tower!5e0!3m2!1sen!2sin!4v1698036663396!5m2!1sen!2sin" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div> 
         </div>

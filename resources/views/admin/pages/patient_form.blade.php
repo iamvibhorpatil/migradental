@@ -39,116 +39,119 @@
                                         value="{{ now()->setTimezone('Asia/Kolkata')->format('Y-m-d') }}">
                                 </div>
                                 <div class="row input_field" style="">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-4">
+                                            <label for="patient_name">Name:</label>
+                                            <input type="text" class="form-control" id="patient_name" name="patient_name"required>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
                                         <label for="patient_number">Patient Number:</label>
-                                        <input type="number" class="form-control" id="patient_number" name="patient_number"
-                                            required>
+                                        <input type="number" class="form-control" id="patient_number" name="patient_number"required>
                                     </div>
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-4">
                                         <label for="family_card_number">Family Card Number:</label>
-                                        <input type="number" class="form-control" id="family_card_number"
-                                            name="family_card_number" required>
+                                        <input type="number" class="form-control" id="family_card_number" name="family_card_number" required>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row input_field" style="">
+                                    <div class="col-sm-12 col-md-4">
+                                        <label for="aadhar_no">Aadhar Card:</label>
+                                        <input type="text" class="form-control" id="aadhar_no" name="aadhar_no" required>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                            <label for="mobile_no">Mobile Number:</label>
+                                            <input type="tel" class="form-control" id="mobile_no" name="mobile_no" required>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                            <label for="email_id">Email ID:</label>
+                                            <input type="email" class="form-control" id="email_id" name="email_id" required>
                                     </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="patient_name">Name:</label>
-                                    <input type="text" class="form-control" id="patient_name" name="patient_name"
-                                        required>
-                                </div>
-
 
                                 <div class="row" style="">
                                     <div class="col-sm-12 col-md-6">
+                                        <label for="profession">Profession:</label>
+                                        <input type="text" class="form-control" id="profession" name="profession" required>
+                                    </div>
+                                    <div class="col-sm-12 col-md-3">
                                         <label for="dob">Date of Birth:</label>
                                         <input type="date" class="form-control" id="dob" name="dob"
                                             oninput="calculateAge()" required>
                                     </div>
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-3">
                                         <label for="age">Age:</label>
                                         <input type="number" class="form-control" id="age" name="age"
                                             oninput="calculateDOB()" required>
                                     </div>
                                 </div>
-
-
-
-                                <div class="form-group">
-                                    <label for="mobile_no">Mobile Number:</label>
-                                    <input type="tel" class="form-control" id="mobile_no" name="mobile_no" required>
+                                <div class="row" style="">
+                                    <div class="col-sm-12 col-md-4">
+                                       <div class="form-group">
+                                            <label for="city">City:</label>
+                                            <input type="text" class="form-control" id="city" name="city" value="Nagpur"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="form-group">
+                                            <label for="state">State:</label>
+                                            <input type="text" class="form-control" id="state" name="state"
+                                                value="Maharashtra" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="form-group">
+                                            <label for="country">Country:</label>
+                                            <input type="text" class="form-control" id="country" name="country"
+                                            value="India" required>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="email_id">Email ID:</label>
-                                    <input type="email" class="form-control" id="email_id" name="email_id" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="aadhar_no">Aadhar Card:</label>
-                                    <input type="text" class="form-control" id="aadhar_no" name="aadhar_no" required>
-                                </div>
+
                                 <div class="form-group">
                                     <label for="address">Address:</label>
                                     <textarea id="address" class="form-control" name="address" required></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="profession">Profession:</label>
-                                    <input type="text" class="form-control" id="profession" name="profession" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="city">City:</label>
-                                    <input type="text" class="form-control" id="city" name="city" value="Nagpur"
-                                        required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="state">State:</label>
-                                    <input type="text" class="form-control" id="state" name="state"
-                                        value="Maharashtra" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="country">Country:</label>
-                                    <input type="text" class="form-control" id="country" name="country"
-                                        value="India" required>
-                                </div>
 
-                                <div>
+                                <div class="d-flex">
                                     <label>Gender</label>
-                                    <div class="form-check">
+                                    <div class="form-check ps-5">
                                         <input class="form-check-input" type="radio" name="gender"
                                             id="flexRadioDefaultMale" value="Male">
                                         <label class="form-check-label" for="flexRadioDefaultMale">Male</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check ps-5">
                                         <input class="form-check-input" type="radio" name="gender"
                                             id="flexRadioDefaultFemale" value="Female">
                                         <label class="form-check-label" for="flexRadioDefaultFemale">Female</label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check ps-5">
                                         <input class="form-check-input" type="radio" name="gender"
                                             id="flexRadioDefaultOther" value="Other">
                                         <label class="form-check-label" for="flexRadioDefaultOther">Other</label>
                                     </div>
                                 </div>
 
-                                <h4>Guardian for Reference if:Minor/ Old Age / spouse</h4>
+                                <h4>Guardian For Reference If : Minor/ Old Age / Spouse</h4>
 
-                                <div class="form-group">
-                                    <label for="guardian_name">Name:</label>
-                                    <input type="text" class="form-control" id="guardian_name" name="guardian_name"
-                                        required>
-                                </div>
-                                <div class="row" style="">
-                                    <div class="col-sm-12 col-md-6">
+                                
+                                <div class="row input_field" style="">
+                                    <div class="col-sm-12 col-md-4">
+                                        <label for="guardian_name">Name:</label>
+                                        <input type="text" class="form-control" id="guardian_name" name="guardian_name" required>
+                                    </div>      
+
+                                    <div class="col-sm-12 col-md-4">
                                         <label for="guardian_no">Mobile Number:</label>
-                                        <input type="tel" class="form-control" id="guardian_no" name="guardian_no"
-                                            required>
+                                        <input type="tel" class="form-control" id="guardian_no" name="guardian_no" required>
                                     </div>
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-4">
                                         <label for="guardian_city">City:</label>
-                                        <input type="text" class="form-control" value="Nagpur" id="guardian_city"
-                                            name="guardian_city" required>
+                                        <input type="text" class="form-control" value="Nagpur" id="guardian_city" name="guardian_city" required>
                                     </div>
                                 </div>
                                 <div class="my-3">
-                                    <label for="referred_by" class="pe-4">Referred by:</label>
+                                    <label for="referred_by" class="pe-4">Referred By:</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="referred_by" id="doctor"
                                             value="Doctor">
@@ -180,14 +183,17 @@
                                         <label class="form-check-label" for="print_media">Print Media</label>
                                     </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="referred_name">Name:</label>
-                                    <input type="text" id="referred_name" name="referred_name" required>
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="referred_name">Name:</label>
+                                        <input type="text" id="referred_name" class="form-control" name="referred_name" required>
+                                    </div>
                                 </div>
-
+                                <div class="col-md-8">
                                 <div class="my-2">
-                                    <label for="time" class="pe-4">Your Preffered Time Of treatment :</label>
+                                    <label for="time" class="pe-4">Your Preffered Time Of Treatment :</label>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="time"
                                             id="inlineCheckbox1" value="8am to 10 am">
@@ -209,19 +215,34 @@
                                         <label class="form-check-label" for="radio">5pm to 8pm</label>
                                     </div>
                                 </div>
-                                <div>
-                                    <label>Do you prefer appointment on sunday</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="appointment_sunday"
-                                            id="flexRadioDefault1" value="Yes">
-                                        <label class="form-check-label" for="flexRadioDefault1">Yes</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="appointment_sunday"
-                                            id="flexRadioDefault2" value="No" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">No</label>
-                                    </div>
                                 </div>
+                            </div>    
+                               
+
+                                
+
+
+
+
+                                    <div class="row input_field" style="">
+                                        <div class="col-sm-12 col-md-6 d-flex">
+                                            <label>Do You Prefer Appointment On Sunday</label>
+                                            <div class="form-check ps-5">
+                                                <input class="form-check-input" type="radio" name="appointment_sunday"
+                                                    id="flexRadioDefault1" value="Yes">
+                                                <label class="form-check-label" for="flexRadioDefault1">Yes</label>
+                                            </div>
+                                            <div class="form-check ps-5">
+                                                <input class="form-check-input" type="radio" name="appointment_sunday"
+                                                    id="flexRadioDefault2" value="No" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">No</label>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+
+
                                 <div class="form-group">
                                     <div class="col-sm-12 d-flex justify-content-center">
                                         <button type="submit"

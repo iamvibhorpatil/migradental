@@ -314,37 +314,6 @@
                 </div>
             </div>
 
-<<<<<<< HEAD
-            <div class="row services-row">
-                <div class=" col-sm-12 col-md-3 col-xl-3 py-3">
-                    <div class="our-services-box">
-                        <div class="our-services speedup">
-                            <div class="icon"> <img src="assets/images/services-img/orofacial-pain.png"> </div>
-                            <h4><a href="#">Orofacial Pain</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-xl-3 py-3">
-                    <div class="our-services-box">
-                        <div class="our-services speedup">
-                            <div class="icon"> <img src="assets/images/services-img/migrane-tmj.png"> </div>
-                            <h4>Migraine & TMJ</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-xl-3 py-3">
-                    <div class="our-services-box">
-                        <div class="our-services speedup">
-                            <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
-                            <h4>TMD</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-xl-3 py-3">
-                    <div class="our-services-box">
-                        <div class="our-services speedup">
-                            <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png">
-=======
             <div class="row text-center">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="card">
@@ -352,7 +321,6 @@
                             <div class="d-flex justify-content-center mb-4">
                                 <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
                                     class="rounded-circle shadow-1-strong" width="100" height="100" />
->>>>>>> 1ad9b7907d33c3796e3a98ccd09a5cb7275cc10a
                             </div>
                             <h5 class="font-weight-bold">Teresa May</h5>
                             <h6 class="font-weight-bold my-3">Founder at ET Company</h6>
