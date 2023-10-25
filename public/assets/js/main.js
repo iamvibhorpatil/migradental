@@ -341,6 +341,57 @@
      });
 
 
+// JavaScript to rotate images every 5 seconds
+    var currentImageIndex = 0;
+
+    function changeImages() {
+        var images = document.querySelectorAll('.custom-images .image');
+        images[currentImageIndex].classList.add('d-none');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.remove('d-none');
+    }
+    setInterval(changeImages, 5000);
+
+
+//blog_info page
+
+    $(document).ready(function() {
+        var images = [];
+        var currentIndex = 0;
+
+        // Collect all image sources
+        $('.gallery-item a').each(function() {
+            images.push($(this).data('image'));
+        });
+
+        // Show modal and set initial image
+        $('#teamModal').on('show.bs.modal', function(event) {
+            currentIndex = images.indexOf($(event.relatedTarget).data('image'));
+            showImage(currentIndex);
+        });
+
+        // Show previous image
+        $('#prevBtn').click(function() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        });
+
+        // Show next image
+        $('#nextBtn').click(function() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        });
+
+        // Function to display image
+        function showImage(index) {
+            var imageSource = images[index];
+            $('#teamModal .modal-body img').attr('src', imageSource);
+        }
+    });
+
+        CKEDITOR.replace('description');
+ 
+
 
 
 

@@ -1,280 +1,167 @@
 @extends('layouts.includes.main')
 @section('content')
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/cmn-bg.jpg');background-size: cover;"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
-                    <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Blogs </h2>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 ftco-animate">
-                    <h2 class="mb-3">#2. Creative WordPress Themes</h2>
-                    <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
-                        Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error
-                        dolore voluptas, omnis molestias odio
-                        dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis
-                        incidunt hic non? Debitis commodi aut, adipisci.</p>
-                    <p>
-                        <img src="images/image_2.jpg" alt class="img-fluid">
-                    </p>
-                    <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
-                        est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
-                        consectetur suscipit veritatis nulla
-                        quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste
-                        enim veniam, modi rem maiores.</p>
-                    <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem
-                        pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo
-                        soluta commodi libero voluptatem similique
-                        id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia
-                        laboriosam harum excepturi ea.</p>
-                    <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique
-                        asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates
-                        beatae iure nemo itaque laborum.
-                        Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae
-                        numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-                    <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo
-                        a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis
-                        alias laborum sint dolore. Dolores,
-                        iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum
-                        voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
-                    <div class="tag-widget post-tag-container mb-5 mt-5">
-                        <div class="tagcloud">
-                            <a href="#" class="tag-cloud-link">Life</a>
-                            <a href="#" class="tag-cloud-link">Sport</a>
-                            <a href="#" class="tag-cloud-link">Tech</a>
-                            <a href="#" class="tag-cloud-link">Travel</a>
-                        </div>
-                    </div>
-                    <div class="about-author d-flex p-4 bg-light">
-                        <div class="bio mr-5">
-                            <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
-                        </div>
-                        <div class="desc">
-                            <h3>George Washington</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem
-                                necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente
-                                consectetur similique, inventore eos fugit cupiditate
-                                numquam!</p>
-                        </div>
-                    </div>
-                    <div class="pt-5 mt-5">
-                        <h3 class="mb-5 h4 font-weight-bold">6 Comments</h3>
-                        <ul class="comment-list">
-                            <li class="comment">
-                                <div class="vcard bio">
-                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                    <h3>John Doe</h3>
-                                    <div class="meta mb-2">January 03, 2019 at 2:21pm</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                                        necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente
-                                        iste iure! Quam voluptas earum impedit necessitatibus,
-                                        nihil?</p>
-                                    <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                            </li>
-                            <li class="comment">
-                                <div class="vcard bio">
-                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                    <h3>John Doe</h3>
-                                    <div class="meta mb-2">January 03, 2019 at 2:21pm</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                                        necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente
-                                        iste iure! Quam voluptas earum impedit necessitatibus,
-                                        nihil?</p>
-                                    <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                                <ul class="children">
-                                    <li class="comment">
-                                        <div class="vcard bio">
-                                            <img src="images/person_1.jpg" alt="Image placeholder">
-                                        </div>
-                                        <div class="comment-body">
-                                            <h3>John Doe</h3>
-                                            <div class="meta mb-2">January 03, 2019 at 2:21pm</div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem
-                                                laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe
-                                                enim sapiente iste iure! Quam voluptas earum impedit necessitatibus,
-                                                nihil?</p>
-                                            <p><a href="#" class="reply">Reply</a></p>
-                                        </div>
-                                        <ul class="children">
-                                            <li class="comment">
-                                                <div class="vcard bio">
-                                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <h3>John Doe</h3>
-                                                    <div class="meta mb-2">January 03, 2019 at 2:21pm</div>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-                                                        quidem laborum necessitatibus, ipsam impedit vitae autem, eum
-                                                        officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum
-                                                        impedit
-                                                        necessitatibus, nihil?</p>
-                                                    <p><a href="#" class="reply">Reply</a></p>
-                                                </div>
-                                                <ul class="children">
-                                                    <li class="comment">
-                                                        <div class="vcard bio">
-                                                            <img src="images/person_1.jpg" alt="Image placeholder">
-                                                        </div>
-                                                        <div class="comment-body">
-                                                            <h3>John Doe</h3>
-                                                            <div class="meta mb-2">January 03, 2019 at 2:21pm</div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                                Pariatur quidem laborum necessitatibus, ipsam impedit vitae
-                                                                autem, eum officia, fugiat saepe enim sapiente iste iure!
-                                                                Quam voluptas earum
-                                                                impedit necessitatibus, nihil?</p>
-                                                            <p><a href="#" class="reply">Reply</a></p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="comment">
-                                <div class="vcard bio">
-                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                    <h3>John Doe</h3>
-                                    <div class="meta mb-2">January 03, 2019 at 2:21pm</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
-                                        necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente
-                                        iste iure! Quam voluptas earum impedit necessitatibus,
-                                        nihil?</p>
-                                    <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                            </li>
-                        </ul>
+   
 
-                        <div class="comment-form-wrap pt-5">
-                            <h3 class="mb-5 h4 font-weight-bold">Leave a comment</h3>
-                            <form action="#" class="p-5 bg-light">
-                                <div class="form-group">
-                                    <label for="name">Name *</label>
-                                    <input type="text" class="form-control" id="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="website">Website</label>
-                                    <input type="url" class="form-control" id="website">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea name id="message" cols="30" rows="10" class="form-control"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
-                                </div>
-                            </form>
+<div class="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-3 widget-area">
+                <aside class="widget post-widget">
+                    <h3 class="widget-title">Latest Blog</h3>
+                    <ul class="widget-post ttm-recent-post-list">
+                        <li>
+                            <a href=''>
+                                <img src='assets/images/doc-5.jpg' alt='post-img'>
+                            </a>
+                            <span class='post-date'><i class='fa fa-calendar'></i>$date</span>
+                            <a href=''>$title2</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <aside class="widget widget_media_image">
+                    <div class="banner-img-box ttm-textcolor-white text-left">
+                        <div class="featured-content featured-content-banner">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <div class="featured-title ttm-box-title">
+                                <h5 style="color: white!important;">How Can We Help?</h5>
+                            </div>
+                            <div class="featured-desc">
+                                <p>If you need any help, please<br> feel free to contact us.</p>
+                            </div>
+                            <ul>
+                                <li><i class="fa fa-phone"></i>+1234567890</li>
+                                <li><i class="fa fa-envelope-o"></i><a
+                                        href="mailto:info@example.com">info@example.com</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 sidebar ftco-animate">
-                    <div class="sidebar-box">
-                        <form action="#" class="search-form">
-                            <div class="form-group">
-                                <span class="icon icon-search"></span>
-                                <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="sidebar-box ftco-animate">
-                        <h3>Category</h3>
-                        <ul class="categories">
-                            <li><a href="#">Neurology <span>(6)</span></a></li>
-                            <li><a href="#">Cardiology <span>(8)</span></a></li>
-                            <li><a href="#">Surgery <span>(2)</span></a></li>
-                            <li><a href="#">Dental <span>(2)</span></a></li>
-                            <li><a href="#">Ophthalmology <span>(2)</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="sidebar-box ftco-animate">
-                        <h3>Popular Articles</h3>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about
-                                        the blind texts</a></h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct. 04, 2018</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Dave Lewis</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
+                </aside>
+                <aside class="widget widget widget_media_gallery">
+                    <h3 class="widget-title">Photo Gallery</h3>
+                    <div>
+                        <div class='gallery-item'>
+                            <a href='' target='_blank' data-toggle='modal' data-target='#teamModal' data-image=''>
+                                <img class='img-fluid' src='assets/images/doc-5.jpg' alt='image'
+                                    style='height: 92.25px!important;width: 91.99px!important;'>
+                            </a>
                         </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about
-                                        the blind texts</a></h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct. 04, 2018</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Dave Lewis</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about
-                                        the blind texts</a></h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct. 04, 2018</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Dave Lewis</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel">
+                        <div class="modal-dialog modal-lg" role="document" style="margin-top: 7vw;">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <i class="fa-chevron-left fas fs-60" id="prevBtn"></i>
+                                    <img class=" px-5" src="" alt="image" width='600'
+                                        height='460'>
+                                    <i class="fa-chevron-right fas fs-60" id="nextBtn"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="sidebar-box ftco-animate">
-                        <h3>Tag Cloud</h3>
-                        <ul class="tagcloud m-0 p-0">
-                            <a href="#" class="tag-cloud-link">Medical</a>
-                            <a href="#" class="tag-cloud-link">Hospital</a>
-                            <a href="#" class="tag-cloud-link">Nurse</a>
-                            <a href="#" class="tag-cloud-link">Doctor</a>
-                            <a href="#" class="tag-cloud-link">Medicine</a>
-                            <a href="#" class="tag-cloud-link">Facilities</a>
-                            <a href="#" class="tag-cloud-link">Staff</a>
-                        </ul>
-                    </div>
-                    <div class="sidebar-box ftco-animate">
-                        <h3>Archives</h3>
-                        <ul class="categories">
-                            <li><a href="#">December 2018 <span>(30)</span></a></li>
-                            <li><a href="#">Novemmber 2018 <span>(20)</span></a></li>
-                            <li><a href="#">September 2018 <span>(6)</span></a></li>
-                            <li><a href="#">August 2018 <span>(8)</span></a></li>
-                        </ul>
-                    </div>
-                    <div class="sidebar-box ftco-animate">
-                        <h3>Paragraph</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus
-                            voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur
-                            similique, inventore eos fugit cupiditate numquam!</p>
-                    </div>
-                </div>
+                </aside>
             </div>
-        </div>
-    </section>
-@endsection
+
+            <div class="col-lg-9 content-area">
+                <article class="post ttm-blog-single clearfix">
+                    <!-- post-featured-wrapper -->
+                    <div class='ttm-post-featured-wrapper'>
+                        <div class='ttm-post-featured'>
+                            <img class='img-fluid' src='assets/images/doc-5.jpg' alt='blog-post'
+                                style='width: 100%;height: 500px;'>
+                        </div>
+                    </div>
+                    <div class='ttm-blog-single-content'>
+                        <div class='entry-content'>
+                            <div class='ttm-post-entry-header pt-20 pb-15'>
+                                <div class='post-meta'>
+                                    <span class='ttm-meta-line entry-date'>
+                                        <i class='fa fa-calendar'></i>
+                                        <time class='entry-date published'>$date</time>
+                                    </span>
+                                </div>
+                            </div>
+                            <p id='display'>$description</p>
+                            <!-- separator -->
+                            <div class="separator">
+                                <div class="sep-line mt-25 mb-25"></div>
+                            </div>
+                            <div class="ttm-blog-classic-box-comment">
+                                <div id="comments" class="comments-area">
+                                    <h2 class="comments-title">Comments</h2>
+                                    <!-- <ul class="comment-list">
+                                        <li>
+                                            <div class='comment-body'>
+                                                <div class='comment-author vcard'>
+                                                    <img src='assets/images/doc-5.jpg' class='avatar'
+                                                        alt='comment-img'>
+                                                </div>
+                                                <div class='comment-box'>
+                                                    <div class='comment-meta commentmetadata'>
+                                                        <cite class='ttm-comment-owner'>$comment_name</cite>
+                                                        <a>$date</a>
+                                                    </div>
+                                                    <div class='author-content-wrap'>
+                                                        <p>$fetch_comment</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul> -->
+                                    <!-- separator -->
+                                    <div class="separator">
+                                        <div class="sep-line mt-25 mb-25"></div>
+                                    </div>
+
+                                    <div class="comment-respond">
+                                        <h3 class="comment-reply-title">Leave a Comment</h3>
+                                        <p class="comment-notes">Your email address will not be published. </p>
+                                        <form method="post" id="ttm-comment-form" class="row comment-form clearfix">
+                                            <div class="col-sm-12 col-md-12">
+                                                <div class="form-group">
+                                                    <textarea name="comment" rows="5" placeholder="Comments"
+                                                        required="required" class="form-control with-border"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input name="name" type="text" class="form-control with-border"
+                                                        placeholder="Name (required)" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input name="email" type="text" placeholder="Email (required)"
+                                                        required="required" class="form-control with-border">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input name="website" type="text" placeholder="Website"
+                                                        required="required" class="form-control with-border">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group text-left mt-30">
+                                                    <button type="submit" name="submit" id="submit"
+                                                        class="ttm-btn ttm-btn-size-md ttm-btn-color-darkgrey ttm-btn-style-border"
+                                                        value="">
+                                                        Post Comment
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                 
+        </div><!-- row end -->
+    </div>
+</div>
+ @endsection

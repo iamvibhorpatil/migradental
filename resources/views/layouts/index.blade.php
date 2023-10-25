@@ -2,20 +2,17 @@
 
 
 @section('content')
-    <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image:url(assets/images/slider-img-1.webp);"
-            data-stellar-background-ratio="0.5">
-            <!-- <div class="overlay"></div> -->
-        </div>
-        <div class="slider-item" style="background-image:url(assets/images/slider-img-2.webp);"
-            data-stellar-background-ratio="0.5">
-            <!-- <div class="overlay"></div> -->
-        </div>
-    </section>
+<section class="home-slider owl-carousel">
+<div class="slider-item" style="background-image:url(assets/images/slider-img-1.webp);"
+    data-stellar-background-ratio="0.5"> <!-- <div class="overlay"></div> --> </div> <div class="slider-item"
+    style="background-image:url(assets/images/slider-img-2.webp);" data-stellar-background-ratio="0.5">
+    <!-- <div class="overlay"></div> -->
+</div>
+</section>
 
 
 
-    <!-- why choose us -->
+<!-- why choose us -->
 
     <div class="container">
         <div class="card mb-3 shadow-lg animated fadeInLeft ">
@@ -275,30 +272,27 @@
 
     <!-- //request form -->
     <div class="container-fluid rounded-pill" style="background-color:#47b0ab;">
-        <div class="">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-sm-12 col-request-call-sec-left pl-5">
-                    <div class="title">
-                        <h2 class="text-light">Get Expert Dental Advice at Your Convenience.</h2>
-                    </div>
-                    <p class="sub-title text-light">Our dental experts are here to help you with any questions or
-                        concerns.</p>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-request-call-sec-left pl-5">
+                <div class="title">
+                    <h2 class="text-light">Get Expert Dental Advice at Your Convenience.</h2>
                 </div>
+                <p class="sub-title text-light">Our dental experts are here to help you with any questions or
+                    concerns.</p>
+            </div>
 
-                <div class="col-md-6 col-lg-6 col-sm-12 pr-5">
-                    <div class="pl-3 pr-3 pt-4">
-                        <form>
-                            <div class="form-group-rc">
-                                <input type="text" id="name" name="name" placeholder="Your Name *" required>
-                                <input type="tel" id="phone" name="phone" placeholder="Mobile No *" required>
-                                <button type="submit" class="submit-button">Request a Callback</button>
-                            </div>
-                        </form>
-                    </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 pr-5">
+                <div class="pl-3 pr-3 pt-4">
+                    <form>
+                        <div class="form-group-rc">
+                            <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Mobile No *" required>
+                            <button type="submit" class="submit-button">Request a Callback</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <section class="ftco-section" style="background-color: #f3f2f2;">
@@ -441,4 +435,4 @@
         </div>
 
     </section>
-@endsection
+    @endsection

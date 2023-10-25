@@ -18,11 +18,11 @@
         <div class="col-md-6 col-12 text-center" style="color: #47b0ab;">
             <a href="#" target="_blank" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; color: #47b0ab;">
-                <i class="fa fa-phone px-1"></i>Call: +91 0000444400
+                <i class="fa fa-phone px-1 fa-2xl"></i>Call: +91 0000444400
             </a>
             <a href="#" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; border-right: 1px solid rgba(250, 250, 250, 0.3); color: #47b0ab;">
-                <i class="fa-brands fa-whatsapp px-1"></i>Whatsapp No.: xxx-xx-xx-xxx
+                <i class="fa-brands fa-whatsapp px-1 fa-2xl"></i>Whatsapp No.: xxx-xx-xx-xxx
             </a>
         </div>
 
