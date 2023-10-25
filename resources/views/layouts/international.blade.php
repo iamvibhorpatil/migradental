@@ -19,53 +19,34 @@
 <div class="container container-treatment my-2">
 
         <div class="left-side-treatment bg-white align-self-baseline">
-            
-            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="assets/images/orofacial048ID.png" class="d-block w-100" alt="img">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="assets/images/orofacial096ID.png" class="d-block w-100" alt="img">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="assets/images/orofacial107ID.png" class="d-block w-100" alt="img">
-                    </div>
-                </div>
+            <div class="custom-images" style="max-width-100%;max-height:484px;">
+                @foreach ($international_client as $key => $item)
+                    <div class="image {{ $key === 0 ? '' : 'd-none' }}" id="image{{ $key }}"><img
+                            src="{{ url('assets/uploads/' . $item->image) }}"></div>
+                @endforeach
             </div>
         </div>
 
         <div class="right-side-treatment pt-0">
             <div class="right-side-content-treatment">
                 <div id="accordion">
-
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="card-link accordion-title" data-toggle="collapse" href="#collapseOne">
-                            What is lorem?
-                            </a>
-                        </div>
-                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                            <div class="card-body">
-                                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate 
-                                the visual form of a document or a typeface without relying on meaningful content. 
+                    @foreach ($international_client as $key => $item)
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="{{ $key === 0 ? '' : 'collapsed' }} card-link accordion-title" data-toggle="collapse"
+                                    href="#collapse{{ $key }}">
+                                    {{ $item->question }}
+                                </a>
+                            </div>
+                            <div id="collapse{{ $key }}" class="collapse  {{ $key === 0 ? 'show' : '' }}"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    {{ $item->answer }}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseTwo">
-                            Why is lorem?
-                            </a>
-                        </div>
-                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate
-                                the visual form of a document or a typeface without relying on meaningful content. 
-                            </div>
-                        </div>
-                    </div>
 
 
                 </div>

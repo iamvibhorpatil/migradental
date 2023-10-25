@@ -1,76 +1,109 @@
 @extends('layouts.includes.main')
 @section('content')
-<!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg-common-img-slider.jpg');" data-stellar-background-ratio="0.5">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row no-gutters slider-text align-items-center justify-content-center">
-                        <div class="col-md-9 ftco-animate text-center">
-                            <h1 class="mb-2 bread">International Client</h1>
-                            
-                        </div>
-                    </div>
+    <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg-common-img-slider.jpg');" data-stellar-background-ratio="0.5">
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="row no-gutters slider-text align-items-center justify-content-center">
+                                    <div class="col-md-9 ftco-animate text-center">
+                                        <h1 class="mb-2 bread">International Client</h1>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </section> -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/cmn-bg.jpg');background-size: cover;"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Videos </h2>
                 </div>
-            </section> -->
-<section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/cmn-bg.jpg');background-size: cover;"
-    data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
+            </div>
+        </div>
+    </section>
     <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-            <div class="col-md-9 ftco-animate text-center">
-                <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Videos </h2>
+        <div class="row my-2 testi-img-video-blog-cmn">
+            <div class="col-md-3 col-sm-12 col-lg-3">
+                @foreach ($videos_category as $item)
+                    <button type="button" value="{{ $item->id }}"
+                        class="videos_category btn web_bg px-5 rounded-0 w-100 wow fadeInLeft">{{ $item->category }}</button>
+                    <hr class="m-0">
+                @endforeach
+
+
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9 ">
+                <div class="row testim">
+                    @foreach ($adm_videos_first as $item)
+                        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp">
+                            <div class="card mx-auto">
+                                <iframe width="300" height="170"
+                                    src="{{ url('https://www.youtube.com/embed/' . $item->video) }}"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                                <div class="card-body py-2 text-center">
+                                    <h5 class="card-title">{{ $item->title }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+
+                </div>
             </div>
         </div>
     </div>
-</section>
-<div class="container">
-    <div class="row my-2 testi-img-video-blog-cmn">
-        <div class="col-md-3 col-sm-12 col-lg-3">
-            <button type="button" class="btn web_bg px-5 py-2 rounded-0 w-100 wow fadeInLeft">Button</button>
-            <hr class="m-0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('.videos_category').click(function() {
+                let cat_id = $(this).val();
+                // console.log(cat_id);
+                $.ajax({
+                    url: '/get_videos_category_id',
+                    type: 'get',
+                    data: {
+                        'cat_id': cat_id,
+                    },
+                    datatype: 'json',
+                    success: function(result) {
+                        //  console.log(result);
+                        var type = $('.testim');
+                        type.empty();
+                        $.each(result, function(key, value) {
+                            type.append(
+                                '<div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp">' +
+                                '<div class="card mx-auto">' +
+                                '<iframe width="300" height="170" src="https://www.youtube.com/embed/' +
+                                value.video + '" ' +
+                                'title="YouTube video player" frameborder="0" ' +
+                                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
+                                'allowfullscreen></iframe>' +
+                                '<div class="card-body py-2 text-center">' +
+                                '<h5 class="card-title">' + value.title + '</h5>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>'
+                            );
+                        });
 
 
-        </div>
-        <div class="col-md-9 col-sm-12 col-lg-9 ">
-            <div class="row">
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp">
-                    <div class="card mx-auto">
-                        <iframe width="400" height="250"
-                            src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <div class="card-body py-2 text-center">
-                            <h5 class="card-title">Title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp">
-                    <div class="card mx-auto">
-                        <iframe width="400" height="250"
-                            src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <div class="card-body py-2 text-center">
-                            <h5 class="card-title">Title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp">
-                    <div class="card mx-auto">
-                        <iframe width="400" height="250"
-                            src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <div class="card-body py-2 text-center">
-                            <h5 class="card-title">Title</h5>
-                        </div>
-                    </div>
-                </div>
+                        if (result.length === 0) {
+                            type.append(
+                                '<p class=" wow fadeInUp">There are no videos available.</p>'
+                            );
+                        }
 
-            </div>
-        </div>
-    </div>
-</div>
+
+
+                    }
+                })
+            })
+
+        })
+    </script>
 @endsection

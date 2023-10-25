@@ -281,15 +281,17 @@
                     concerns.</p>
             </div>
 
-            <div class="col-md-6 col-lg-6 col-sm-12 pr-5">
-                <div class="pl-3 pr-3 pt-4">
-                    <form>
-                        <div class="form-group-rc">
-                            <input type="text" id="name" name="name" placeholder="Your Name *" required>
-                            <input type="tel" id="phone" name="phone" placeholder="Mobile No *" required>
-                            <button type="submit" class="submit-button">Request a Callback</button>
-                        </div>
-                    </form>
+                <div class="col-md-6 col-lg-6 col-sm-12 pr-5">
+                    <div class="pl-3 pr-3 pt-4">
+                        <form action="request_callback_store" method="POST">
+                            @csrf
+                            <div class="form-group-rc">
+                                <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                                <input type="tel" id="mobile" name="mobile" placeholder="Mobile No *" required>
+                                <button type="submit" class="submit-button">Request a Callback</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
