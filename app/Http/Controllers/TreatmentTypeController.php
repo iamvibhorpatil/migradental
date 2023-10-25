@@ -16,8 +16,6 @@ class TreatmentTypeController extends Controller
         $treatment = Treatment::where('status', 'Active')->get();
         $treatment_type = TreatmentType::latest()->with('Treatment')->get();
 
-
-
         return view('admin.pages.treatment_type', compact('treatment_type', 'treatment',));
     }
 

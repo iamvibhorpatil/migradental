@@ -1,10 +1,8 @@
-
 <div class="container-fluid" style="background-color: #fff;">
     <div class="row align-items-center">
         <div class="col-12 text-center d-md-none">
             <a class="navbar-brand py-0" href="{{ route('/') }}">
-                <img src="assets/images/logo.png" alt="logo" width="180" height="86.46"
-                    style="max-width: 180px;">
+                <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" style="max-width: 180px;">
             </a>
         </div>
 
@@ -58,18 +56,20 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <form>
+            <form action="request_callback_store" method="POST">
+                @csrf
+                <div class="modal-body">
                     <div class="form-group-rc">
                         <input type="text" id="name" name="name" placeholder="Your Name *" required>
-                        <input type="tel" id="phone" name="phone" placeholder="Mobile No *" required>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Mobile No *" required>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Submit</button>
-            </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -172,5 +172,4 @@
 
         });
     });
-
 </script>

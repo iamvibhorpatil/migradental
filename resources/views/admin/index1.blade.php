@@ -73,14 +73,15 @@
                     <a href="#" class="nav-link " onclick="toggleUser()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-user text-dark text-sm opacity-10"></i>
+
+                            <i class="fa-solid fa-hospital-user text-dark text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Patient</span>
                     </a>
                     <ul class="navbar-nav ps-5" id="users" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{Route('patient_form')}}">
+                            <a class="nav-link " href="{{ Route('patient_form') }}">
                                 <span class="nav-link-text ms-1">Patient Form<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -88,7 +89,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{Route('detail')}}">
+                            <a class="nav-link " href="{{ Route('detail') }}">
                                 <span class="nav-link-text ms-1">Patient Details<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -102,14 +103,14 @@
                     <a href="#" class="nav-link " onclick="togglecategory()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-user text-dark text-sm opacity-10"></i>
+                            <i class="fa-solid fa-tooth text-dark text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Treatment</span>
                     </a>
                     <ul class="navbar-nav ps-5" id="Treatment" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{Route('adm_treatment')}}">
+                            <a class="nav-link " href="{{ Route('adm_treatment') }}">
                                 <span class="nav-link-text ms-1">Treatment<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -117,7 +118,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{Route('treatment_type')}}">
+                            <a class="nav-link " href="{{ Route('treatment_type') }}">
                                 <span class="nav-link-text ms-1">Treatment Types<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -125,6 +126,140 @@
                         {{-- @endif --}}
                     </ul>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('international_client') }}">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-users text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">International Client</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link " onclick="toggletestimonial()">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-file-circle-question text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Testimonial</span>
+                    </a>
+                    <ul class="navbar-nav ps-5" id="Testimonial" style="display: none;">
+                        {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('adm_testimonial') }}">
+                                <span class="nav-link-text ms-1">Testimonial<i
+                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                        {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('testimonial_category') }}">
+                                <span class="nav-link-text ms-1">Testimonial Category<i
+                                        class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link " onclick="toggleimages()">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-regular fa-image text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Images</span>
+                    </a>
+                    <ul class="navbar-nav ps-5" id="Images" style="display: none;">
+                        {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('adm_images') }}">
+                                <span class="nav-link-text ms-1">Images<i
+                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                        {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('images_category') }}">
+                                <span class="nav-link-text ms-1">Image Category<i
+                                        class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link " onclick="toggleVideos()">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-video text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Videos</span>
+                    </a>
+                    <ul class="navbar-nav ps-5" id="Videos" style="display: none;">
+                        {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('adm_videos') }}">
+                                <span class="nav-link-text ms-1">Videos<i
+                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                        {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('videos_category') }}">
+                                <span class="nav-link-text ms-1">Video Category<i
+                                        class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link " onclick="toggleBlog()">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-blog text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Blog</span>
+                    </a>
+                    <ul class="navbar-nav ps-5" id="Blog" style="display: none;">
+                        {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('adm_blog') }}">
+                                <span class="nav-link-text ms-1">Blog<i
+                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                        {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('blog_category') }}">
+                                <span class="nav-link-text ms-1">Blog Category<i
+                                        class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                    </ul>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('request_callback') }}">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-users text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Request Calback</span>
+                    </a>
+                </li>
+
 
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('logout') }}">
@@ -359,11 +494,47 @@
                 content1.style.display = "none";
             }
         }
+
+        function toggletestimonial() {
+            var content1 = document.getElementById("Testimonial");
+            if (content1.style.display === "none") {
+                content1.style.display = "block";
+            } else {
+                content1.style.display = "none";
+            }
+        }
+
+        function toggleimages() {
+            var content1 = document.getElementById("Images");
+            if (content1.style.display === "none") {
+                content1.style.display = "block";
+            } else {
+                content1.style.display = "none";
+            }
+        }
+
+        function toggleVideos() {
+            var content1 = document.getElementById("Videos");
+            if (content1.style.display === "none") {
+                content1.style.display = "block";
+            } else {
+                content1.style.display = "none";
+            }
+        }
+
+        function toggleBlog() {
+            var content1 = document.getElementById("Blog");
+            if (content1.style.display === "none") {
+                content1.style.display = "block";
+            } else {
+                content1.style.display = "none";
+            }
+        }
     </script>
     <script>
         // Check if the success message element exists
         const successMessages = document.querySelectorAll('.alert');
-    
+
         if (successMessages.length > 0) {
             // Set a timeout to hide each message after 5 seconds
             successMessages.forEach(function(successMessage) {
@@ -373,7 +544,7 @@
             });
         }
     </script>
-    
+
 
 </body>
 
