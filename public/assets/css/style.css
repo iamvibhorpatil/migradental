@@ -4974,10 +4974,12 @@ iframe {
     position: relative;
     margin-bottom: 30px;
     display: inline-block;
+    border-right-color: 2px solid #47b0ab;
     font-size: 20px;
     line-height: 22px;
     text-transform: capitalize;
-    padding-left: 16px;
+    padding-left: 10px;
+    border-left: 4px solid #47b0ab;
     font-weight: 500;
     }
 .widget .widget-title:after {
@@ -5003,7 +5005,8 @@ iframe {
     border: 1px dashed rgba(255, 255, 255, .2);
     }
 .banner-img-box {
-    background-image: url();
+    /* background-image: url(); */
+    background-color:#403e3e;
     padding: 15px;
     color: #fff;
     text-align: center;
@@ -5013,17 +5016,30 @@ iframe {
     min-height: 385px;
     position: relative;
 }
+
+.banner-img-box .featured-content {
+    padding: 30px;
+}
 .text-left {
     text-align: left !important;
 }
 
-.widget.widget_media_gallery .gallery-item {
+.gallery-item {
     display: inline-block;
     max-width: 32%;
     padding: 0 1% 2% 0%;
     text-align: center;
     vertical-align: top;
     width: 100%;
+}
+.widget_media_gallery{
+    margin:35px 0 35px;
+}
+.post-widget-latest-blog{
+    margin:0 0 35px;  
+}
+.padding-latest-blog{
+    padding:none!important;
 }
 
 .sidebar ul.ttm-recent-post-list>li img {
@@ -5041,4 +5057,156 @@ ul.ttm-recent-post-list>li img {
     float: left;
     margin-right: 18px;
     border: 3px solid rgba(255, 255, 255, .05);
+}
+.sidebar .widget-area .widget {
+    position: relative!important;
+    margin: 35px 0 35px!important;
+}
+
+.comments-area {
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.comments-area h2,
+.comment-reply-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.comment-list li {
+    position: relative;
+    margin-top: 30px;
+}
+
+.comment-list,
+.comment-list .children {
+    list-style-type: none;
+    padding: 0;
+}
+
+.single-post .comments-area {
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.single-post .comments-area .comments-title {
+    font-size: 33px;
+    font-weight: 600;
+}
+
+.comment-body {
+    margin-left: 105px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    padding: 20px 20px;
+    position: relative;
+    border: 1px solid;
+}
+
+.comment-body:before {
+    position: absolute;
+    top: 17px;
+    width: 0;
+    height: 0;
+    border-width: 10px 12px 10px 0;
+    border-style: solid;
+    border-color: transparent #f5faff transparent #f5faff;
+    z-index: 1;
+    content: "";
+    left: -12px;
+}
+
+.comment-author {
+    float: left;
+    text-align: center;
+    width: 87px;
+    height: 87px;
+    display: block;
+    margin-right: 25px;
+    overflow: hidden;
+    margin-left: -125px;
+    margin-top: -20px;
+}
+
+.comment-author img {
+    max-width: 100%;
+    height: auto;
+}
+
+.comment-meta {
+    font-size: 14px;
+    padding: 0;
+    position: relative;
+}
+
+.comment-meta,
+.comment-meta a {
+    color: #6e6e6e;
+    font-size: 13px;
+}
+
+.comment-meta .ttm-comment-owner h5,
+.ttm-comment-owner {
+    display: block;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.comment-box .author-content-wrap p {
+    margin-top: 10px;
+}
+
+.single article.post .comment-body p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.comment-list a.comment-reply-link {
+    font-size: 13px;
+    padding: 2px 25px 3px 15px;
+    position: relative;
+    margin-top: 5px;
+    display: inline-block;
+    border: 1px solid;
+    font-weight: 500;
+}
+
+.comment-list a.comment-reply-link:after {
+    position: absolute;
+    top: 6px;
+    font-family: 'themify';
+    content: "\e649";
+    font-weight: 400;
+    display: inline-block;
+    margin-right: .2em;
+    text-align: center;
+    opacity: 1;
+    line-height: 20px;
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+.comments-area .comment-respond {
+    padding-top: 10px;
+}
+
+#respond .comment-reply-title {
+    margin: 0 0 20px !important;
+}
+.post-meta {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.ttm-btn.ttm-btn-style-border {
+    background-color: transparent;
+    border: 1px solid;
+}
+.ttm-btn.ttm-btn-size-md {
+    font-size: 15px;
+    padding: 13px 30px 13px 30px;
 }
