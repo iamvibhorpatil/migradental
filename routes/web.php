@@ -90,8 +90,12 @@ Route::middleware('auth')->group(function () {
     Route::get('logout', [DashboardController::class, 'logout']);
 
     // request callback
+    Route::get('adm_contact', [CallRequestController::class, 'index'])->name('adm_contact'); 
+    Route::get('contact/delete/{id}', [CallRequestController::class, 'destroy_contact']);
     Route::get('request_callback', [CallRequestController::class, 'request_callback'])->name('request_callback'); 
     Route::post('request_callback_store', [CallRequestController::class, 'store']); 
+    Route::post('store_contact', [CallRequestController::class, 'store_contact']);
+    Route::get('call_request/delete/{id}', [CallRequestController::class, 'destroy']); 
 
     // Patient Form
     Route::get('patient_form', [PatientFormController::class, 'index'])->name('patient_form');
