@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CallRequest;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class CallRequestController extends Controller
@@ -12,9 +13,16 @@ class CallRequestController extends Controller
      */
     public function index()
     {
-        //
+       $contact = Contact::all();
+       return view('admin.pages.adm_contact', compact('contact'));
     }
 
+    public function destroy_contact(Contact $contact, $id)
+    {
+        $contact = Contact::find($id);
+        $contact->delete();
+        return redirect()->back()->with('delete', 'Contact  Deleted Successfully');
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -35,36 +43,26 @@ class CallRequestController extends Controller
 
         return redirect()->back()->with('submit','');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(CallRequest $callRequest)
+    public function store_contact(Request $request)
     {
-        //
+        $contact = new Contact();
+
+        $contact->name = $request->name;
+        $contact->mobile = $request->mobile;
+        $contact->whats_app = $request->whats_app;
+        $contact->subject = $request->subject;
+        $contact->message = $request->message;
+
+        $contact->save();
+
+        return redirect()->back()->with('submit','Your data is Submitted');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(CallRequest $callRequest)
+   
+    public function destroy(CallRequest $callRequest, $id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, CallRequest $callRequest)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(CallRequest $callRequest)
-    {
-        //
+        $callrequest = CallRequest::find($id);
+        $callrequest->delete();
+        return redirect()->back()->with('delete', 'Call Request Deleted Successfully');
     }
 }

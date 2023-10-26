@@ -254,15 +254,25 @@
                     <a class="nav-link " href="{{ route('request_callback') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-users text-dark text-sm opacity-10"></i>
+                            <i class="fa-solid fa-phone-volume text-dark text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Request Calback</span>
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link " href="{{route('adm_contact')}}">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-address-book text-dark text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Contacts</span>
+                    </a>
+                </li>
+
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ route('logout') }}">
+                    <a class="nav-link " href="{{ route('logout') }}"  onclick="return confirm('Are you sure') ">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-arrow-right-from-bracket text-dark text-sm opacity-10"></i>

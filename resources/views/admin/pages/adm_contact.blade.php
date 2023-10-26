@@ -11,7 +11,7 @@
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Pages</a></li>
                         <li class="breadcrumb-item text-sm text-white active" aria-current="page">Dashboard</li>
                     </ol>
-                    <h6 class="font-weight-bolder text-white mb-0">Request Call </h6>
+                    <h6 class="font-weight-bolder text-white mb-0">Contacts </h6>
                 </nav>
                 {{-- half-nav  --}}
                 @include('admin.half_nav')
@@ -23,14 +23,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+
                     <div class="card mb-4">
+
                         <div class="card-header pb-0">
                             @if (session('delete'))
                                 <div class="text-white alert alert-danger">
                                     {{ session('delete') }}
                                 </div>
                             @endif
-                            <h6>Callback List</h6>
+                            <h6>Contact List</h6>
                         </div>
                         <div class="card-body px-3 pt-0 pb-2 table-responsive">
                             <table class="table" id="myTable8">
@@ -39,19 +41,27 @@
                                         <th scope="col">Sr.No</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Mobile No. </th>
+                                        <th scope="col">What's App No. </th>
+                                        <th scope="col">Subject </th>
+                                        <th scope="col">Message </th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $p = 1; ?>
-                                    @foreach ($call as $item)
+                                    @foreach ($contact as $item)
                                         <tr class="">
                                             <td><?php echo $p++; ?></td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->mobile }}</td>
+                                            <td>{{ $item->whats_app }}</td>
+                                            <td>{{ $item->subject }}</td>
                                             <td>
-                                                <a href="{{ url('call_request/delete/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want delete this Call Request ') "
+                                                <textarea class="form-control" cols="10" row="3">{{ $item->message }}</textarea>
+                                            </td>
+                                            <td>
+                                                <a href="{{ url('contact/delete/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want delete this Contact ') "
                                                     class="btn btn-danger badge mx-2">Delete</a>
                                             </td>
                                         </tr>

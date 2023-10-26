@@ -157,6 +157,19 @@
 <script>
     new WOW().init();
     </script>
+    <script>
+        // Check if the success message element exists
+        const successMessages = document.querySelectorAll('.alert');
+
+        if (successMessages.length > 0) {
+            // Set a timeout to hide each message after 5 seconds
+            successMessages.forEach(function(successMessage) {
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 5000); // 5000 milliseconds = 5 seconds
+            });
+        }
+    </script>
 
 </body>
 
