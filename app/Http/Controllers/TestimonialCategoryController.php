@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TestimonialCategory;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class TestimonialCategoryController extends Controller
@@ -25,13 +26,13 @@ class TestimonialCategoryController extends Controller
         $testimonial_category->category = $request->category;
         $testimonial_category->status = $request->status;
 
-       
+
         $testimonial_category->save();
 
         return redirect()->back()->with('success', 'Data uploaded successfully');
     }
 
-    
+
     public function edit(TestimonialCategory $testimonialCategory, $id)
     {
         $testimonial_category = TestimonialCategory::find($id);
@@ -62,5 +63,34 @@ class TestimonialCategoryController extends Controller
         $testimonial_category = TestimonialCategory::find($id);
         $testimonial_category->delete();
         return redirect()->back()->with('delete', 'Testimonial Category Deleted Successfully');
+    }
+    
+    //  comments
+    public function comment()
+    {
+        $comment = comment::latest()->get();
+
+        return view('admin.pages.comment', compact('comment'));
+    }
+    public function store_comment(Request $request)
+    {
+        $comment = new Comment();
+
+        $comment->name = $request->name;
+        $comment->blog_id = $request->blog_id;
+        $comment->mobile = $request->mobile;
+        $comment->comment = $request->comment;
+
+
+        $comment->save();
+
+        return redirect()->back()->with('success', 'Comment Added Successfully');
+    }
+
+    public function destroy_comment(TestimonialCategory $testimonialCategory, $id)
+    {
+        $comment = Comment::find($id);
+        $comment->delete();
+        return redirect()->back()->with('delete', 'Comment  Deleted Successfully');
     }
 }

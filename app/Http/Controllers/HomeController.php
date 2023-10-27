@@ -20,10 +20,7 @@ class HomeController extends Controller
     {
         return view('layouts.contact');
     }
-    public function blog_info()
-    {
-        return view('layouts.blog_info');
-    }
+    
 
    
 

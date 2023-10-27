@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Image;
+use App\Models\Comment;
 use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 
@@ -114,5 +116,34 @@ class BlogController extends Controller
         $adm_image = Blog::find($id);
         $adm_image->delete();
         return redirect()->back()->with('delete', 'Blog Deleted Successfully');
+    }
+
+    public function get_blog_id(Request $request)
+    {
+        $blog_id = $request->input('blog_id');
+        session(['blog_id' => $blog_id]);
+        $blog = Blog::where('id',$request->blog_id)->get();
+        session()->put('blog', $blog);
+
+        return response()->json([
+            'success' => true
+        ]);
+    }
+
+    public function blog_info(Request $request)
+    {
+       
+        $blog_id = session()->get('blog_id');
+        $blog = session()->get('blog', []);
+        
+        if (empty($blog)) {
+            return redirect()->back()->with('error', 'Data not found');
+        }
+        $blog_info = Blog::latest()->take(3)->get();
+        $image = Image::latest()->take(9)->get();
+        $comment = comment::where('blog_id',$blog_id)->with('Blog')->latest()->take(3)->get();
+        
+
+        return view('layouts.blog_info',compact('blog','blog_info','image','comment'));
     }
 }
