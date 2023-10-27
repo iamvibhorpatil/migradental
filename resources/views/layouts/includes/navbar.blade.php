@@ -13,7 +13,7 @@
             </a>
         </div>
 
-        <div class="col-md-6 col-12 text-center" style="color: #47b0ab;">
+        <div class="col-md-6 col-12 text-center d-none d-md-block" style="color: #47b0ab;">
             <a href="#" target="_blank" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; color: #47b0ab;">
                 <i class="fa fa-phone px-1 fa-2xl"></i>Call: +91 0000444400

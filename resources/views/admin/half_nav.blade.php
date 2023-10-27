@@ -1,12 +1,13 @@
 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar" style="background-color:#fff;border-radius:10px">
-    <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-      <div class="input-group">
+   
+<div class="row ms-md-auto pe-md-3 d-flex align-items-center">
+      <div class="col-7 input-group">
       <!--  <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>-->
       <!--  <input type="text" class="form-control" placeholder="Type here...">-->
       <img src="{{ asset('assets/images/logo.png') }}" alt="a" width="200px" class="img-fluid" style="mix-blend-mode: multiply;padding:10px">
       </div>
     </div>
-    <ul class="navbar-nav  justify-content-end">
+    <ul class="col-5 navbar-nav  justify-content-end">
       <li class="nav-item d-flex align-items-center">
         <a href="javascript:;" class="nav-link text-dark font-weight-bold px-0 p-0">
           <div class="dropdown">
@@ -40,3 +41,4 @@
       
     </ul>
   </div>
+ 

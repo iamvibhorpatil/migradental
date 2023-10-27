@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      {{-- <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card" style="min-height: 100%">
           <div class="card-body p-3">
             <div class="row">
@@ -51,7 +51,7 @@
                 <div class="numbers">
                   <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Inquiries</p>
                   <h5 class="font-weight-bolder">
-                    {{ $totalInquiryCount }}
+                   {{-- {{ $totalInquiryCount }} --}} 
                   </h5>
                 </div>
               </div>
@@ -63,8 +63,8 @@
             </div>
           </div>
         </div>
-      </div> --}}
-      {{-- <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+      </div>
+       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card" style="min-height: 100%">
           <div class="card-body p-3">
             <div class="row">
@@ -72,7 +72,7 @@
                 <div class="numbers">
                   <p class="text-sm mb-0 text-uppercase font-weight-bold text-nowrap">Today's Job Application</p>
                   <h5 class="font-weight-bolder">
-                    +{{ $todayJobCount }}
+                      {{-- +{{ $todayJobCount }} --}}     
                   </h5>
                 </div>
               </div>
@@ -84,8 +84,8 @@
             </div>
           </div>
         </div>
-      </div> --}}
-      {{-- <div class="col-xl-3 col-sm-6">
+      </div> 
+       <div class="col-xl-3 col-sm-6">
         <div class="card" style="min-height: 100%">
           <div class="card-body p-3">
             <div class="row">
@@ -93,7 +93,7 @@
                 <div class="numbers">
                   <p class="text-sm mb-0 text-uppercase font-weight-bold text-nowrap">Total Job Application</p>
                   <h5 class="font-weight-bolder">
-                    {{ $totalJobCount }}
+                        {{-- {{ $totalJobCount }} --}} 
                   </h5>
                   
                 </div>
@@ -106,7 +106,7 @@
             </div>
           </div>
         </div>
-      </div> --}}
+      </div>
     </div>
     
        

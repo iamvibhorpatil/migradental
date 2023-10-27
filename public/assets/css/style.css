@@ -2856,6 +2856,20 @@ h4,
     }
 }
 
+
+@media (max-width: 767px) {
+    
+    .home-slider {
+        height: 60vh; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+   
+    .home-slider {
+        height: 80vh; 
+}}
+
 .owl-carousel.home-slider .owl-dots .owl-dot {
     width: 10px;
     height: 10px;
