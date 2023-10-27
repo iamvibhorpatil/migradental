@@ -162,6 +162,14 @@
                             </a>
                         </li>
                         {{-- @endif --}}
+                        {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('comment') }}">
+                                <span class="nav-link-text ms-1">Comments<i
+                                        class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
                     </ul>
                 </li>
 

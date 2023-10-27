@@ -56,7 +56,7 @@ Route::get('/optimize', function () {
 // });
 
 // Route::get('/add_column', function () {
-//     DB::statement('ALTER TABLE internationals ADD status VARCHAR(255) AFTER image');
+//     DB::statement('ALTER TABLE comments ADD blog_id VARCHAR(255) AFTER name');
 
 //         return 'Column added successfully.';
 
@@ -69,10 +69,11 @@ Route::get('international', [InternationalController::class, 'international'])->
 Route::get('testimonial', [TestimonialController::class, 'testimonial'])->name('testimonial');
 Route::get('image', [ImageController::class, 'image'])->name('image');
 Route::get('video', [VideoController::class, 'video'])->name('video');
-Route::get('blog', [BlogController::class, 'blog'])->name('blog');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('blog_info', [HomeController::class, 'blog_info'])->name('blog_info');
+Route::get('blog', [BlogController::class, 'blog'])->name('blog');
+Route::get('get_blog_id', [BlogController::class, 'get_blog_id']);
+Route::get('blog_info', [BlogController::class, 'blog_info'])->name('blog_info');
 
 // view tretment 
 Route::get('view_treatment', [TreatmentController::class, 'view_treatment'])->name('view_treatment');
@@ -137,6 +138,9 @@ Route::middleware('auth')->group(function () {
     //TestimonialCategory
     Route::get('testimonial_category', [TestimonialCategoryController::class, 'index'])->name('testimonial_category');
     Route::post('store_testimonial_category', [TestimonialCategoryController::class, 'store']);
+    Route::get('comment', [TestimonialCategoryController::class, 'comment'])->name('comment');
+    Route::post('store_comment', [TestimonialCategoryController::class, 'store_comment']);
+    Route::get('comment/delete/{id}', [TestimonialCategoryController::class, 'destroy_comment']);
     Route::get('testimonial_category/edit/{id}', [TestimonialCategoryController::class, 'edit']);
     Route::post('testimonial_category/update/{id}', [TestimonialCategoryController::class, 'update']);
     Route::get('testimonial_category/delete/{id}', [TestimonialCategoryController::class, 'destroy']);
