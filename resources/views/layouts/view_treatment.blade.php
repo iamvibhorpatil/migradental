@@ -8,16 +8,31 @@
         <div class="container">
             <div class="row  slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
-                    @foreach ($treatment as $key => $item)  
-                    @php
-                        $type = DB::table('treatments')
-                            ->where('id', $item->treatment_type_id)
-                            ->first();
-                            
-                    @endphp
- @endforeach
-                    <h2 class="bread font-weight-normal mb-2" style="color:white;"> {{ $type->treatment_type }}</h2>
-                   
+                    {{-- @foreach ($treatment as $key => $item)
+                        @php
+                            $type = DB::table('treatments')
+                                ->where('id', $item->treatment_type_id)
+                                ->first();
+
+                        @endphp
+                    @endforeach
+                    @if ($treatment)
+                     <h2 class="bread font-weight-normal mb-2" style="color:white;"> {{ $type->treatment_type }}</h2>
+                     @else
+                     <h2 class="bread font-weight-normal mb-2" style="color:white;"> Treatment</h2>
+                    @endif --}}
+                    @if ($treatment->count() > 0)
+                        @php
+                            $type = DB::table('treatments')
+                                ->where('id', $treatment[0]->treatment_type_id)
+                                ->first();
+                        @endphp
+                        <h2 class="bread font-weight-normal mb-2" style="color:white;"> {{ $type->treatment_type }}</h2>
+                    @else
+                        <h2 class="bread font-weight-normal mb-2" style="color:white;"> Treatment</h2>
+                    @endif
+
+
                 </div>
             </div>
         </div>
@@ -41,8 +56,8 @@
                     @foreach ($treatment as $key => $item)
                         <div class="card">
                             <div class="card-header">
-                                <a class="{{ $key === 0 ? '' : 'collapsed' }} card-link accordion-title" data-toggle="collapse"
-                                    href="#collapse{{ $key }}">
+                                <a class="{{ $key === 0 ? '' : 'collapsed' }} card-link accordion-title"
+                                    data-toggle="collapse" href="#collapse{{ $key }}">
                                     {{ $item->question }}
                                 </a>
                             </div>

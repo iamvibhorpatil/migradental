@@ -114,7 +114,7 @@
                         Treatment <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
                         @foreach ($sp_treatment as $item)
-                            <li class="special_treatment" data-treatment-id="{{ $item->id }}"><a
+                            <li class="treatment" data-treatment-id="{{ $item->id }}"><a
                                     class="dropdown-item" href="#">{{ $item->treatment_type }}</a></li>
                         @endforeach
                     </ul>

@@ -59,7 +59,8 @@
                         type.empty();
                         $.each(result, function(key, value) {
                             type.append(
-                                '<div class="col-md-4 col-sm-12 col-lg-4 wow fadeInUp"><div class="card mx-auto"><img src="{{ asset('assets/uploads/') }}/' +
+                                '<div class="col-md-4 col-sm-12 col-lg-4 wow fadeInUp blog_id" data-blog-id="' +
+                                value.id + '" style="cursor: pointer;"><div class="card mx-auto"  style="min-height: 100%;"><img src="{{ asset('assets/uploads/') }}/' +
                                 value.image +
                                 '" class="card-img-top p-2" alt="..."><div class="card-body py-2 text-center"><h5 class="card-title">' +
                                 value.title + '</h5></div></div></div>');
@@ -77,9 +78,9 @@
                 })
             })
 
-            $('.blog_id').click(function() {
+           $(document).on('click', '.blog_id', function() {
                 let blog_id = $(this).attr('data-blog-id');
-                // console.log(blog_id);
+                console.log(blog_id);
                 // session(['blog_id' => blog_id]);
                 $.ajax({
                     url: '/get_blog_id',

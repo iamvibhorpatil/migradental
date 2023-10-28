@@ -74,7 +74,12 @@ Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('blog', [BlogController::class, 'blog'])->name('blog');
 Route::get('get_blog_id', [BlogController::class, 'get_blog_id']);
 Route::get('blog_info', [BlogController::class, 'blog_info'])->name('blog_info');
-
+Route::post('store_comment', [TestimonialCategoryController::class, 'store_comment']);
+Route::get('get_category_id', [TestimonialController::class, 'get_category_id']);
+Route::get('get_images_category_id', [ImageController::class, 'get_images_category_id']);
+Route::get('get_videos_category_id', [VideoController::class, 'get_videos_category_id']);
+Route::get('get_blog_category_id', [BlogController::class, 'get_blog_category_id']);
+    
 // view tretment 
 Route::get('view_treatment', [TreatmentController::class, 'view_treatment'])->name('view_treatment');
 Route::get('get_view_treatment_id', [TreatmentController::class, 'get_view_treatment_id']);
@@ -134,12 +139,10 @@ Route::middleware('auth')->group(function () {
     Route::get('adm_testimonial/edit/{id}', [TestimonialController::class, 'edit']);
     Route::post('adm_testimonial/update/{id}', [TestimonialController::class, 'update']);
     Route::get('adm_testimonial/delete/{id}', [TestimonialController::class, 'destroy']);
-    Route::get('get_category_id', [TestimonialController::class, 'get_category_id']);
     //TestimonialCategory
     Route::get('testimonial_category', [TestimonialCategoryController::class, 'index'])->name('testimonial_category');
     Route::post('store_testimonial_category', [TestimonialCategoryController::class, 'store']);
     Route::get('comment', [TestimonialCategoryController::class, 'comment'])->name('comment');
-    Route::post('store_comment', [TestimonialCategoryController::class, 'store_comment']);
     Route::get('comment/delete/{id}', [TestimonialCategoryController::class, 'destroy_comment']);
     Route::get('testimonial_category/edit/{id}', [TestimonialCategoryController::class, 'edit']);
     Route::post('testimonial_category/update/{id}', [TestimonialCategoryController::class, 'update']);
@@ -150,7 +153,6 @@ Route::middleware('auth')->group(function () {
     Route::get('adm_images/edit/{id}', [ImageController::class, 'edit']);
     Route::post('adm_images/update/{id}', [ImageController::class, 'update']);
     Route::get('adm_images/delete/{id}', [ImageController::class, 'destroy']);
-    Route::get('get_images_category_id', [ImageController::class, 'get_images_category_id']);
     //Images
     Route::get('images_category', [ImagesCategoryController::class, 'index'])->name('images_category');
     Route::post('store_images_category', [ImagesCategoryController::class, 'store']);
@@ -163,7 +165,6 @@ Route::middleware('auth')->group(function () {
     Route::get('adm_videos/edit/{id}', [VideoController::class, 'edit']);
     Route::post('adm_videos/update/{id}', [VideoController::class, 'update']);
     Route::get('adm_videos/delete/{id}', [VideoController::class, 'destroy']);
-    Route::get('get_videos_category_id', [VideoController::class, 'get_videos_category_id']);
     //Videos
     Route::get('videos_category', [VideosCategoryController::class, 'index'])->name('videos_category');
     Route::post('store_videos_category', [VideosCategoryController::class, 'store']);
@@ -176,7 +177,6 @@ Route::middleware('auth')->group(function () {
     Route::get('adm_blog/edit/{id}', [BlogController::class, 'edit']);
     Route::post('adm_blog/update/{id}', [BlogController::class, 'update']);
     Route::get('adm_blog/delete/{id}', [BlogController::class, 'destroy']);
-    Route::get('get_blog_category_id', [BlogController::class, 'get_blog_category_id']);
     //Blog
     Route::get('blog_category', [BlogCategoryController::class, 'index'])->name('blog_category');
     Route::post('store_blog_category', [BlogCategoryController::class, 'store']);
