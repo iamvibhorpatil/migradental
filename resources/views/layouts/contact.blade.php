@@ -21,10 +21,19 @@
                 <div class="col-md-7 p-4 p-md-4 bg-light">
                     <form action="store_contact" method="POST">
                         @csrf
-                        @if (session('submit'))
-                            <div class=" alert alert-success">
-                                {{ session('submit') }}
-                            </div>
+                        @if (session('contact_success'))
+                            <script>
+                                Swal.fire({
+                                    title: 'Submited!',
+                                    text: 'You will be contacted soon.',
+                                    icon: 'success',
+                                    customClass: {
+                                        popup: 'my-sweetalert-popup',
+                                        title: 'my-sweetalert-title',
+                                        content: 'my-sweetalert-content',
+                                    }
+                                });
+                            </script>
                         @endif
                         <div class="d-flex form-group justify-content-between">
                             <div class="pr-3 w-50">
