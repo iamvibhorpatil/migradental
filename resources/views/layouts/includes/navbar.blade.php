@@ -16,11 +16,11 @@
         <div class="col-md-6 col-12 text-center d-none d-md-block" style="color: #47b0ab;">
             <a href="#" target="_blank" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; color: #47b0ab;">
-                <i class="fa fa-phone px-1 fa-2xl"></i>Call: +91 0000444400
+                <i class="fa fa-phone px-1 fa-2xl"></i>Call: +919594369752
             </a>
             <a href="#" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; border-right: 1px solid rgba(250, 250, 250, 0.3); color: #47b0ab;">
-                <i class="fa-brands fa-whatsapp px-1 fa-2xl"></i>Whatsapp No.: xxx-xx-xx-xxx
+                <i class="fa-brands fa-whatsapp px-1 fa-2xl"></i>Whatsapp No.: +917276976729
             </a>
         </div>
 
@@ -76,13 +76,13 @@
 
 <!-- Modal -->
 
-
 <nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light ">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="fa-solid fa-bars-staggered fa-xl" style="color:#ffffff;"></i></span>
-        </button>
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleButton(this)">
+    <span><i class="fa-solid fa-bars-staggered fa-xl" id="toggleIcon" style="color:#ffffff;"></i></span>
+</button>
+
         <div class="collapse navbar-collapse justify-content-center" id="ftco-nav">
             <ul class="navbar-nav">
 

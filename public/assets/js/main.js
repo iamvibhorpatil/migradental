@@ -353,7 +353,7 @@
     setInterval(changeImages, 5000);
 
 
-//blog_info page
+    //blog_info page
 
     $(document).ready(function() {
         var images = [];
@@ -390,7 +390,23 @@
     });
 
         CKEDITOR.replace('description');
- 
+
+    //blog_info page end
+
+
+    //toggle icon
+
+    function toggleButton(button) {
+    var icon = button.querySelector('#toggleIcon');
+    if (icon.classList.contains('fa-bars-staggered')) {
+        icon.classList.remove('fa-bars-staggered');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars-staggered');
+    }
+}
+   //toggle icon end
 
 
  

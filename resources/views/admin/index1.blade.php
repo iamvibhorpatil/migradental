@@ -82,7 +82,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('patient_form') }}">
-                                <span class="nav-link-text ms-1">Patient Form<i
+                                <span class="nav-link-text ms-1">New Patient<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -90,7 +90,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('detail') }}">
-                                <span class="nav-link-text ms-1">Patient Details<i
+                                <span class="nav-link-text ms-1">Patient List<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
@@ -99,19 +99,21 @@
                 </li>
                 {{-- @endif --}}
 
+
+                <!-- Treatment change to main-menu-->
                 <li class="nav-item">
                     <a href="#" class="nav-link " onclick="togglecategory()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-tooth text-dark text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Treatment</span>
+                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Main Menu</span>
                     </a>
                     <ul class="navbar-nav ps-5" id="Treatment" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_treatment') }}">
-                                <span class="nav-link-text ms-1">Treatment<i
+                                <span class="nav-link-text ms-1">Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -119,13 +121,14 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('treatment_type') }}">
-                                <span class="nav-link-text ms-1">Treatment Types<i
+                                <span class="nav-link-text ms-1">Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
                         {{-- @endif --}}
                     </ul>
                 </li>
+                <!-- Treatment change to main-menu end-->
 
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('international_client') }}">
@@ -146,19 +149,20 @@
                         <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Testimonial</span>
                     </a>
                     <ul class="navbar-nav ps-5" id="Testimonial" style="display: none;">
-                        {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
-                        <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_testimonial') }}">
-                                <span class="nav-link-text ms-1">Testimonial<i
-                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
-                            </a>
-                        </li>
-                        {{-- @endif --}}
+
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('testimonial_category') }}">
-                                <span class="nav-link-text ms-1">Testimonial Category<i
+                                <span class="nav-link-text ms-1">Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
+                            </a>
+                        </li>
+                        {{-- @endif --}}
+                        {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('adm_testimonial') }}">
+                                <span class="nav-link-text ms-1">Add Data<i
+                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
                         {{-- @endif --}}
@@ -185,7 +189,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_images') }}">
-                                <span class="nav-link-text ms-1">Images<i
+                                <span class="nav-link-text ms-1">Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -193,7 +197,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('images_category') }}">
-                                <span class="nav-link-text ms-1">Image Category<i
+                                <span class="nav-link-text ms-1">Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
@@ -213,7 +217,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_videos') }}">
-                                <span class="nav-link-text ms-1">Videos<i
+                                <span class="nav-link-text ms-1">Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -221,7 +225,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('videos_category') }}">
-                                <span class="nav-link-text ms-1">Video Category<i
+                                <span class="nav-link-text ms-1">Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
