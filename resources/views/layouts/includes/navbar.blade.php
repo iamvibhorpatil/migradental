@@ -43,7 +43,20 @@
         </div>
     </div>
 </div>
-
+@if (session('request_callback_success'))
+    <script>
+       Swal.fire({
+            title: 'Submited!',
+            text: 'You will be contacted soon.',
+            icon: 'success',
+            customClass: {
+                popup: 'my-sweetalert-popup',
+                title: 'my-sweetalert-title',
+                content: 'my-sweetalert-content',
+            }
+        });
+    </script>
+@endif
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -114,8 +127,8 @@
                         Treatment <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
                         @foreach ($sp_treatment as $item)
-                            <li class="treatment" data-treatment-id="{{ $item->id }}"><a
-                                    class="dropdown-item" href="#">{{ $item->treatment_type }}</a></li>
+                            <li class="treatment" data-treatment-id="{{ $item->id }}"><a class="dropdown-item"
+                                    href="#">{{ $item->treatment_type }}</a></li>
                         @endforeach
                     </ul>
                 </li>

@@ -79,6 +79,8 @@ Route::get('get_category_id', [TestimonialController::class, 'get_category_id'])
 Route::get('get_images_category_id', [ImageController::class, 'get_images_category_id']);
 Route::get('get_videos_category_id', [VideoController::class, 'get_videos_category_id']);
 Route::get('get_blog_category_id', [BlogController::class, 'get_blog_category_id']);
+Route::post('request_callback_store', [CallRequestController::class, 'store']); 
+Route::post('store_contact', [CallRequestController::class, 'store_contact']);
     
 // view tretment 
 Route::get('view_treatment', [TreatmentController::class, 'view_treatment'])->name('view_treatment');
@@ -99,8 +101,6 @@ Route::middleware('auth')->group(function () {
     Route::get('adm_contact', [CallRequestController::class, 'index'])->name('adm_contact'); 
     Route::get('contact/delete/{id}', [CallRequestController::class, 'destroy_contact']);
     Route::get('request_callback', [CallRequestController::class, 'request_callback'])->name('request_callback'); 
-    Route::post('request_callback_store', [CallRequestController::class, 'store']); 
-    Route::post('store_contact', [CallRequestController::class, 'store_contact']);
     Route::get('call_request/delete/{id}', [CallRequestController::class, 'destroy']); 
 
     // Patient Form

@@ -5224,3 +5224,17 @@ ul.ttm-recent-post-list>li img {
     font-size: 15px;
     padding: 13px 30px 13px 30px;
 }
+
+/* Define your custom styles for the SweetAlert pop-up */
+.my-sweetalert-popup {
+    background-color: #fff!important; /* Set the background color to a lighter color */
+    color: #333!important; /* Set the text color to a darker color */
+}
+
+.my-sweetalert-title {
+    color: #333!important; /* Set the title text color */
+}
+
+.my-sweetalert-content {
+    color: #666!important; /* Set the content text color */
+}

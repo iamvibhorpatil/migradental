@@ -41,7 +41,7 @@ class CallRequestController extends Controller
 
         $call->save();
 
-        return redirect()->back()->with('submit','');
+        return redirect()->back()->with('request_callback_success','Submitted: You will be contacted soon.');
     }
     public function store_contact(Request $request)
     {
@@ -55,7 +55,7 @@ class CallRequestController extends Controller
 
         $contact->save();
 
-        return redirect()->back()->with('submit','Your data is Submitted');
+        return redirect()->back()->with('contact_success','Your data is Submitted');
     }
 
    
