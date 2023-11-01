@@ -141,7 +141,7 @@ class BlogController extends Controller
         }
         $blog_info = Blog::latest()->take(3)->get();
         $image = Image::latest()->take(9)->get();
-        $comment = comment::where('blog_id',$blog_id)->with('Blog')->latest()->take(3)->get();
+        $comment = comment::where('blog_id',$blog_id)->with('Blog')->latest()->paginate(3);
         
 
         return view('layouts.blog_info',compact('blog','blog_info','image','comment'));

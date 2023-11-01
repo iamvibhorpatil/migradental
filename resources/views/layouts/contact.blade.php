@@ -60,7 +60,7 @@
                         </div>
                         <div class="form-group pr-3">
                             <label for="message" class="font-weight-normal text-uppercase">Message</label>
-                            <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">

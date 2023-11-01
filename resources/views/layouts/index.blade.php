@@ -290,7 +290,7 @@
                     <div class="form-group-rc">
                         <input type="text" class="form-control" id="name" name="name" placeholder="Your Name *"
                             required>
-                        <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Mobile No *"
+                        <input type="tel" class="form-control" id="mobile" pattern=".{10}" name="mobile" placeholder="Mobile No *"
                             required>
                         <button type="submit" class="submit-button">Request a Callback</button>
                     </div>
@@ -313,12 +313,12 @@
             </div>
         </div>
 
-        <div class="row text-center">
+        <div class="row text-center mb-3">
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mb-md-0">
                 <div class="card">
-                    <div class="card-body py-4 mt-2">
+                    <div class="card-body">
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="assets/images/female-profile.jpeg" class="rounded-circle shadow-1-strong"
+                            <img src="assets/images/dummyuser.png" class="rounded-circle shadow-1-strong"
                                 width="100" height="100" />
                         </div>
                         <h5 class="font-weight-bold">Teresa May</h5>
@@ -332,9 +332,9 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 mb-md-0">
                 <div class="card">
-                    <div class="card-body py-4 mt-2">
+                    <div class="card-body">
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="assets/images/female-profile.jpeg" class="rounded-circle shadow-1-strong"
+                            <img src="assets/images/dummyuser.png" class="rounded-circle shadow-1-strong"
                                 width="100" height="100" />
                         </div>
                         <h5 class="font-weight-bold">Maggie McLoan</h5>
@@ -348,16 +348,15 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-0">
                 <div class="card">
-                    <div class="card-body py-4 mt-2">
+                    <div class="card-body">
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="assets/images/male-profile.jpeg" class="rounded-circle shadow-1-strong"
+                            <img src="assets/images/dummyuser.png" class="rounded-circle shadow-1-strong"
                                 width="100" height="100" />
                         </div>
                         <h5 class="font-weight-bold">Alexa Horwitz</h5>
                         <p class="mb-2">
                             <i class="fas fa-quote-left pe-2"></i>Cras sit amet nibh libero, in gravida
-                            nulla metus scelerisque ante sollicitudin commodo cras purus odio,
-                            vestibulum in tempus viverra turpis.
+                            nulla .
                         </p>
                     </div>
                 </div>
@@ -365,25 +364,15 @@
         </div>
     </div>
 </section>
-<section class="video-section p-5">
-    <div class="">
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb"
+<section class="video-section p-5 row text-center">
+    @foreach ($video as $item)
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 my-2">
+        <iframe width="400" height="250" src="{{url('https://www.youtube.com/embed/'.$item->video)}}"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
     </div>
-    <div class="">
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-    </div>
-    <div class="">
-        <iframe width="400" height="250" src="https://www.youtube.com/embed/3LGXBY7OW6Y?si=OjG_C05BnBfROFAb"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-    </div>
-
+    @endforeach
+   
 </section>
 @endsection
