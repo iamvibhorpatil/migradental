@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-5 d-flex align-items-center justify-content-center">
                     <img src="assets/images/image_5.jpg" class="img-fluid rounded-start" alt="Our Services"
-                        style="max-width: 100%; height: auto;" />
+                        style="max-width: 100%; height: -webkit-fill-available;" />
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <div class="row g-0">
                 <div class="col-md-5 d-flex align-items-center justify-content-center">
                     <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="Our Team"
-                        style="max-width: 100%; height: auto;">
+                        style="max-width: 100%; height: -webkit-fill-available;">
                 </div>
 
                 <div class="col-md-7">
@@ -364,7 +364,7 @@
         </div>
     </div>
 </section>
-<section class="video-section p-5 row text-center">
+<section class="video-section p-5 row text-center m-0">
     @foreach ($video as $item)
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 my-2">
         <iframe width="400" height="250" src="{{url('https://www.youtube.com/embed/'.$item->video)}}"
