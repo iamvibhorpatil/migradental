@@ -11,7 +11,8 @@
                     <h3 class="widget-title">Latest Blog</h3>
                     <div class="post-widget-latest-blog">
                         @foreach ($blog_info as $item)
-                            <div class="row d-flex text-center my-2">
+                            <div class="row d-flex text-center my-2 blog_id"  data-blog-id="{{ $item->id }}"
+                                style="cursor: pointer;">
                                 <div class="col-lg-5" style="padding:0px!important;">
                                     <img class='img-fluid' src="{{ asset('assets/uploads/' . $item->image) }}" alt='image'
                                         style='height: 80px!important;width: 80px!important;aspect-ratio: 3/2;
@@ -74,7 +75,7 @@
                             <div class="modal-content">
                                 <div class="modal-body text-center">
                                     <i class="fa-solid fa-chevron-left fa-2xl" id="prevBtn" style="color: #000000;"></i>
-                                    <img class=" px-5" src="assets/images/person_2.jpg" alt="image" width='600'
+                                    <img class=" px-5" src="" alt="image" width='600'
                                         height='460'>
                                     <i class="fa-solid fa-chevron-right fa-2xl" id="nextBtn" style="color: #000000;"></i>
                                 </div>
@@ -90,9 +91,17 @@
                 <div class="ttm-post-featured-wrapper">
                     <div class="ttm-post-featured">
                         @if (session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
+                        <script>
+                            Swal.fire({
+                                title: 'Submited!',
+                                icon: 'success',
+                                customClass: {
+                                    popup: 'my-sweetalert-popup',
+                                    title: 'my-sweetalert-title',
+                                    content: 'my-sweetalert-content',
+                                }
+                            });
+                        </script>
                         @endif
                         <img class="img-fluid" src="{{ asset('assets/uploads/' . $blog->image) }}" alt="blog-post"
                             style="width: 100%;height: 500px;">
@@ -121,21 +130,25 @@
                                     @endif
 
                                     <div class="row">
-                                        @foreach ($comment as $comment)
+                                        @foreach ($comment as $item)
                                             <div class="col-2 my-2">
                                                 <img src="{{ asset('assets/images/user_comment.jpg') }}" width="50px"
                                                     class="avatar float-right" alt="comment-img">
                                             </div>
                                             <div class="col-10 bg-light comment-box p-3 my-2">
                                                 <div class="comment-meta commentmetadata">
-                                                    <cite class="ttm-comment-owner">{{ $comment->name }}</cite>
-                                                    <a>{{ $comment->created_at }}</a>
+                                                    <cite class="ttm-comment-owner">{{ $item->name }}</cite>
+                                                    <a>{{ $item->created_at }}</a>
                                                 </div>
                                                 <div class="author-content-wrap">
-                                                    <p>{{ $comment->comment }}</p>
+                                                    <p>{{ $item->comment }}</p>
                                                 </div>
                                             </div>
                                         @endforeach
+                                        
+                                        <div class="pagination-container my-3">
+                                            {{ $comment->links() }}
+                                        </div>
                                     </div>
 
 
@@ -193,4 +206,33 @@
 
     </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+           $(document).on('click', '.blog_id', function() {
+                let blog_id = $(this).attr('data-blog-id');
+                console.log(blog_id);
+                // session(['blog_id' => blog_id]);
+                $.ajax({
+                    url: '/get_blog_id',
+                    type: 'get',
+                    data: {
+                        'blog_id': blog_id,
+                    },
+                    datatype: 'json',
+                    success: function(result) {
+                        var blog = JSON.stringify(result['blog']);
+                        sessionStorage.setItem('blog', blog);
+                        sessionStorage.setItem('blog_id', blog_id);
+                        window.location.href = '/blog_info';
+
+
+                    }
+                })
+            })
+
+        })
+    </script>
 @endsection

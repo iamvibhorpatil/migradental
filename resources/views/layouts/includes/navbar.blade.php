@@ -74,7 +74,7 @@
                 <div class="modal-body">
                     <div class="form-group-rc">
                         <input type="text" id="name" name="name" placeholder="Your Name *" required>
-                        <input type="tel" id="mobile" name="mobile" placeholder="Mobile No *" required>
+                        <input type="tel" id="mobile" name="mobile" pattern=".{10}" placeholder="Mobile No *" required>
                     </div>
 
                 </div>

@@ -52,6 +52,27 @@
                                             required>
                                     </div>
 
+                                    
+                                    
+                                   
+                                    <div class="col-sm-12 col-md-6">
+                                        <label for="status">Status</label>
+                                        <select class="form-select" name="status" aria-label="Default select example"
+                                            required>
+                                            <option value="Active"{{$adm_videos->status === 'Active' ? 'selected':''}}>Active</option>
+                                            <option value="Deactive"{{$adm_videos->status === 'Deactive' ? 'selected':''}}>Deactive</option>
+                                          </select>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-6">
+                                        <label for="display">Home Display Status</label>
+                                        <select class="form-select" name="display" id="display" aria-label="Default select example"
+                                            required>
+                                            <option value="Yes"{{$adm_videos->display === 'Yes' ? 'selected':''}}>Yes</option>
+                                            <option value="No"{{$adm_videos->display === 'No' ? 'selected':''}}>No</option>
+                                          </select>
+                                    </div>
+
                                     <div class="col-sm-12 col-md-6">
                                         <label for="video"> Video</label>
                                         <input type="text" class="form-control" value="{{$adm_videos->video}}" id="video" name="video"
@@ -63,16 +84,6 @@
                                                 title="YouTube video player" frameborder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                 allowfullscreen></iframe>
-                                    </div>
-                                    
-                                   
-                                    <div class="col-sm-12 col-md-6">
-                                        <label for="status">Status</label>
-                                        <select class="form-select" name="status" aria-label="Default select example"
-                                            required>
-                                            <option value="Active"{{$adm_videos->status === 'Active' ? 'selected':''}}>Active</option>
-                                            <option value="Deactive"{{$adm_videos->status === 'Deactive' ? 'selected':''}}>Deactive</option>
-                                          </select>
                                     </div>
 
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">

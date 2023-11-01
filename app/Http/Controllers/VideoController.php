@@ -72,6 +72,7 @@ class VideoController extends Controller
         $adm_videos->category_id = $request->category_id;
         $adm_videos->title = $request->title;
         $adm_videos->status = $request->status;
+        $adm_videos->display = $request->display;
         $adm_videos->video = $request->video;
 
        

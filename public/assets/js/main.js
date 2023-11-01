@@ -322,8 +322,6 @@
 
 
  // accordion
- 
-
  const accordionCards = document.querySelectorAll('.card');
      accordionCards.forEach((card, index) => {
          card.addEventListener('click', () => {
@@ -354,8 +352,9 @@
 
 
     //blog_info page
-
+ 
     $(document).ready(function() {
+        
         var images = [];
         var currentIndex = 0;
 
@@ -389,7 +388,6 @@
         }
     });
 
-        CKEDITOR.replace('description');
 
     //blog_info page end
 

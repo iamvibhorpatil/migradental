@@ -107,6 +107,7 @@
                                         <th scope="col">Category</th>
                                         <th scope="col">Title </th>
                                         <th scope="col">Video</th>
+                                        <th scope="col">Display</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">Action</th>
                                     </tr>
@@ -126,6 +127,7 @@
                                                 allowfullscreen></iframe></td>
                                            
 
+                                            <td>{{ $item->display }}</td>
                                             <td>{{ $item->status }}</td>
                                             <td>
                                                 <a href="{{ url('adm_videos/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Video') "

@@ -55,12 +55,12 @@ Route::get('/optimize', function () {
 //     }
 // });
 
-// Route::get('/add_column', function () {
-//     DB::statement('ALTER TABLE comments ADD blog_id VARCHAR(255) AFTER name');
+Route::get('/add_column', function () {
+    DB::statement('ALTER TABLE videos ADD display VARCHAR(255) AFTER status');
 
-//         return 'Column added successfully.';
+        return 'Column added successfully.';
 
-// });
+});
 
 // Home Controller
 
