@@ -82,7 +82,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('patient_form') }}">
-                                <span class="nav-link-text ms-1">New Patient<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-user-plus me-2"></i>New Patient<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -90,7 +90,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('detail') }}">
-                                <span class="nav-link-text ms-1">Patient List<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-user-nurse me-2"></i>Patient List<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
@@ -113,7 +113,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_treatment') }}">
-                                <span class="nav-link-text ms-1">Sub Head<i
+                                <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -121,7 +121,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('treatment_type') }}">
-                                <span class="nav-link-text ms-1">Add Data<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
@@ -153,7 +153,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('testimonial_category') }}">
-                                <span class="nav-link-text ms-1">Sub Head<i
+                                <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
@@ -161,7 +161,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_testimonial') }}">
-                                <span class="nav-link-text ms-1">Add Data<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -169,7 +169,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('comment') }}">
-                                <span class="nav-link-text ms-1">Comments<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-comments me-2"></i>Comments<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
@@ -189,7 +189,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_images') }}">
-                                <span class="nav-link-text ms-1">Sub Head<i
+                                <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -197,7 +197,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('images_category') }}">
-                                <span class="nav-link-text ms-1">Add Data<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
@@ -217,7 +217,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_videos') }}">
-                                <span class="nav-link-text ms-1">Sub Head<i
+                                <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
@@ -225,7 +225,7 @@
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('videos_category') }}">
-                                <span class="nav-link-text ms-1">Add Data<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
                         </li>
