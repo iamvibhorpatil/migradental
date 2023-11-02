@@ -21,16 +21,19 @@ class TreatmentController extends Controller
 
     public function store(Request $request)
     {
+        try {
+            $treatment = new Treatment();
 
-        $treatment = new Treatment();
+            $treatment->category = $request->category;
+            $treatment->treatment_type = $request->treatment_type;
+            $treatment->status = $request->status;
 
-        $treatment->category = $request->category;
-        $treatment->treatment_type = $request->treatment_type;
-        $treatment->status = $request->status;
+            $treatment->save();
 
-        $treatment->save();
-
-        return redirect()->back()->with('success', 'Treatment Added Successfully');
+            return redirect()->back()->with('success', 'Treatment Added Successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     public function edit(Treatment $treatment, $id)
@@ -45,15 +48,19 @@ class TreatmentController extends Controller
      */
     public function update(Request $request, Treatment $treatment, $id)
     {
-        $treatment =  Treatment::find($id);
+        try {
+            $treatment =  Treatment::find($id);
 
-        $treatment->category = $request->category;
-        $treatment->treatment_type = $request->treatment_type;
-        $treatment->status = $request->status;
+            $treatment->category = $request->category;
+            $treatment->treatment_type = $request->treatment_type;
+            $treatment->status = $request->status;
 
-        $treatment->update();
+            $treatment->update();
 
-        return redirect('/adm_treatment')->with('success', 'Treatment Updated Successfully');
+            return redirect('/adm_treatment')->with('success', 'Treatment Updated Successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     /**
@@ -82,8 +89,8 @@ class TreatmentController extends Controller
     {
 
         $treatment_type = TreatmentType::where('treatment_type_id', $request->treatment_id)
-        ->where('status', 'Active')->get();
-       
+            ->where('status', 'Active')->get();
+
         session()->put('treatment', $treatment_type);
 
         return response()->json([

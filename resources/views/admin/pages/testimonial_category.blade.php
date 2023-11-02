@@ -49,7 +49,8 @@
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category"> Category </label>
                                         <input type="text" class="form-control" id="category" name="category"
-                                            required>
+                                            required  pattern=".{0,30}"
+                                            title="Please enter up to 30 characters for the Category field">
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>

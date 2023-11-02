@@ -27,7 +27,7 @@ class VideoController extends Controller
 
     public function get_videos_category_id(Request $request)
     {
-        $video = Video::where('category_id',$request->cat_id)->get();
+        $video = Video::where('category_id', $request->cat_id)->get();
         return response()->json($video);
     }
     public function index()
@@ -38,22 +38,26 @@ class VideoController extends Controller
         return view('admin.pages.adm_videos', compact('adm_videos', 'videos_category',));
     }
 
-    
+
     public function store(Request $request)
     {
-        $adm_videos = new Video();
+        try {
+            $adm_videos = new Video();
 
-        $adm_videos->category_id = $request->category_id;
-        $adm_videos->title = $request->title;
-        $adm_videos->status = $request->status;
-        $adm_videos->video = $request->video;
+            $adm_videos->category_id = $request->category_id;
+            $adm_videos->title = $request->title;
+            $adm_videos->status = $request->status;
+            $adm_videos->video = $request->video;
 
-       
-        $adm_videos->save();
 
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            $adm_videos->save();
+
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
-   
+
     public function edit(Video $video, $id)
     {
         $adm_videos = Video::find($id);
@@ -67,18 +71,22 @@ class VideoController extends Controller
      */
     public function update(Request $request, Video $video, $id)
     {
-        $adm_videos =  Video::find($id);
+        try {
+            $adm_videos =  Video::find($id);
 
-        $adm_videos->category_id = $request->category_id;
-        $adm_videos->title = $request->title;
-        $adm_videos->status = $request->status;
-        $adm_videos->display = $request->display;
-        $adm_videos->video = $request->video;
+            $adm_videos->category_id = $request->category_id;
+            $adm_videos->title = $request->title;
+            $adm_videos->status = $request->status;
+            $adm_videos->display = $request->display;
+            $adm_videos->video = $request->video;
 
-       
-        $adm_videos->update();
 
-        return redirect('/adm_videos')->with('success', 'Data Updated successfully');
+            $adm_videos->update();
+
+            return redirect('/adm_videos')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
     /**
      * Remove the specified resource from storage.

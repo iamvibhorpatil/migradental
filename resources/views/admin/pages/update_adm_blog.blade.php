@@ -49,7 +49,8 @@
                                     <div class="col-sm-12 col-md-6">
                                         <label for="title"> Title</label>
                                         <input type="text" class="form-control" value="{{$adm_blog->title}}" id="title" name="title"
-                                            required>
+                                            required pattern=".{0,255}"
+                                            title="Please enter up to 255 characters for the Title field">
                                     </div>
                                     
                                     <div class="col-sm-12 col-md-6">
@@ -68,13 +69,15 @@
                                     <div class="col-sm-12 col-md-12">
                                         <label for="description"> Description </label>
                                         <textarea class="form-control" name="description" id="description" cols="30" rows="10"> {{$adm_blog->description}}</textarea>
+                                        <p id="description-error" style="color: red;"></p>
+
                                     </div>
 
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
 
                                         <a href="{{route('adm_blog')}}" class="mx-3"><button type="button"
                                             class="btn btn-dark mx-auto mx-md-0 text-white">Back</button></a>
-                                        <button type="submit"
+                                        <button type="submit" id="submit-button"
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Update</button>
 
                                     </div>
@@ -98,8 +101,21 @@
             $('#myTable8').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                     'excel', 'pdf'
+                    'excel', 'pdf'
                 ]
+            });
+
+            $('#description').on('input', function() {
+                var maxChars = 1000; 
+                var currentChars = $(this).val().length;
+
+                if (currentChars > maxChars) {
+                    $('#description-error').text('Description cannot exceed 1000 characters');
+                    $('#submit-button').prop('disabled', true);
+                } else {
+                    $('#description-error').text('');
+                    $('#submit-button').prop('disabled', false);
+                }
             });
         });
     </script>

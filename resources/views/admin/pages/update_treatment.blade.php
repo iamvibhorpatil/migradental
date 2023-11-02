@@ -43,13 +43,15 @@
                                     <div class="col-sm-12 col-md-12">
                                         <label for="treatment_type">Treatment Type</label>
                                         <input type="text" class="form-control" value="{{$treatment->treatment_type}}" id="treatment_type" name="treatment_type"
-                                            required>
+                                            required pattern=".{0,30}"
+                                            title="Please enter up to 30 characters for the Treatment Type field">
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category">Category</label>
                                         <select class="form-select" name="category" aria-label="Default select example" required>
                                             <option value="Treatment" {{$treatment->category === 'Treatment' ? 'selected':''}}>Treatment</option>
-                                            <option value="Special Treatment"{{$treatment->category === 'Special Treatment' ? 'selected':''}}>Special Treatment</option>
+                                            <option value="Elite Treatment"{{$treatment->category === 'Elite Treatment' ? 'selected':''}}>Elite Treatment</option>
+                                            <option value="Migraine" {{$treatment->category === 'Migraine' ? 'selected':''}}>Migraine</option>
                                           </select>
                                     </div>
                                     <div class="col-sm-12 col-md-6">

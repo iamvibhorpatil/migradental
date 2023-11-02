@@ -34,7 +34,7 @@
                                     </div>
                                 @endif
                                 @if (session('error'))
-                                    <div class="text-white alert alert-warming">
+                                    <div class="text-white alert alert-danger">
                                         {{ session('error') }}
                                     </div>
                                 @endif
@@ -47,24 +47,24 @@
 
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category_id">Category</label>
-                                        <select class="form-select category" id="category_id" name="category_id" aria-label="Default select example"
-                                            required>
+                                        <select class="form-select category" id="category_id" name="category_id"
+                                            aria-label="Default select example" required>
                                             <option selected>Select Category</option>
                                             @foreach ($blog_category as $item)
-                                             <option value="{{$item->id}}">{{$item->category}}</option>
+                                                <option value="{{ $item->id }}">{{ $item->category }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="title"> Title</label>
-                                        <input type="text" class="form-control" id="title" name="title"
-                                            required>
+                                        <input type="text" class="form-control" id="title"
+                                            name="title" required pattern=".{0,255}"
+                                            title="Please enter up to 255 characters for the Title field">
                                     </div>
-                                    
+
                                     <div class="col-sm-12 col-md-6">
                                         <label for="image"> Image </label>
-                                        <input type="file" class="form-control" id="image" name="image"
-                                            required>
+                                        <input type="file" class="form-control" id="image" name="image" required>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>
@@ -76,12 +76,15 @@
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label for="description"> Description </label>
-                                        <textarea class="form-control" name="description" id="description" cols="30" rows="5"></textarea>
+                                        <textarea class="form-control" name="description" id="description" cols="30" rows="5" required></textarea>
+                                        <p id="description-error" style="color: red;"></p>
+
+
                                     </div>
 
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
 
-                                        <button type="submit"
+                                        <button type="submit" id="submit-button"
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Submit</button>
 
                                     </div>
@@ -99,7 +102,7 @@
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <h6>Image  List</h6>
+                            <h6>Image List</h6>
                         </div>
                         <div class="card-body px-3 pt-0 pb-2 table-responsive">
                             <table class="table" id="myTable8">
@@ -117,18 +120,22 @@
                                 <tbody>
                                     <?php $p = 1; ?>
                                     @foreach ($adm_blog as $item)
-                        
                                         <tr class="">
                                             <td><?php echo $p++; ?></td>
                                             <td>{{ $item->BlogCategory->category }}</td>
                                             <td>{{ $item->title }}</td>
-                                            <td><textarea class="form-control"cols="10" rows="2">{{ $item->description }}</textarea></td>
-                                            <td><img src="{{ url('assets/uploads/' . $item->image) }}" width="50px" alt=""></td>
+                                            <td>
+                                                <textarea class="form-control"cols="10" rows="2">{{ $item->description }}</textarea>
+                                            </td>
+                                            <td><img src="{{ url('assets/uploads/' . $item->image) }}" width="50px"
+                                                    alt=""></td>
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('adm_blog/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Blog') "
+                                                <a href="{{ url('adm_blog/edit/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want edit this Blog') "
                                                     class="btn btn-behance badge mx-2">Edit</a>
-                                                <a href="{{ url('adm_blog/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Blog ') "
+                                                <a href="{{ url('adm_blog/delete/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want delete this Blog ') "
                                                     class="btn btn-danger badge mx-2">Delete</a>
                                             </td>
                                         </tr>
@@ -141,7 +148,7 @@
                 </div>
             </div>
         </div>
-       
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -154,7 +161,19 @@
                     'excel', 'pdf'
                 ]
             });
+
+            $('#description').on('input', function() {
+                var maxChars = 1000; 
+                var currentChars = $(this).val().length;
+
+                if (currentChars > maxChars) {
+                    $('#description-error').text('Description cannot exceed 1000 characters');
+                    $('#submit-button').prop('disabled', true);
+                } else {
+                    $('#description-error').text('');
+                    $('#submit-button').prop('disabled', false);
+                }
+            });
         });
     </script>
-   
 @endsection

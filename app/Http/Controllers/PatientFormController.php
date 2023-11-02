@@ -31,32 +31,36 @@ class PatientFormController extends Controller
 
     public function store(Request $request)
     {
-        $patientForm = new PatientForm();
-        $patientForm->form_date = $request->form_date;
-        $patientForm->patient_number = $request->patient_number;
-        $patientForm->family_card_number = $request->family_card_number;
-        $patientForm->patient_name = $request->patient_name;
-        $patientForm->dob = $request->dob;
-        $patientForm->age = $request->age;
-        $patientForm->mobile_no = $request->mobile_no;
-        $patientForm->email_id = $request->email_id;
-        $patientForm->aadhar_no = $request->aadhar_no;
-        $patientForm->address = $request->address;
-        $patientForm->profession = $request->profession;
-        $patientForm->city = $request->city;
-        $patientForm->state = $request->state;
-        $patientForm->country = $request->country;
-        $patientForm->gender = $request->gender;
-        $patientForm->guardian_name = $request->guardian_name;
-        $patientForm->guardian_no = $request->guardian_no;
-        $patientForm->guardian_city = $request->guardian_city;
-        $patientForm->referred_by = $request->referred_by;
-        $patientForm->referred_name = $request->referred_name;
-        $patientForm->time = $request->time;
-        $patientForm->appointment_sunday = $request->appointment_sunday;
+        try {
+            $patientForm = new PatientForm();
+            $patientForm->form_date = $request->form_date;
+            $patientForm->patient_number = $request->patient_number;
+            $patientForm->family_card_number = $request->family_card_number;
+            $patientForm->patient_name = $request->patient_name;
+            $patientForm->dob = $request->dob;
+            $patientForm->age = $request->age;
+            $patientForm->mobile_no = $request->mobile_no;
+            $patientForm->email_id = $request->email_id;
+            $patientForm->aadhar_no = $request->aadhar_no;
+            $patientForm->address = $request->address;
+            $patientForm->profession = $request->profession;
+            $patientForm->city = $request->city;
+            $patientForm->state = $request->state;
+            $patientForm->country = $request->country;
+            $patientForm->gender = $request->gender;
+            $patientForm->guardian_name = $request->guardian_name;
+            $patientForm->guardian_no = $request->guardian_no;
+            $patientForm->guardian_city = $request->guardian_city;
+            $patientForm->referred_by = $request->referred_by;
+            $patientForm->referred_name = $request->referred_name;
+            $patientForm->time = $request->time;
+            $patientForm->appointment_sunday = $request->appointment_sunday;
 
-        $patientForm->save();
-        return redirect('patient_form')->with('success', 'Patient Details Added successfully');
+            $patientForm->save();
+            return redirect('patient_form')->with('success', 'Patient Details Added successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     /**
@@ -92,32 +96,36 @@ class PatientFormController extends Controller
      */
     public function update(Request $request, PatientForm $patientForm, $id)
     {
-        $patientForm = PatientForm::find($id);
-        $patientForm->form_date = $request->form_date;
-        $patientForm->patient_number = $request->patient_number;
-        $patientForm->family_card_number = $request->family_card_number;
-        $patientForm->patient_name = $request->patient_name;
-        $patientForm->dob = $request->dob;
-        $patientForm->age = $request->age;
-        $patientForm->mobile_no = $request->mobile_no;
-        $patientForm->email_id = $request->email_id;
-        $patientForm->aadhar_no = $request->aadhar_no;
-        $patientForm->address = $request->address;
-        $patientForm->profession = $request->profession;
-        $patientForm->city = $request->city;
-        $patientForm->state = $request->state;
-        $patientForm->country = $request->country;
-        $patientForm->gender = $request->gender;
-        $patientForm->guardian_name = $request->guardian_name;
-        $patientForm->guardian_no = $request->guardian_no;
-        $patientForm->guardian_city = $request->guardian_city;
-        $patientForm->referred_by = $request->referred_by;
-        $patientForm->referred_name = $request->referred_name;
-        $patientForm->time = $request->time;
-        $patientForm->appointment_sunday = $request->appointment_sunday;
+        try {
+            $patientForm = PatientForm::find($id);
+            $patientForm->form_date = $request->form_date;
+            $patientForm->patient_number = $request->patient_number;
+            $patientForm->family_card_number = $request->family_card_number;
+            $patientForm->patient_name = $request->patient_name;
+            $patientForm->dob = $request->dob;
+            $patientForm->age = $request->age;
+            $patientForm->mobile_no = $request->mobile_no;
+            $patientForm->email_id = $request->email_id;
+            $patientForm->aadhar_no = $request->aadhar_no;
+            $patientForm->address = $request->address;
+            $patientForm->profession = $request->profession;
+            $patientForm->city = $request->city;
+            $patientForm->state = $request->state;
+            $patientForm->country = $request->country;
+            $patientForm->gender = $request->gender;
+            $patientForm->guardian_name = $request->guardian_name;
+            $patientForm->guardian_no = $request->guardian_no;
+            $patientForm->guardian_city = $request->guardian_city;
+            $patientForm->referred_by = $request->referred_by;
+            $patientForm->referred_name = $request->referred_name;
+            $patientForm->time = $request->time;
+            $patientForm->appointment_sunday = $request->appointment_sunday;
 
-        $patientForm->update();
-        return redirect('patient_detail')->with('success', 'Patient Details Updated successfully');
+            $patientForm->update();
+            return redirect('patient_detail')->with('success', 'Patient Details Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
     /**
      * Remove the specified resource from storage.
@@ -145,5 +153,4 @@ class PatientFormController extends Controller
         // Generate and return the PDF as a downloadable response
         return $pdf->download("vibhor.pdf");
     }
-
 }

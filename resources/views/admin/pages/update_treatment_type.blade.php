@@ -36,7 +36,8 @@
                                         <select class="form-select category" name="category" aria-label="Default select example"
                                             required>
                                             <option value="Treatment" {{$treatment_type->category === 'Treatment' ? 'selected':''}}>Treatment</option>
-                                            <option value="Special Treatment"{{$treatment_type->category === 'Special Treatment' ? 'selected':''}}>Special Treatment</option>
+                                            <option value="Elite Treatment"{{$treatment_type->category === 'Elite Treatment' ? 'selected':''}}>Elite Treatment</option>
+                                            <option value="Migraine" {{$treatment_type->category === 'Migraine' ? 'selected':''}}>Migraine</option>
                                           </select>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
@@ -49,12 +50,14 @@
                                     <div class="col-sm-12 col-md-12">
                                         <label for="question"> Question ?</label>
                                         <input type="text" value="{{$treatment_type->question}}" class="form-control" id="question" name="question"
-                                            required>
+                                            required pattern=".{0,255}"
+                                            title="Please enter up to 255 characters for the Question field">
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label for="answer"> Answer </label>
-                                        <textarea type="text" class="form-control" id="question" name="answer"
+                                        <textarea type="text" class="form-control" id="answer" name="answer"
                                             required> {{$treatment_type->answer}}</textarea>
+                                            <p id="description-error" style="color: red;"></p>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="image"> Image </label>
@@ -74,7 +77,7 @@
 
                                         <a href="{{route('treatment_type')}}" class="mx-3"><button type="button"
                                             class="btn btn-dark mx-auto mx-md-0 text-white">Back</button></a>
-                                        <button type="submit"
+                                        <button id="submit-button" type="submit"
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Update</button>
 
                                     </div>
@@ -119,6 +122,43 @@
                     }
                 })
             })
+
+
+            $('#answer').on('input', function() {
+                var maxChars = 555; 
+                var currentChars = $(this).val().length;
+
+                if (currentChars > maxChars) {
+                    $('#description-error').text('Answer cannot exceed 500 characters');
+                    $('#submit-button').prop('disabled', true);
+                } else {
+                    $('#description-error').text('');
+                    $('#submit-button').prop('disabled', false);
+                }
+            });
+            
+            $('#category_id').on('change', function() {
+                validateSelect($(this));
+            });
+
+            $('#treatment_type_id').on('change', function() {
+                validateSelect($(this));
+            });
+
+            function validateSelect(selectElement) {
+                var selectedValue = selectElement.val();
+                var categoryError = $('#category-error');
+                var submitButton = $('#submit-button');
+
+                if (selectedValue === "") {
+                    categoryError.text('Please select a category.');
+                    submitButton.prop('disabled', true);
+                } else {
+                    categoryError.text('');
+                    submitButton.prop('disabled', false);
+                }
+            }
+
 
         })
     </script>

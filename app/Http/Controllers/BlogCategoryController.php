@@ -17,18 +17,21 @@ class BlogCategoryController extends Controller
         return view('admin.pages.blog_category', compact('blog_category'));
     }
 
-    
+
     public function store(Request $request)
     {
-        $blog_category = new BlogCategory();
+        try {
+            $blog_category = new BlogCategory();
 
-        $blog_category->category = $request->category;
-        $blog_category->status = $request->status;
+            $blog_category->category = $request->category;
+            $blog_category->status = $request->status;
 
-       
-        $blog_category->save();
+            $blog_category->save();
 
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     public function edit(BlogCategory $blogCategory, $id)
@@ -43,14 +46,18 @@ class BlogCategoryController extends Controller
      */
     public function update(Request $request, BlogCategory $blogCategory, $id)
     {
-        $blog_category =  BlogCategory::find($id);
+        try {
+            $blog_category =  BlogCategory::find($id);
 
-        $blog_category->category = $request->category;
-        $blog_category->status = $request->status;
+            $blog_category->category = $request->category;
+            $blog_category->status = $request->status;
 
-        $blog_category->update();
+            $blog_category->update();
 
-        return redirect('/blog_category')->with('success', 'Data Updated successfully');
+            return redirect('/blog_category')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
 

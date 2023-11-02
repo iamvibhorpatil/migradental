@@ -54,11 +54,13 @@
                                              <option value="{{$item->id}}">{{$item->category}}</option>
                                             @endforeach
                                         </select>
+                                        <span id="category-error" style="color: red;"></span>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="title"> Title</label>
                                         <input type="text" class="form-control" id="title" name="title"
-                                            required>
+                                            required pattern=".{0,255}"
+                                            title="Please enter up to 255 characters for the Title field">
                                     </div>
                                     
                                     <div class="col-sm-12 col-md-6">
@@ -77,7 +79,7 @@
 
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
 
-                                        <button type="submit"
+                                        <button id="submit-button" type="submit" disabled
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Submit</button>
 
                                     </div>
@@ -148,6 +150,18 @@
                 buttons: [
                     'excel', 'pdf'
                 ]
+            });
+            
+            $('#category_id').on('change', function() {
+                var selectedValue = $(this).val();
+                
+                if (selectedValue === "") {
+                    $('#category-error').text('Please select a category.');
+                    $('#submit-button').prop('disabled', true);
+                } else {
+                    $('#category-error').text('');
+                    $('#submit-button').prop('disabled', false);
+                }
             });
         });
     </script>

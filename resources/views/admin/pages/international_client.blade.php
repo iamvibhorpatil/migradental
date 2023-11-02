@@ -45,21 +45,23 @@
                                 @endif
                                 <div class="row input_field" style="">
 
-                                  
+
                                     <div class="col-sm-12 col-md-12">
                                         <label for="question"> Question ?</label>
-                                        <input type="text" class="form-control" id="question" name="question"
-                                            required>
+                                        <input type="text" class="form-control" id="question" name="question" required
+                                            pattern=".{0,255}"
+                                            title="Please enter up to 255 characters for the Question field">
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label for="answer"> Answer </label>
-                                        <textarea type="text" class="form-control" id="question" name="answer"
-                                            required></textarea>
+                                        <textarea type="text" class="form-control" id="answer" name="answer" required></textarea>
+                                        <p id="description-error" style="color: red;"></p>
+
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="image"> Image </label>
-                                        <input type="file" class="form-control" id="image" name="image"
-                                            required>
+                                        <input type="file" class="form-control" id="image" accept="image/*"
+                                            name="image[]" required multiple>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>
@@ -72,7 +74,7 @@
 
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
 
-                                        <button type="submit"
+                                        <button type="submit" id="submit-button"
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Submit</button>
 
                                     </div>
@@ -99,7 +101,6 @@
                                         <th scope="col">Sr.No</th>
                                         <th scope="col">Question</th>
                                         <th scope="col">Answer</th>
-                                        <th scope="col">Image</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">Action</th>
                                     </tr>
@@ -107,18 +108,22 @@
                                 <tbody>
                                     <?php $p = 1; ?>
                                     @foreach ($international_client as $item)
-                        
                                         <tr class="">
                                             <td><?php echo $p++; ?></td>
-                                            <td><textarea class="form-control-sm" cols="15">{{ $item->question }}</textarea></td>
-                                            <td><textarea class="form-control-sm" cols="30">{{ $item->answer }}</textarea></td>
-                                            <td><img src="{{ url('assets/uploads/' . $item->image) }}" width="50px" alt=""></td>
-
+                                            <td>
+                                                <textarea class="form-control-sm" cols="15">{{ $item->question }}</textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control-sm" cols="30">{{ $item->answer }}</textarea>
+                                            </td>
+                                           
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('international_client/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Treatment Type') "
+                                                <a href="{{ url('international_client/edit/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want edit this Treatment Type') "
                                                     class="btn btn-behance badge mx-2">Edit</a>
-                                                <a href="{{ url('international_client/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Treatment Type') "
+                                                <a href="{{ url('international_client/delete/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want delete this Treatment Type') "
                                                     class="btn btn-danger badge mx-2">Delete</a>
                                             </td>
                                         </tr>
@@ -131,20 +136,32 @@
                 </div>
             </div>
         </div>
-       
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
+           
             $('#myTable8').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
                     'excel', 'pdf'
                 ]
             });
+            $('#answer').on('input', function() {
+                var maxChars = 555;
+                var currentChars = $(this).val().length;
+
+                if (currentChars > maxChars) {
+                    $('#description-error').text('Answer cannot exceed 500 characters');
+                    $('#submit-button').prop('disabled', true);
+                } else {
+                    $('#description-error').text('');
+                    $('#submit-button').prop('disabled', false);
+                }
+            });
         });
     </script>
-   
 @endsection

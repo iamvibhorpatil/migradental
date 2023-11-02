@@ -34,8 +34,8 @@
                         
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category"> Category </label>
-                                        <input type="text" class="form-control" value="{{$blog_category->category}}" id="category" name="category"
-                                            required>
+                                        <input type="text"  pattern=".{0,30}" class="form-control" value="{{$blog_category->category}}" id="category" name="category"
+                                            required title="Please enter up to 30 characters for the category field">
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>

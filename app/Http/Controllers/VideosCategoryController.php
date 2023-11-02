@@ -19,18 +19,22 @@ class VideosCategoryController extends Controller
 
     public function store(Request $request)
     {
-        $videos_category = new VideosCategory();
+        try {
+            $videos_category = new VideosCategory();
 
-        $videos_category->category = $request->category;
-        $videos_category->status = $request->status;
+            $videos_category->category = $request->category;
+            $videos_category->status = $request->status;
 
-       
-        $videos_category->save();
 
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            $videos_category->save();
+
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
-    
+
     public function edit(VideosCategory $videosCategory, $id)
     {
         $videos_category = VideosCategory::find($id);
@@ -44,14 +48,18 @@ class VideosCategoryController extends Controller
      */
     public function update(Request $request, VideosCategory $videosCategory, $id)
     {
-        $videos_category =  VideosCategory::find($id);
+        try {
+            $videos_category =  VideosCategory::find($id);
 
-        $videos_category->category = $request->category;
-        $videos_category->status = $request->status;
+            $videos_category->category = $request->category;
+            $videos_category->status = $request->status;
 
-        $videos_category->update();
+            $videos_category->update();
 
-        return redirect('/videos_category')->with('success', 'Data Updated successfully');
+            return redirect('/videos_category')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     /**

@@ -21,15 +21,19 @@ class TestimonialCategoryController extends Controller
 
     public function store(Request $request)
     {
-        $testimonial_category = new TestimonialCategory();
+        try {
+            $testimonial_category = new TestimonialCategory();
 
-        $testimonial_category->category = $request->category;
-        $testimonial_category->status = $request->status;
+            $testimonial_category->category = $request->category;
+            $testimonial_category->status = $request->status;
 
 
-        $testimonial_category->save();
+            $testimonial_category->save();
 
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
 
@@ -45,14 +49,18 @@ class TestimonialCategoryController extends Controller
      */
     public function update(Request $request, TestimonialCategory $testimonialCategory, $id)
     {
-        $testimonial_category =  TestimonialCategory::find($id);
+        try {
+            $testimonial_category =  TestimonialCategory::find($id);
 
-        $testimonial_category->category = $request->category;
-        $testimonial_category->status = $request->status;
+            $testimonial_category->category = $request->category;
+            $testimonial_category->status = $request->status;
 
-        $testimonial_category->update();
+            $testimonial_category->update();
 
-        return redirect('/testimonial_category')->with('success', 'Data Updated successfully');
+            return redirect('/testimonial_category')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     /**
@@ -64,7 +72,7 @@ class TestimonialCategoryController extends Controller
         $testimonial_category->delete();
         return redirect()->back()->with('delete', 'Testimonial Category Deleted Successfully');
     }
-    
+
     //  comments
     public function comment()
     {
@@ -74,17 +82,21 @@ class TestimonialCategoryController extends Controller
     }
     public function store_comment(Request $request)
     {
-        $comment = new Comment();
+        try {
+            $comment = new Comment();
 
-        $comment->name = $request->name;
-        $comment->blog_id = $request->blog_id;
-        $comment->mobile = $request->mobile;
-        $comment->comment = $request->comment;
+            $comment->name = $request->name;
+            $comment->blog_id = $request->blog_id;
+            $comment->mobile = $request->mobile;
+            $comment->comment = $request->comment;
 
 
-        $comment->save();
+            $comment->save();
 
-        return redirect()->back()->with('success', 'Comment Added Successfully');
+            return redirect()->back()->with('success', 'Comment Added Successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     public function destroy_comment(TestimonialCategory $testimonialCategory, $id)
