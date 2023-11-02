@@ -43,28 +43,30 @@
                                     <div class="col-sm-12 col-md-12">
                                         <label for="treatment_type">Treatment Type</label>
                                         <input type="text" class="form-control" id="treatment_type" name="treatment_type"
-                                            required>
+                                            required pattern=".{0,30}"
+                                            title="Please enter up to 30 characters for the Treatment Type field">
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category">Category</label>
-                                        <select class="form-select" name="category" aria-label="Default select example" required>
+                                        <select class="form-select" id="category_id" name="category" aria-label="Default select example" required>
                                             <option selected>Select Category</option>
                                             <option value="Treatment">Treatment</option>
-                                            <option value="Special Treatment">Special Treatment</option>
+                                            <option value="Special Treatment">Elite Treatment</option>
+                                            <option value="Migraine">Migraine</option>
                                           </select>
+                                        <span id="category-error" style="color: red;"></span>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>
                                         <select class="form-select" name="status" aria-label="Default select example" required>
-                                            <option selected>Select Status</option>
-                                            <option value="Active">Active</option>
+                                            <option value="Active" selected>Active</option>
                                             <option value="Deactive">Deactive</option>
                                           </select>
                                     </div>
                                     
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
                                        
-                                            <button type="submit"
+                                            <button id="submit-button" type="submit" disabled
                                                 class="btn btn-primary mx-auto mx-md-0 text-white">Submit</button>
                                         
                                     </div>
@@ -131,6 +133,17 @@
                 buttons: [
                     'excel', 'pdf'
                 ]
+            });
+            $('#category_id').on('change', function() {
+                var selectedValue = $(this).val();
+                
+                if (selectedValue === "") {
+                    $('#category-error').text('Please select a category.');
+                    $('#submit-button').prop('disabled', true);
+                } else {
+                    $('#category-error').text('');
+                    $('#submit-button').prop('disabled', false);
+                }
             });
         });
     </script>

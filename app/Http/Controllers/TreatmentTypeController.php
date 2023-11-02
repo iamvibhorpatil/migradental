@@ -28,28 +28,31 @@ class TreatmentTypeController extends Controller
 
     public function store(Request $request)
     {
+        try {
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,jpg,png|max:5048',
+            ]);
 
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,jpg,png|max:5048',
-        ]);
+            $treatment_type = new TreatmentType();
 
-        $treatment_type = new TreatmentType();
+            $treatment_type->category = $request->category;
+            $treatment_type->treatment_type_id = $request->treatment_type_id;
+            $treatment_type->question = $request->question;
+            $treatment_type->answer = $request->answer;
+            $treatment_type->status = $request->status;
+            $image = $request->image;
 
-        $treatment_type->category = $request->category;
-        $treatment_type->treatment_type_id = $request->treatment_type_id;
-        $treatment_type->question = $request->question;
-        $treatment_type->answer = $request->answer;
-        $treatment_type->status = $request->status;
-        $image = $request->image;
+            $imageName = $image->getClientOriginalName();
+            $imagePath = 'public/assets/uploads/' . $imageName;
+            $image->move(public_path('assets/uploads'), $imagePath);
+            $treatment_type->image = $imageName;
 
-        $imageName = $image->getClientOriginalName();
-        $imagePath = 'public/assets/uploads/' . $imageName;
-        $image->move(public_path('assets/uploads'), $imagePath);
-        $treatment_type->image = $imageName;
+            $treatment_type->save();
 
-        $treatment_type->save();
-
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
 
@@ -65,33 +68,36 @@ class TreatmentTypeController extends Controller
 
     public function update(Request $request, TreatmentType $treatmentType, $id)
     {
-       
 
-        $treatment_type =  TreatmentType::find($id);
+        try {
+            $treatment_type =  TreatmentType::find($id);
 
-        $treatment_type->category = $request->category;
-        $treatment_type->treatment_type_id = $request->treatment_type_id;
-        $treatment_type->question = $request->question;
-        $treatment_type->answer = $request->answer;
-        $treatment_type->status = $request->status;
-        $image = $request->image;
+            $treatment_type->category = $request->category;
+            $treatment_type->treatment_type_id = $request->treatment_type_id;
+            $treatment_type->question = $request->question;
+            $treatment_type->answer = $request->answer;
+            $treatment_type->status = $request->status;
+            $image = $request->image;
 
-        if ($image) {
-            $allowedExtensions = ['png', 'jpg', 'jpeg'];
+            if ($image) {
+                $allowedExtensions = ['png', 'jpg', 'jpeg'];
 
-            // Check if the file extension is allowed
-            $extension = strtolower($image->getClientOriginalExtension());
-            if (!in_array($extension, $allowedExtensions)) {
-                return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                // Check if the file extension is allowed
+                $extension = strtolower($image->getClientOriginalExtension());
+                if (!in_array($extension, $allowedExtensions)) {
+                    return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                }
+                $imageName = $image->getClientOriginalName();
+                $imagePath = 'public/assets/uploads/' . $imageName;
+                $image->move(public_path('assets/uploads'), $imagePath);
+                $treatment_type->image = $imageName;
             }
-            $imageName = $image->getClientOriginalName();
-            $imagePath = 'public/assets/uploads/' . $imageName;
-            $image->move(public_path('assets/uploads'), $imagePath);
-            $treatment_type->image = $imageName;
-        }
-        $treatment_type->update();
+            $treatment_type->update();
 
-        return redirect('/treatment_type')->with('success', 'Data Updated successfully');
+            return redirect('/treatment_type')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     public function destroy(TreatmentType $treatmentType, $id)

@@ -49,7 +49,8 @@
                                     <div class="col-sm-12 col-md-6">
                                         <label for="title"> Title</label>
                                         <input type="text" class="form-control" value="{{$adm_testimonial->title}}" id="title" name="title"
-                                            required>
+                                            required  pattern=".{0,255}"
+                                            title="Please enter up to 255 characters for the Title field">
                                     </div>
                                     
                                     <div class="col-sm-12 col-md-6">

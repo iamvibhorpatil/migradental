@@ -26,7 +26,7 @@ class ImageController extends Controller
 
     public function get_images_category_id(Request $request)
     {
-        $image = Image::where('category_id',$request->cat_id)->get();
+        $image = Image::where('category_id', $request->cat_id)->get();
         return response()->json($image);
     }
 
@@ -38,32 +38,36 @@ class ImageController extends Controller
         return view('admin.pages.adm_images', compact('adm_images', 'images_category',));
     }
 
-   
+
     public function store(Request $request)
     {
-        $adm_image = new Image();
+        try {
+            $adm_image = new Image();
 
-        $adm_image->category_id = $request->category_id;
-        $adm_image->title = $request->title;
-        $adm_image->status = $request->status;
-        $image = $request->image;
+            $adm_image->category_id = $request->category_id;
+            $adm_image->title = $request->title;
+            $adm_image->status = $request->status;
+            $image = $request->image;
 
-        if ($image) {
-            $allowedExtensions = ['png', 'jpg', 'jpeg'];
+            if ($image) {
+                $allowedExtensions = ['png', 'jpg', 'jpeg'];
 
-            // Check if the file extension is allowed
-            $extension = strtolower($image->getClientOriginalExtension());
-            if (!in_array($extension, $allowedExtensions)) {
-                return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                // Check if the file extension is allowed
+                $extension = strtolower($image->getClientOriginalExtension());
+                if (!in_array($extension, $allowedExtensions)) {
+                    return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                }
+                $imageName = $image->getClientOriginalName();
+                $imagePath = 'public/assets/uploads/' . $imageName;
+                $image->move(public_path('assets/uploads'), $imagePath);
+                $adm_image->image = $imageName;
             }
-            $imageName = $image->getClientOriginalName();
-            $imagePath = 'public/assets/uploads/' . $imageName;
-            $image->move(public_path('assets/uploads'), $imagePath);
-            $adm_image->image = $imageName;
-        }
-        $adm_image->save();
+            $adm_image->save();
 
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     public function edit(Image $image, $id)
@@ -78,29 +82,33 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image, $id)
     {
-        $adm_image =  Image::find($id);
+        try {
+            $adm_image =  Image::find($id);
 
-        $adm_image->category_id = $request->category_id;
-        $adm_image->title = $request->title;
-        $adm_image->status = $request->status;
-        $image = $request->image;
+            $adm_image->category_id = $request->category_id;
+            $adm_image->title = $request->title;
+            $adm_image->status = $request->status;
+            $image = $request->image;
 
-        if ($image) {
-            $allowedExtensions = ['png', 'jpg', 'jpeg'];
+            if ($image) {
+                $allowedExtensions = ['png', 'jpg', 'jpeg'];
 
-            // Check if the file extension is allowed
-            $extension = strtolower($image->getClientOriginalExtension());
-            if (!in_array($extension, $allowedExtensions)) {
-                return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                // Check if the file extension is allowed
+                $extension = strtolower($image->getClientOriginalExtension());
+                if (!in_array($extension, $allowedExtensions)) {
+                    return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                }
+                $imageName = $image->getClientOriginalName();
+                $imagePath = 'public/assets/uploads/' . $imageName;
+                $image->move(public_path('assets/uploads'), $imagePath);
+                $adm_image->image = $imageName;
             }
-            $imageName = $image->getClientOriginalName();
-            $imagePath = 'public/assets/uploads/' . $imageName;
-            $image->move(public_path('assets/uploads'), $imagePath);
-            $adm_image->image = $imageName;
-        }
-        $adm_image->update();
+            $adm_image->update();
 
-        return redirect('/adm_images')->with('success', 'Data Updated successfully');
+            return redirect('/adm_images')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     /**

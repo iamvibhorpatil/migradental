@@ -55,12 +55,12 @@ Route::get('/optimize', function () {
 //     }
 // });
 
-Route::get('/add_column', function () {
-    DB::statement('ALTER TABLE videos ADD display VARCHAR(255) AFTER status');
+// Route::get('/add_column', function () {
+//     DB::statement('ALTER TABLE videos ADD display VARCHAR(255) AFTER status');
 
-        return 'Column added successfully.';
+//         return 'Column added successfully.';
 
-});
+// });
 
 // Home Controller
 
@@ -133,6 +133,7 @@ Route::middleware('auth')->group(function () {
     Route::get('international_client/edit/{id}', [InternationalController::class, 'edit']);
     Route::post('international_client/update/{id}', [InternationalController::class, 'update']);
     Route::get('international_client/delete/{id}', [InternationalController::class, 'destroy']);
+    Route::get('delete_image', [InternationalController::class, 'delete_image']);
     //adm_testimonial
     Route::get('adm_testimonial', [TestimonialController::class, 'index'])->name('adm_testimonial');
     Route::post('store_adm_testimonial', [TestimonialController::class, 'store']);

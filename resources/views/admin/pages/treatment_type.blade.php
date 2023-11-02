@@ -47,29 +47,34 @@
 
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category">Category</label>
-                                        <select class="form-select category" name="category" aria-label="Default select example"
+                                        <select class="form-select category" id="category_id" name="category" aria-label="Default select example"
                                             required>
                                             <option selected>Select Category</option>
                                             <option value="Treatment">Treatment</option>
                                             <option value="Special Treatment">Special Treatment</option>
                                         </select>
+                                        <span id="category-error" style="color: red;"></span>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="treatment_type_id">Treatment Type</label>
-                                        <select class="form-select treatment_type_id" name="treatment_type_id" aria-label="Default select example"
-                                            required>
+                                        <select class="form-select treatment_type_id" name="treatment_type_id" aria-label="Default select example" id="treatment_type_id"
+                                            required title="Select Category First">
                                             <option selected>Select Treatment</option>
                                         </select>
+                                        <span id="treatment-type-error" style="color: red;"></span>
+
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label for="question"> Question ?</label>
                                         <input type="text" class="form-control" id="question" name="question"
-                                            required>
+                                            required pattern=".{0,255}"
+                                            title="Please enter up to 255 characters for the Question field">
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label for="answer"> Answer </label>
-                                        <textarea type="text" class="form-control" id="question" name="answer"
+                                        <textarea type="text" class="form-control" id="answer" name="answer"
                                             required></textarea>
+                                            <p id="description-error" style="color: red;"></p>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="image"> Image </label>
@@ -87,7 +92,7 @@
 
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
 
-                                        <button type="submit"
+                                        <button id="submit-button" type="submit" disabled
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Submit</button>
 
                                     </div>
@@ -191,6 +196,41 @@
                     }
                 })
             })
+
+            
+            $('#answer').on('input', function() {
+                var maxChars = 555; 
+                var currentChars = $(this).val().length;
+
+                if (currentChars > maxChars) {
+                    $('#description-error').text('Answer cannot exceed 500 characters');
+                    $('#submit-button').prop('disabled', true);
+                } else {
+                    $('#description-error').text('');
+                    $('#submit-button').prop('disabled', false);
+                }
+            });
+
+            $('#category_id').on('change', function() {
+                validateSelect($(this), $('#category-error'));
+            });
+
+            $('#treatment_type_id').on('change', function() {
+                validateSelect($(this), $('#treatment-type-error'));
+            });
+
+            function validateSelect(selectElement, errorElement) {
+                var selectedValue = selectElement.val();
+                var submitButton = $('#submit-button');
+
+                if (selectedValue === "") {
+                    errorElement.text('Please select a category.');
+                    submitButton.prop('disabled', true);
+                } else {
+                    errorElement.text('');
+                    submitButton.prop('disabled', false);
+                }
+            }
 
         })
     </script>

@@ -26,6 +26,8 @@
     <link id="pagestyle" href="{{ URL::to('admin_assets/css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>    
+   
 
 
 </head>
@@ -70,7 +72,7 @@
                 </li>
                 {{-- @if (Auth::user()->hasPermissionTo('Add User') || Auth::user()->hasPermissionTo('View Users')) --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link " onclick="toggleUser()">
+                    <a href="#" class="nav-link {{ request()->is('patient_form') || request()->is('detail') ? 'active' : '' }}" onclick="toggleUser()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 
@@ -102,12 +104,12 @@
 
                 <!-- Treatment change to main-menu-->
                 <li class="nav-item">
-                    <a href="#" class="nav-link " onclick="togglecategory()">
+                    <a href="#" class="nav-link {{ request()->is('adm_treatment') || request()->is('treatment_type') ? 'active' : '' }}" onclick="togglecategory()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-tooth text-dark text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Main Menu</span>
+                        <span class="nav-link-text ms-1 mt-2 dropdown-toggle">Treatment Menu</span>
                     </a>
                     <ul class="navbar-nav ps-5" id="Treatment" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
@@ -131,7 +133,7 @@
                 <!-- Treatment change to main-menu end-->
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ route('international_client') }}">
+                    <a class="nav-link {{ request()->is('international_client') ? 'active' : '' }}" href="{{ route('international_client') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-users text-dark text-sm opacity-10"></i>
@@ -141,7 +143,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link " onclick="toggletestimonial()">
+                    <a href="#" class="nav-link {{ request()->is('testimonial_category') || request()->is('adm_testimonial') || request()->is('comment') ? 'active' : '' }}" onclick="toggletestimonial()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-file-circle-question text-dark text-sm opacity-10"></i>
@@ -178,7 +180,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link " onclick="toggleimages()">
+                    <a href="#" class="nav-link  {{ request()->is('images_category') || request()->is('adm_images') ? 'active' : '' }}" onclick="toggleimages()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-regular fa-image text-dark text-sm opacity-10"></i>
@@ -188,7 +190,7 @@
                     <ul class="navbar-nav ps-5" id="Images" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_images') }}">
+                            <a class="nav-link " href="{{ Route('images_category') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -196,7 +198,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('images_category') }}">
+                            <a class="nav-link " href="{{ Route('adm_images') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -206,7 +208,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link " onclick="toggleVideos()">
+                    <a href="#" class="nav-link  {{ request()->is('videos_category') || request()->is('adm_videos') ? 'active' : '' }}" onclick="toggleVideos()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-video text-dark text-sm opacity-10"></i>
@@ -216,7 +218,7 @@
                     <ul class="navbar-nav ps-5" id="Videos" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_videos') }}">
+                            <a class="nav-link " href="{{ Route('videos_category') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -224,7 +226,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('videos_category') }}">
+                            <a class="nav-link " href="{{ Route('adm_videos') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -234,7 +236,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link " onclick="toggleBlog()">
+                    <a href="#" class="nav-link  {{ request()->is('adm_blog') || request()->is('blog_category') ? 'active' : '' }}" onclick="toggleBlog()">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-blog text-dark text-sm opacity-10"></i>
@@ -263,7 +265,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ route('request_callback') }}">
+                    <a class="nav-link {{ request()->is('request_callback') ? 'active' : '' }}" href="{{ route('request_callback') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-phone-volume text-dark text-sm opacity-10"></i>
@@ -273,7 +275,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('adm_contact')}}">
+                    <a class="nav-link {{ request()->is('adm_contact') ? 'active' : '' }}" href="{{route('adm_contact')}}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-address-book text-dark text-sm opacity-10"></i>
@@ -497,6 +499,8 @@
     <script async defer src="{{ URL::to('https://buttons.github.io/buttons.js') }}"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ URL::to('admin_assets/js/argon-dashboard.min.js?v=2.0.4') }}"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
 
     <script>
         function toggleUser() {

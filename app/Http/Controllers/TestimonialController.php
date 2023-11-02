@@ -26,7 +26,7 @@ class TestimonialController extends Controller
 
     public function get_category_id(Request $request)
     {
-        $testimonial = Testimonial::where('category_id',$request->cat_id)->get();
+        $testimonial = Testimonial::where('category_id', $request->cat_id)->get();
         return response()->json($testimonial);
     }
 
@@ -40,29 +40,33 @@ class TestimonialController extends Controller
 
     public function store(Request $request)
     {
-        $adm_testimonial = new Testimonial();
+        try {
+            $adm_testimonial = new Testimonial();
 
-        $adm_testimonial->category_id = $request->category_id;
-        $adm_testimonial->title = $request->title;
-        $adm_testimonial->status = $request->status;
-        $image = $request->image;
+            $adm_testimonial->category_id = $request->category_id;
+            $adm_testimonial->title = $request->title;
+            $adm_testimonial->status = $request->status;
+            $image = $request->image;
 
-        if ($image) {
-            $allowedExtensions = ['png', 'jpg', 'jpeg'];
+            if ($image) {
+                $allowedExtensions = ['png', 'jpg', 'jpeg'];
 
-            // Check if the file extension is allowed
-            $extension = strtolower($image->getClientOriginalExtension());
-            if (!in_array($extension, $allowedExtensions)) {
-                return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                // Check if the file extension is allowed
+                $extension = strtolower($image->getClientOriginalExtension());
+                if (!in_array($extension, $allowedExtensions)) {
+                    return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                }
+                $imageName = $image->getClientOriginalName();
+                $imagePath = 'public/assets/uploads/' . $imageName;
+                $image->move(public_path('assets/uploads'), $imagePath);
+                $adm_testimonial->image = $imageName;
             }
-            $imageName = $image->getClientOriginalName();
-            $imagePath = 'public/assets/uploads/' . $imageName;
-            $image->move(public_path('assets/uploads'), $imagePath);
-            $adm_testimonial->image = $imageName;
-        }
-        $adm_testimonial->save();
+            $adm_testimonial->save();
 
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     public function edit(Testimonial $testimonial, $id)
@@ -78,29 +82,33 @@ class TestimonialController extends Controller
      */
     public function update(Request $request, Testimonial $testimonial, $id)
     {
-        $adm_testimonial =  Testimonial::find($id);
+        try {
+            $adm_testimonial =  Testimonial::find($id);
 
-        $adm_testimonial->category_id = $request->category_id;
-        $adm_testimonial->title = $request->title;
-        $adm_testimonial->status = $request->status;
-        $image = $request->image;
+            $adm_testimonial->category_id = $request->category_id;
+            $adm_testimonial->title = $request->title;
+            $adm_testimonial->status = $request->status;
+            $image = $request->image;
 
-        if ($image) {
-            $allowedExtensions = ['png', 'jpg', 'jpeg'];
+            if ($image) {
+                $allowedExtensions = ['png', 'jpg', 'jpeg'];
 
-            // Check if the file extension is allowed
-            $extension = strtolower($image->getClientOriginalExtension());
-            if (!in_array($extension, $allowedExtensions)) {
-                return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                // Check if the file extension is allowed
+                $extension = strtolower($image->getClientOriginalExtension());
+                if (!in_array($extension, $allowedExtensions)) {
+                    return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                }
+                $imageName = $image->getClientOriginalName();
+                $imagePath = 'public/assets/uploads/' . $imageName;
+                $image->move(public_path('assets/uploads'), $imagePath);
+                $adm_testimonial->image = $imageName;
             }
-            $imageName = $image->getClientOriginalName();
-            $imagePath = 'public/assets/uploads/' . $imageName;
-            $image->move(public_path('assets/uploads'), $imagePath);
-            $adm_testimonial->image = $imageName;
-        }
-        $adm_testimonial->update();
+            $adm_testimonial->update();
 
-        return redirect('/adm_testimonial')->with('success', 'Data Updated successfully');
+            return redirect('/adm_testimonial')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     /**

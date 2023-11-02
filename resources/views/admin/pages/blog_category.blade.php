@@ -34,7 +34,7 @@
                                     </div>
                                 @endif
                                 @if (session('error'))
-                                    <div class="text-white alert alert-warming">
+                                    <div class="text-white alert alert-danger">
                                         {{ session('error') }}
                                     </div>
                                 @endif
@@ -45,11 +45,13 @@
                                 @endif
                                 <div class="row input_field" style="">
 
-                        
+
                                     <div class="col-sm-12 col-md-6">
                                         <label for="category"> Category </label>
-                                        <input type="text" class="form-control" id="category" name="category"
-                                            required>
+                                        <input type="text" pattern=".{0,30}" class="form-control" id="category"
+                                            name="category" required
+                                            title="Please enter up to 30 characters for the category field">
+
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>
@@ -95,16 +97,17 @@
                                 <tbody>
                                     <?php $p = 1; ?>
                                     @foreach ($blog_category as $item)
-                        
                                         <tr class="">
                                             <td><?php echo $p++; ?></td>
-                                            <td>{{$item->category}}</td>
+                                            <td>{{ $item->category }}</td>
 
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('blog_category/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Category Type') "
+                                                <a href="{{ url('blog_category/edit/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want edit this Category Type') "
                                                     class="btn btn-behance badge mx-2">Edit</a>
-                                                <a href="{{ url('blog_category/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Category Type') "
+                                                <a href="{{ url('blog_category/delete/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want delete this Category Type') "
                                                     class="btn btn-danger badge mx-2">Delete</a>
                                             </td>
                                         </tr>
@@ -117,7 +120,7 @@
                 </div>
             </div>
         </div>
-       
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -127,10 +130,9 @@
             $('#myTable8').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                  'excel', 'pdf'
+                    'excel', 'pdf'
                 ]
             });
         });
     </script>
-   
 @endsection

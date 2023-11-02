@@ -19,21 +19,25 @@ class ImagesCategoryController extends Controller
 
     public function store(Request $request)
     {
-        $images_category = new ImagesCategory();
+        try {
+            $images_category = new ImagesCategory();
 
-        $images_category->category = $request->category;
-        $images_category->status = $request->status;
+            $images_category->category = $request->category;
+            $images_category->status = $request->status;
 
-       
-        $images_category->save();
 
-        return redirect()->back()->with('success', 'Data uploaded successfully');
+            $images_category->save();
+
+            return redirect()->back()->with('success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
 
     public function edit(ImagesCategory $imagesCategory, $id)
     {
-       $images_category = ImagesCategory::find($id);
+        $images_category = ImagesCategory::find($id);
 
         return view('admin.pages.update_images_category', compact('images_category'));
     }
@@ -43,14 +47,18 @@ class ImagesCategoryController extends Controller
      */
     public function update(Request $request, ImagesCategory $imagesCategory, $id)
     {
-        $images_category =  ImagesCategory::find($id);
+        try {
+            $images_category =  ImagesCategory::find($id);
 
-        $images_category->category = $request->category;
-        $images_category->status = $request->status;
+            $images_category->category = $request->category;
+            $images_category->status = $request->status;
 
-        $images_category->update();
+            $images_category->update();
 
-        return redirect('/images_category')->with('success', 'Data Updated successfully');
+            return redirect('/images_category')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
     }
 
     /**
