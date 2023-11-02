@@ -4,77 +4,74 @@
 @section('content')
 <section class="home-slider owl-carousel">
 <div class="slider-item" style="background-image:url(assets/images/slider-img-1.webp);"
-    data-stellar-background-ratio="0.5"> </div>
-<div class="slider-item" style="background-image:url(assets/images/slider-img-2.webp);"
-    data-stellar-background-ratio="0.5"> </div> </section>
+    data-stellar-background-ratio="0.5"> </div> <div class="slider-item"
+    style="background-image:url(assets/images/slider-img-2.webp);" data-stellar-background-ratio="0.5"> </div>
+</section>
 
-    <!-- why choose us -->
+<!-- why choose us -->
 
-    <div class="container">
-        <div class="card mb-3 shadow-lg animated fadeInLeft">
-            <div class="row g-0">
-                <div class="col-md-7">
-                    <div class="card-body what-who-sec">
-                        <div class="text-center mb-4">
-                            <h5 class="card-title" style="font-size: 32px; font-weight: 700;">What We Are?</h5>
-                        </div>
-                        <div class=" mb-5">
-                            <p>At the core of our mission is a profound dedication to improving lives and fostering
-                                healthier communities. Dr. Sarrah Husain is not only a skilled dental practitioner but
-                                also a
-                                compassionate advocate for those who suffer from debilitating conditions. Here's a
-                                glimpse
-                                of who we are and what we stand for:</p>
-                            <a href="{{ Route('about') }}#What_we_are">
-                                <button type="button" class="btn custom-btn-what-why">
-                                    Read More
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 d-flex align-items-center justify-content-center">
-                    <img src="assets/images/image_5.jpg" class="img-fluid rounded-start" alt="Our Services"
-                        style="max-width: 100%; height: -webkit-fill-available;" />
-                </div>
-            </div>
+<div class="container"> <div class="card mb-3 shadow-lg animated fadeInLeft"> <div class="row g-0">
+    <div class="col-md-7">
+    <div class="card-body what-who-sec">
+    <div class="text-center mb-4">
+        <h5 class="card-title" style="font-size: 32px; font-weight: 700;">What We Are?</h5>
+    </div>
+    <div class=" mb-5">
+        <p>At the core of our mission is a profound dedication to improving lives and fostering
+            healthier communities. Dr. Sarrah Husain is not only a skilled dental practitioner but
+            also a
+            compassionate advocate for those who suffer from debilitating conditions. Here's a
+            glimpse
+            of who we are and what we stand for:</p>
+        <a href="{{ Route('about') }}#What_we_are">
+            <button type="button" class="btn custom-btn-what-why">
+                Read More
+            </button>
+        </a>
+    </div>
+</div>
+</div>
+<div class="col-md-5 d-flex align-items-center justify-content-center">
+    <img src="assets/images/image_5.jpg" class="img-fluid rounded-start" alt="Our Services"
+        style="max-width: 100%; height: -webkit-fill-available;" />
+</div>
+</div>
+</div>
+
+
+
+
+<div class="card mb-3 mt-5 shadow-lg animated fadeInRight">
+    <div class="row g-0">
+        <div class="col-md-5 d-flex align-items-center justify-content-center">
+            <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="Our Team"
+                style="max-width: 100%; height: -webkit-fill-available;">
         </div>
 
+        <div class="col-md-7">
+            <div class="card-body what-who-sec">
+                <div class="text-center mb-4">
+                    <h5 class="card-title" style="font-size: 32px; font-weight: 700;">Who We Are?</h5>
+                </div>
+                <div class="mb-5">
+                    <p>Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an
+                        unwavering
+                        commitment to excellence in patient care and professional growth. With 17 years of
+                        dedicated practice as a conservative dentist, she has recently taken a significant
+                        leap in her
+                        career by pursuing a specialized Orofacial Pain Fellowship.
+                    </p>
+                    <a href="{{ Route('about') }}#Who_we_are"><button type="button" class="btn custom-btn-what-why">
+                            Read More
+                        </button></a>
 
-
-
-        <div class="card mb-3 mt-5 shadow-lg animated fadeInRight">
-            <div class="row g-0">
-                <div class="col-md-5 d-flex align-items-center justify-content-center">
-                    <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="Our Team"
-                        style="max-width: 100%; height: -webkit-fill-available;">
                 </div>
 
-                <div class="col-md-7">
-                    <div class="card-body what-who-sec">
-                        <div class="text-center mb-4">
-                            <h5 class="card-title" style="font-size: 32px; font-weight: 700;">Who We Are?</h5>
-                        </div>
-                        <div class="mb-5">
-                            <p>Dr. Sarrah Husain is a distinguished figure in the field of dentistry, with an
-                                unwavering
-                                commitment to excellence in patient care and professional growth. With 17 years of
-                                dedicated practice as a conservative dentist, she has recently taken a significant
-                                leap in her
-                                career by pursuing a specialized Orofacial Pain Fellowship.
-                            </p>
-                            <a href="{{ Route('about') }}#Who_we_are"><button type="button"
-                                    class="btn custom-btn-what-why">
-                                    Read More
-                                </button></a>
-
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 
 <section class="ftco-section ftco-services">
@@ -290,8 +287,8 @@
                     <div class="form-group-rc">
                         <input type="text" class="form-control" id="name" name="name" placeholder="Your Name *"
                             required>
-                        <input type="tel" class="form-control" id="mobile" pattern=".{10}" name="mobile" placeholder="Mobile No *"
-                            required>
+                        <input type="tel" class="form-control" id="mobile" pattern=".{10}" name="mobile"
+                            placeholder="Mobile No *" required>
                         <button type="submit" class="submit-button">Request a Callback</button>
                     </div>
                 </form>
@@ -300,9 +297,9 @@
     </div>
 </div>
 
-<section class="ftco-section" style="background-color: #f3f2f2;">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
+<!-- <section class="ftco-section" style="background-color: #f3f2f2;">
+    <div class="container"> -->
+        <!-- <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
                 <h1 class="fw-bold mb-4">Testimonials</h1>
                 <p class="mb-4 pb-2 mb-md-5 pb-md-0">
@@ -361,9 +358,47 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div class="testimonials-clean">
+        <div class="container" style="background-image: linear-gradient(131deg, #f0f0f0 33.33%, #f8f7fa 33.33%, #f8f7fa 50%, #f0f0f0 50%, #f0f0f0 83.33%, #f8f7fa 83.33%, #f8f7fa 100%); background-size: 7.95px 9.15px;">
+            <div class="intro">
+                <h1 class="text-center mt-3 mb-4">Testimonials</h1>
+                 <p class="text-center">Our customers love us! Read what they have to say below. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
+            </div> 
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                    </div>
+                    <div class="author"><img class="rounded-circle" src="{{asset('assets/images/dummyuser.png')}}">
+                        <h5 class="name">Ben Johnson</h5>
+                        <p class="title">CEO of Company Inc.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id.</p>
+                    </div>
+                    <div class="author"><img class="rounded-circle" src="{{asset('assets/images/dummyuser.png')}}">
+                        <h5 class="name">Carl Kent</h5>
+                        <p class="title">Founder of Style Co.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box">
+                        <p class="description">Aliquam varius finibus est, et interdum justo suscipit. Vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p>
+                    </div>
+                    <div class="author"><img class="rounded-circle" src="{{asset('assets/images/dummyuser.png')}}">
+                        <h5 class="name">Emily Clark</h5>
+                        <p class="title">Owner of Creative Ltd.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+    <!-- </div>
+</section> -->
 <section class="video-section p-5 row text-center m-0">
     @foreach ($video as $item)
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 my-2">
@@ -373,6 +408,6 @@
             allowfullscreen></iframe>
     </div>
     @endforeach
-   
+
 </section>
 @endsection

@@ -1319,6 +1319,7 @@ fieldset:disabled a.btn {
 
     .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute;
+        top: 30px;
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -2429,8 +2430,8 @@ h4,
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
     /* padding-block:1rem; */
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
     font-size: 16px;
     /* font-weight: 600; */
     color: #ffffff;
@@ -2441,7 +2442,9 @@ h4,
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
     color: #095c66;
+    /* background-color: white; */
 }
+
 
 @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
@@ -3038,63 +3041,6 @@ h4,
 .wrap-about .founder h3 {
     font-size: 24px;
 }
-
-/* 
-.our-services-box {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px
-}
-.our-services{
-    margin-top: 75px;
-    padding-bottom: 30px;
-    padding: 0 60px;
-    min-height: 198px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #fff;
-    transition: all .4s ease-in-out;
-    box-shadow: 0 0 25px 0 rgba(20,27,202,.17)
-}
-.our-services .icon{
-    margin-bottom: -21px;transform: translateY(-50%);
-    text-align: center
-}
-.our-services h4 a{
-    color:black;
-    text-decoration: none;
-}
-.speedup:hover{
-    box-shadow: 0 0 25px 0 rgba(20,27,201,.05);
-    cursor: pointer;
-    background-image: linear-gradient(-45deg, #8ed8e0 0%, #8ed8e0 100%)
-} */
-/* .settings:hover{
-    box-shadow: 0 0 25px 0 rgba(20,27,201,.05);
-    cursor: pointer;
-    background-image: linear-gradient(-45deg, #299eab 0%, #299eab 100%)
-}
-.privacy:hover{
-    box-shadow: 0 0 25px 0 rgba(20,27,201,.05);
-    cursor: pointer;
-    background-image: linear-gradient(-45deg, #299eab 0%, #299eab 100%)
-}
-.backups:hover{
-    box-shadow: 0 0 25px 0 rgba(20,27,201,.05);
-    cursor: pointer;
-    background-image: linear-gradient(-45deg, #299eab 0%, #299eab 100%)
-}
-.ssl:hover{
-    box-shadow: 0 0 25px 0 rgba(20,27,201,.05);
-    cursor: pointer;
-    background-image: linear-gradient(-45deg, #299eab 0%, #299eab 100%)
-}
-.database:hover{
-    box-shadow: 0 0 25px 0 rgba(20,27,201,.05);
-    cursor: pointer;
-    background-image: linear-gradient(-45deg, #299eab 0%, #299eab 1%)
-} */
 
 .ftco-services .services {
     display: block;
@@ -3856,7 +3802,7 @@ a .nav-hvr:hover {
 
 /*testimonial */
 
-.testimony-section {
+/* .testimony-section {
     position: relative;
 }
 
@@ -3996,9 +3942,110 @@ a .nav-hvr:hover {
 .testi-img-video-blog-cmn .card {
     margin-top: 0 !important;
     padding-top: 0 !important;
-}
+} */
+
+.testimonials-clean {
+    color:#313437;
+    background-color:#eef4f7;
+  }
+  
+  .testimonials-clean p {
+    color:#7d8285;
+  }
+  
+  .testimonials-clean h2 {
+    font-weight:bold;
+    /* margin-bottom:40px; */
+    padding-top:40px;
+    color:inherit;
+  }
+  
+  @media (max-width:767px) {
+    .testimonials-clean h2 {
+      margin-bottom:25px;
+      padding-top:25px;
+      font-size:24px;
+    }
+  }
+  
+  .testimonials-clean .intro {
+    font-size:16px;
+    max-width:500px;
+    margin:0 auto;
+  }
+  
+  .testimonials-clean .intro p {
+    margin-bottom:0;
+  }
+  
+  .testimonials-clean .people {
+    padding:50px 0 20px;
+  }
+  
+  .testimonials-clean .item {
+    margin-bottom:32px;
+  }
+  
+  @media (min-width:768px) {
+    .testimonials-clean .item {
+      height:220px;
+    }
+  }
+  
+  .testimonials-clean .item .box {
+    padding:30px;
+    background-color:#fff;
+    position:relative;
+  }
+  
+  .testimonials-clean .item .box:after {
+    content:'';
+    position:absolute;
+    left:30px;
+    bottom:-24px;
+    width:0;
+    height:0;
+    border:15px solid transparent;
+    border-width:12px 15px;
+    border-top-color:#fff;
+  }
+  
+  .testimonials-clean .item .author {
+    margin-top:28px;
+    padding-left:25px;
+  }
+  
+  .testimonials-clean .item .name {
+    font-weight:bold;
+    margin-bottom:2px;
+    color:inherit;
+  }
+  
+  .testimonials-clean .item .title {
+    font-size:13px;
+    color:#9da9ae;
+  }
+  
+  .testimonials-clean .item .description {
+    font-size:15px;
+    margin-bottom:0;
+  }
+  
+  .testimonials-clean .item img {
+    max-width:40px;
+    float:left;
+    margin-right:12px;
+    margin-top:-5px;
+  }
+
+
+
+
+
+
 
 /*testimonial end*/
+
 .image-popup {
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in;
@@ -4555,11 +4602,11 @@ a .nav-hvr:hover {
 /* navbar  */
 
 .custom-btn {
-    background-color: #47b0ab !important;
+    /* background-color: #47b0ab !important; */
     /* Button background color */
-    color: #fff !important;
+    color: #47b0ab !important;
     /* Text color */
-    border: 1px solid white !important;
+    border: 1px solid #47b0ab!important;
     padding: 10px 20px;
     border-radius: 0 !important;
     transition: background-color 0.3s, transform 0.2s;
@@ -4568,6 +4615,8 @@ a .nav-hvr:hover {
 
 .custom-btn:hover {
     background-color: #359693 !important;
+    border: 1px solid white!important;
+    color: #fff !important;
 }
 
 .custom-btn-what-why {
@@ -4749,6 +4798,13 @@ a .nav-hvr:hover {
 .request-call-padding {
     padding-right: 32px !important;
 }
+ .logo-lg-css{
+    max-width: 180px;
+    z-index: 3!important; 
+    left: 61px!important;
+     position: absolute!important; 
+     top: -7px!important;
+ } 
 
 /* Logo End*/
 
@@ -5119,7 +5175,6 @@ iframe {
 }
 
 .banner-img-box {
-    /* background-image: url(); */
     background-color: #403e3e;
     padding: 15px;
     color: #fff;
@@ -5370,3 +5425,27 @@ ul.ttm-recent-post-list>li img {
     color: #666 !important;
     /* Set the content text color */
 }
+
+
+/* header and nav css */
+
+.nav-head-css{
+    position: absolute;
+    width:100%;
+    z-index:2 ;
+} 
+
+.header1-css{
+    /* position: absolute;
+    z-index: 9;
+    left: 10%;
+    top: -20px; */
+}
+@media screen and (max-width:767px) {
+    .header1-css {
+      top:0;
+      margin-top:0;
+    }
+}
+
+/* header and nav css end */    

@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color: #fff;">
+<div class="container-fluid header1-css" style="background-color: #fff;" >
     <div class="row align-items-center">
         <div class="col-12 text-center d-md-none">
             <a class="navbar-brand py-0" href="{{ route('/') }}">
@@ -8,19 +8,18 @@
 
         <div class="col-md-3 ps-0 ps-lg-2 ps-md-2 text-center d-none d-md-block">
             <a class="navbar-brand py-0" href="{{ route('/') }}">
-                <img src="assets/images/logo.png" alt="logo" width="180" height="86.46"
-                    style="max-width: 180px;">
+                <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" class="logo-lg-css">
             </a>
         </div>
 
         <div class="col-md-6 col-12 text-center d-none d-md-block" style="color: #47b0ab;">
             <a href="#" target="_blank" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; color: #47b0ab;">
-                <i class="fa fa-phone px-1 fa-2xl"></i>Call: +917276976729
+                <i class="fa fa-phone px-1"></i>Call: +917276976729
             </a>
             <a href="#" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; border-right: 1px solid rgba(250, 250, 250, 0.3); color: #47b0ab;">
-                <i class="fa-brands fa-whatsapp px-1 fa-2xl"></i>Whatsapp No.: +919594369752
+                <i class="fa-brands fa-whatsapp px-1"></i>Whatsapp No.: +919594369752
             </a>
         </div>
 
@@ -40,6 +39,9 @@
             <a href="#" class="text-decoration-none px-2">
                 <i class="fa-brands fa-youtube" style="color: #47b0ab;"></i>
             </a>
+            <button type="button" class="btn custom-btn my-1" data-toggle="modal" data-target="#exampleModal">
+            Request a Callback
+        </button>
         </div>
     </div>
 </div>
@@ -89,14 +91,14 @@
 
 <!-- Modal -->
 
-<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light ">
+<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light nav-head-css">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
         aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleButton(this)">
     <span><i class="fa-solid fa-bars-staggered fa-xl" id="toggleIcon" style="color:#ffffff;"></i></span>
 </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="ftco-nav">
+        <div class="collapse navbar-collapse justify-content-end" id="ftco-nav">
             <ul class="navbar-nav">
 
                 <li class="nav-item {{ request()->is('about') ? 'active' : '' }}"><a href="{{ route('about') }}"
@@ -123,13 +125,22 @@
 
                     </ul>
                 </li>
-                <li class="nav-item dropdown "><a href="#" class="nav-link" data-bs-toggle="dropdown">Special
+                <li class="nav-item dropdown "><a href="#" class="nav-link" data-bs-toggle="dropdown">Elite
                         Treatment <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
                         @foreach ($sp_treatment as $item)
                             <li class="treatment" data-treatment-id="{{ $item->id }}"><a class="dropdown-item"
                                     href="#">{{ $item->treatment_type }}</a></li>
                         @endforeach
+                    </ul>
+                </li>
+                <li class="nav-item dropdown "><a href="#" class="nav-link" data-bs-toggle="dropdown">Migraine
+                      <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <!-- @foreach ($sp_treatment as $item)
+                            <li class="treatment" data-treatment-id="{{ $item->id }}"><a class="dropdown-item"
+                                    href="#">{{ $item->treatment_type }}</a></li>
+                        @endforeach -->
                     </ul>
                 </li>
 
@@ -154,9 +165,9 @@
                         class="nav-link">Contact Us</a></li>
             </ul>
         </div>
-        <button type="button" class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">
-            Request a Callback
-        </button>
+        <button type="button" class="btn custom-btn d-lg-none d-md-none" data-toggle="modal" data-target="#exampleModal">
+    Request a Callback
+</button>
     </div>
 </nav>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
