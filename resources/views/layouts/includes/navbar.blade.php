@@ -165,7 +165,7 @@
                         class="nav-link">Contact Us</a></li>
             </ul>
         </div>
-        <button type="button" class="btn custom-btn d-lg-none d-md-none" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn custom-btn-sm-nav d-lg-none d-md-none" data-toggle="modal" data-target="#exampleModal">
     Request a Callback
 </button>
     </div>

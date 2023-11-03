@@ -4601,6 +4601,21 @@ a .nav-hvr:hover {
 
 /* navbar  */
 
+
+.custom-btn-sm-nav{
+    color: white!important;
+    border: 1px solid #fff!important;
+    padding: 10px 20px;
+    border-radius: 0 !important;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+.custom-btn-sm-nav:hover{
+    background-color: #fff !important;
+    border: 1px solid #359693!important;
+    color: #359693 !important;
+}    
+
 .custom-btn {
     /* background-color: #47b0ab !important; */
     /* Button background color */
@@ -4612,7 +4627,6 @@ a .nav-hvr:hover {
     transition: background-color 0.3s, transform 0.2s;
     cursor: pointer;
 }
-
 .custom-btn:hover {
     background-color: #359693 !important;
     border: 1px solid white!important;
@@ -4803,7 +4817,7 @@ a .nav-hvr:hover {
     z-index: 3!important; 
     left: 61px!important;
      position: absolute!important; 
-     top: -7px!important;
+     top: -11px!important;
  } 
 
 /* Logo End*/

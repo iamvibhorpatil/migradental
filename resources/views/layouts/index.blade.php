@@ -223,7 +223,7 @@
 
 <div class="container">
     <div class="row text-center mt-4 mb-4">
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 py-3">
             <div class="icons-land-4">
                 <i class="fa-solid fa-heart-circle-check" style="color: #47b0ab;"></i>
             </div>
@@ -233,7 +233,7 @@
             </div>
             <h6>SATISFIED PATIENTS</h6>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 py-3">
             <div class="icons-land-4">
                 <i class="fa-solid fa-kit-medical" style="color: #47b0ab;"></i>
             </div>
@@ -243,7 +243,7 @@
             </div>
             <h6>HEALTH SECTIONS</h6>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 py-3">
             <div class="icons-land-4">
                 <i class="fa-solid fa-file-circle-plus" style="color: #47b0ab;"></i>
             </div>
@@ -253,7 +253,7 @@
             </div>
             <h6>KIND OF RESEARCH</h6>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 py-3">
             <div class="icons-land-4">
                 <i class="fa-solid fa-award" style="color: #47b0ab;"></i>
             </div>
@@ -360,8 +360,8 @@
             </div>
         </div> -->
 
-        <div class="testimonials-clean">
-        <div class="container" style="background-image: linear-gradient(131deg, #f0f0f0 33.33%, #f8f7fa 33.33%, #f8f7fa 50%, #f0f0f0 50%, #f0f0f0 83.33%, #f8f7fa 83.33%, #f8f7fa 100%); background-size: 7.95px 9.15px;">
+        <div class="testimonials-clean"style="background-image: linear-gradient(131deg, #f0f0f0 33.33%, #f8f7fa 33.33%, #f8f7fa 50%, #f0f0f0 50%, #f0f0f0 83.33%, #f8f7fa 83.33%, #f8f7fa 100%); background-size: 7.95px 9.15px;">
+        <div class="container">
             <div class="intro">
                 <h1 class="text-center mt-3 mb-4">Testimonials</h1>
                  <p class="text-center">Our customers love us! Read what they have to say below. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
@@ -397,11 +397,9 @@
             </div>
         </div>
     </div>
-    <!-- </div>
-</section> -->
 <section class="video-section p-5 row text-center m-0">
     @foreach ($video as $item)
-    <div class="col-12 col-sm-12 col-md-4 col-lg-4 my-2">
+    <div class="col-12 col-xl-12 col-sm-12 col-md-6 col-lg-4 my-2">
         <iframe width="400" height="250" src="{{url('https://www.youtube.com/embed/'.$item->video)}}"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
