@@ -155,7 +155,7 @@
                 var currentChars = $(this).val().length;
 
                 if (currentChars > maxChars) {
-                    $('#description-error').text('Answer cannot exceed 500 characters');
+                    $('#description-error').text('Answer cannot exceed 555 characters');
                     $('#submit-button').prop('disabled', true);
                 } else {
                     $('#description-error').text('');
