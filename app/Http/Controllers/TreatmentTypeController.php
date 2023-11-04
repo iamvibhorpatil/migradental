@@ -30,9 +30,7 @@ class TreatmentTypeController extends Controller
     {
          
         try {
-            $request->validate([
-                'image' => 'required|image|mimes:jpeg,jpg,png|max:5048',
-            ]);
+            
 
             $treatment_type = new TreatmentType();
 

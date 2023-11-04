@@ -56,7 +56,7 @@ Route::get('/optimize', function () {
 // });
 
 // Route::get('/add_column', function () {
-//     DB::statement('ALTER TABLE videos ADD display VARCHAR(255) AFTER status');
+//     DB::statement('ALTER TABLE comments ADD display VARCHAR(255) AFTER comment');
 
 //         return 'Column added successfully.';
 
@@ -146,6 +146,8 @@ Route::middleware('auth')->group(function () {
     Route::post('store_testimonial_category', [TestimonialCategoryController::class, 'store']);
     Route::get('comment', [TestimonialCategoryController::class, 'comment'])->name('comment');
     Route::get('comment/delete/{id}', [TestimonialCategoryController::class, 'destroy_comment']);
+    Route::get('comment/edit/{id}', [TestimonialCategoryController::class, 'edit_comment']);
+    Route::post('comment/update/{id}', [TestimonialCategoryController::class, 'update_comment']);
     Route::get('testimonial_category/edit/{id}', [TestimonialCategoryController::class, 'edit']);
     Route::post('testimonial_category/update/{id}', [TestimonialCategoryController::class, 'update']);
     Route::get('testimonial_category/delete/{id}', [TestimonialCategoryController::class, 'destroy']);
