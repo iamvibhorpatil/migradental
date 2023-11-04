@@ -2,7 +2,8 @@
 
 
 @section('content')
-    <section class="home-slider owl-carousel">
+   
+    <section class="home-slider owl-carousel wow fadeIn" data-wow-delay="1.6s">
         <div class="slider-item" style="background-image:url(assets/images/slider-img-1.webp);"
             data-stellar-background-ratio="0.5"> </div>
         <div class="slider-item" style="background-image:url(assets/images/slider-img-2.webp);"
@@ -12,7 +13,8 @@
     <!-- why choose us -->
 
     <div class="container">
-        <div class="card mb-3 shadow-lg animated fadeInLeft">
+        
+        <div class="card mb-3 shadow-lg wow fadeInLeft" data-wow-delay="1.5s">
             <div class="row g-0">
                 <div class="col-md-7">
                     <div class="card-body what-who-sec">
@@ -44,7 +46,8 @@
 
 
 
-        <div class="card mb-3 mt-5 shadow-lg animated fadeInRight">
+        
+        <div class="card mb-3 mt-5 shadow-lg wow fadeInRight" data-wow-delay="1.5s">
             <div class="row g-0">
                 <div class="col-md-5 d-flex align-items-center justify-content-center">
                     <img src="assets/images/dept-4.jpg" class="img-fluid rounded-start" alt="Our Team"
@@ -228,6 +231,7 @@
     <div class="container">
         <div class="row text-center mt-4 mb-4">
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 py-3">
+            
                 <div class="icons-land-4">
                     <i class="fa-solid fa-heart-circle-check" style="color: #47b0ab;"></i>
                 </div>
@@ -238,6 +242,7 @@
                 <h6>SATISFIED PATIENTS</h6>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 py-3">
+            
                 <div class="icons-land-4">
                     <i class="fa-solid fa-kit-medical" style="color: #47b0ab;"></i>
                 </div>

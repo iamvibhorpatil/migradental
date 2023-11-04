@@ -127,6 +127,7 @@ Route::middleware('auth')->group(function () {
     Route::post('treatment_type/update/{id}', [TreatmentTypeController::class, 'update']);
     Route::get('treatment_type/delete/{id}', [TreatmentTypeController::class, 'destroy']);
     Route::get('get_treatment_type', [TreatmentTypeController::class, 'get_treatment_type']);
+    Route::get('delete_image_treatment', [TreatmentTypeController::class, 'delete_image_treatment']);
     //international_client
     Route::get('international_client', [InternationalController::class, 'index'])->name('international_client');
     Route::post('store_international_client', [InternationalController::class, 'store']);

@@ -28,7 +28,16 @@
 
                             <form action="{{ url('treatment_type/update/' . $treatment_type->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                               
+                                @if (session('error'))
+                                    <div class="text-white alert alert-danger">
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
+                                @if ($errors->has('error'))
+                                    <div class="text-white alert alert-danger">
+                                        {{ $errors->first('error') }}
+                                    </div>
+                                @endif
                                 <div class="row input_field" style="">
 
                                     <div class="col-sm-12 col-md-6">
@@ -61,8 +70,10 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="image"> Image </label>
-                                        <input type="file" class="form-control"  value="{{$treatment_type->image}}" id="image" name="image">
-                                            <img src="{{url('assets/uploads/'.$treatment_type->image)}}" width="100px" alt="">
+                                        <input type="file" class="form-control"
+                                            value="{{ $treatment_type->image }}" id="image" name="image[]"
+                                            multiple>
+                                           
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>
@@ -72,6 +83,27 @@
                                             <option value="Deactive"{{$treatment_type->status === 'Deactive' ? 'selected':''}}>Deactive</option>
                                           </select>
                                     </div>
+
+                                    <div class="col-sm-12 col-md-12 my-3 d-flex">
+                                        @if ($treatment_type->image)
+                                            @php
+                                                $imageArray = explode(',', $treatment_type->image);
+                                            @endphp
+
+                                            @foreach ($imageArray as $key => $imageName)
+                                            <div class="position-relative">
+                                                <span data-id="{{ $treatment_type->id }}"
+                                                    data-index="{{ $key }}"
+                                                    class="btn badge delete_img btn-info position-absolute img-thumbnail rounded-circle"
+                                                    style="right: 0%;">x</span>
+                                                <img src="{{ url('assets/uploads/' . $imageName) }}" width="100px"
+                                                    class="mx-2 img-thumbnail" alt="image">
+                                            </div>
+                                            
+                                            @endforeach
+                                        @endif
+                                    </div>
+
 
                                     <div class="col-sm-12 my-3 d-flex justify-content-end">
 
@@ -158,6 +190,41 @@
                     submitButton.prop('disabled', false);
                 }
             }
+
+            $('.delete_img').on('click', function() {
+                var clickedElement = $(this);
+                var itemId = clickedElement.data('id');
+                var index = clickedElement.data('index');
+
+                var confirmDelete = confirm('Are you sure you want to delete this image?');
+
+                if (confirmDelete) {
+                    $.ajax({
+                        method: 'get',
+                        url: '/delete_image_treatment',
+                        data: {
+                            itemId: itemId,
+                            index: index
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                Swal.fire({
+                                    title: 'Deleted',
+                                    icon: 'success',
+                                }).then(() => {
+                                    location.reload();
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Error',
+                                    icon: 'error',
+                                });
+                                console.error('Error: Image deletion was not successful');
+                            }
+                        }
+                    });
+                }
+            });
 
 
         })

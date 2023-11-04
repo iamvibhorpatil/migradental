@@ -4,9 +4,8 @@
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
-            <div class="row no-gutters
-    slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 text-center wow bounceInUp" data-wow-delay="1.3s">
                     <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Testimonial </h2>
                 </div>
             </div>
@@ -14,10 +13,10 @@
     </section>
     <div class="container my-2">
         <div class="row">
-            <div class="col-md-3 col-sm-12 col-lg-3">
+            <div class="col-md-3 col-sm-12 col-lg-3 wow fadeInLeft" data-wow-delay="1.5s">
                 @foreach ($testimonial_category as $item)
                     <button type="button" value="{{ $item->id }}"
-                        class="testimonial_category btn web_bg px-5 rounded-0 w-100 wow fadeInLeft">{{ $item->category }}</button>
+                        class="testimonial_category btn web_bg px-5 rounded-0 w-100">{{ $item->category }}</button>
                     <hr class="m-0">
                 @endforeach
 
@@ -27,7 +26,7 @@
             <div class="col-md-9 col-sm-12 col-lg-9 ">
                 <div class="row testi-img-video-blog-cmn testim">
                     @foreach ($adm_testimonial_first as $item)
-                        <div class="col-md-4 col-sm-12 col-lg-4 wow fadeInUp">
+                        <div class="col-md-4 col-sm-12 col-lg-4 wow fadeInUp" data-wow-delay="1.5s">
                             <div class="card mx-auto">
                                 <img src="{{ asset('assets/uploads/' . $item->image) }}" class="card-img-top p-2"
                                     alt="...">
@@ -70,7 +69,9 @@
                         });
 
                         if (result.length === 0) {
-                            type.append('<p class=" wow fadeInUp">There are no testimonials available.</p>');
+                            type.append(
+                                '<p class=" wow fadeInUp">There are no testimonials available.</p>'
+                                );
                         }
 
 

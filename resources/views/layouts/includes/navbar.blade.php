@@ -1,4 +1,4 @@
-<div class="container-fluid header1-css" style="background-color: #fff;" >
+<div class="container-fluid header1-css" style="background-color: #fff;">
     <div class="row align-items-center">
         <div class="col-12 text-center d-md-none">
             <a class="navbar-brand py-0" href="{{ route('/') }}">
@@ -40,14 +40,14 @@
                 <i class="fa-brands fa-youtube" style="color: #47b0ab;"></i>
             </a>
             <button type="button" class="btn custom-btn my-1" data-toggle="modal" data-target="#exampleModal">
-            Request a Callback
-        </button>
+                Request a Callback
+            </button>
         </div>
     </div>
 </div>
 @if (session('request_callback_success'))
     <script>
-       Swal.fire({
+        Swal.fire({
             title: 'Submited!',
             text: 'You will be contacted soon.',
             icon: 'success',
@@ -76,7 +76,8 @@
                 <div class="modal-body">
                     <div class="form-group-rc">
                         <input type="text" id="name" name="name" placeholder="Your Name *" required>
-                        <input type="tel" id="mobile" name="mobile" pattern=".{10}" placeholder="Mobile No *" required>
+                        <input type="tel" id="mobile" name="mobile" pattern=".{10}" placeholder="Mobile No *"
+                            required>
                     </div>
 
                 </div>
@@ -94,15 +95,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light nav-head-css">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleButton(this)">
-    <span><i class="fa-solid fa-bars-staggered fa-xl" id="toggleIcon" style="color:#ffffff;"></i></span>
-</button>
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleButton(this)">
+            <span><i class="fa-solid fa-bars-staggered fa-xl" id="toggleIcon" style="color:#ffffff;"></i></span>
+        </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="ftco-nav">
             <ul class="navbar-nav">
 
-                <li class="nav-item {{ request()->is('about') ? 'active' : '' }}"><a href="{{ route('about') }}"
-                        class="nav-link">About</a></li>
+                <li class="nav-item {{ request()->is('about') ? 'active' : '' }} wow bounceInUp"
+                    data-wow-delay="0.1s"><a href="{{ route('about') }}" class="nav-link">About</a></li>
 
 
                 @php
@@ -110,12 +111,15 @@
                         ->where('category', 'Treatment')
                         ->get();
                     $sp_treatment = DB::table('treatments')
-                        ->where('category', 'Special Treatment')
+                        ->where('category', 'Elite Treatment')
+                        ->get();
+                    $mg_treatment = DB::table('treatments')
+                        ->where('category', 'Migraine')
                         ->get();
                 @endphp
 
-                <li class="nav-item dropdown "><a href="#" class="nav-link"
-                        data-bs-toggle="dropdown">Treatment <span><i
+                <li class="nav-item dropdown wow bounceInUp" data-wow-delay="0.3s"><a href="#"
+                        class="nav-link" data-bs-toggle="dropdown">Treatment <span><i
                                 class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
                         @foreach ($treatment as $item)
@@ -125,7 +129,8 @@
 
                     </ul>
                 </li>
-                <li class="nav-item dropdown "><a href="#" class="nav-link" data-bs-toggle="dropdown">Elite
+                <li class="nav-item dropdown wow bounceInUp" data-wow-delay="0.4s"><a href="#"
+                        class="nav-link" data-bs-toggle="dropdown">Elite
                         Treatment <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
                         @foreach ($sp_treatment as $item)
@@ -134,23 +139,32 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item dropdown "><a href="#" class="nav-link" data-bs-toggle="dropdown">Migraine
-                      <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
+                <li class="nav-item dropdown wow bounceInUp" data-wow-delay="0.5s"><a href="#"
+                        class="nav-link" data-bs-toggle="dropdown">Migraine
+                        <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
-                        <!-- @foreach ($sp_treatment as $item)
+                        @foreach ($mg_treatment as $item)
                             <li class="treatment" data-treatment-id="{{ $item->id }}"><a class="dropdown-item"
                                     href="#">{{ $item->treatment_type }}</a></li>
-                        @endforeach -->
+                        @endforeach
                     </ul>
                 </li>
 
-                <li class="nav-item {{ request()->is('international') ? 'active' : '' }}"><a
-                        href="{{ route('international') }}" class="nav-link">International Client</a></li>
+                <li class="nav-item wow bounceInUp {{ request()->is('international') ? 'active' : '' }}"
+                    data-wow-delay="0.6s"><a href="{{ route('international') }}" class="nav-link">International
+                        Client</a></li>
 
-                <li class="nav-item {{ request()->is('testimonial') ? 'active' : '' }}"><a
-                        href="{{ route('testimonial') }}" class="nav-link">Testimonial</a></li>
+                <li class="nav-item wow bounceInUp dropdown " data-wow-delay="0.7s"><a href="#"
+                        class="nav-link" data-bs-toggle="dropdown">Testimonial
+                        <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('testimonial') }}">Images Testimonial</a></li>
+                        <li><a class="dropdown-item" href="">Videos Testimonial</a></li>
+                    </ul>
+                </li>
 
-                <li class="nav-item dropdown "><a href="#" class="nav-link" data-bs-toggle="dropdown">Gallery
+                <li class="nav-item wow bounceInUp dropdown " data-wow-delay="0.8s"><a href="#"
+                        class="nav-link" data-bs-toggle="dropdown">Gallery
                         <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('image') }}">Images</a></li>
@@ -158,16 +172,17 @@
                     </ul>
                 </li>
 
-                <li class="nav-item {{ request()->is('blogs') ? 'active' : '' }}"><a href="{{ route('blog') }}"
-                        class="nav-link">Blogs</a></li>
+                <li class="nav-item wow bounceInUp {{ request()->is('blogs') ? 'active' : '' }}"
+                    data-wow-delay="0.9s"><a href="{{ route('blog') }}" class="nav-link">Blogs</a></li>
 
-                <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}"><a href="{{ route('contact') }}"
-                        class="nav-link">Contact Us</a></li>
+                <li class="nav-item wow bounceInUp {{ request()->is('contact') ? 'active' : '' }}"
+                    data-wow-delay="1.0s"><a href="{{ route('contact') }}" class="nav-link">Contact Us</a></li>
             </ul>
         </div>
-        <button type="button" class="btn custom-btn-sm-nav d-lg-none d-md-none" data-toggle="modal" data-target="#exampleModal">
-    Request a Callback
-</button>
+        <button type="button" class="btn custom-btn-sm-nav d-lg-none d-md-none" data-toggle="modal"
+            data-target="#exampleModal">
+            Request a Callback
+        </button>
     </div>
 </nav>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

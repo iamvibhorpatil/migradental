@@ -28,6 +28,7 @@ class TreatmentTypeController extends Controller
 
     public function store(Request $request)
     {
+         
         try {
             $request->validate([
                 'image' => 'required|image|mimes:jpeg,jpg,png|max:5048',
@@ -40,13 +41,33 @@ class TreatmentTypeController extends Controller
             $treatment_type->question = $request->question;
             $treatment_type->answer = $request->answer;
             $treatment_type->status = $request->status;
-            $image = $request->image;
+            
 
-            $imageName = $image->getClientOriginalName();
-            $imagePath = 'public/assets/uploads/' . $imageName;
-            $image->move(public_path('assets/uploads'), $imagePath);
-            $treatment_type->image = $imageName;
+            if ($request->hasFile('image')) {
+                $allowedExtensions = ['png', 'jpg', 'jpeg'];
+                $imagePaths = [];
+    
+                // Process and save new images
+                foreach ($request->file('image') as $image) {
+                    $extension = strtolower($image->getClientOriginalExtension());
+                    if (!in_array($extension, $allowedExtensions)) {
+                        return redirect()->back()->withErrors(['error' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                    }
+    
+                    $imageName = $image->getClientOriginalName();
+                    $imagePath = 'public/assets/uploads/' . $imageName;
+                    $image->move(public_path('assets/uploads'), $imagePath);
+                    $imagePaths[] = $imageName;
+                }
+    
+                // Combine new and existing image filenames
+                if ($treatment_type->image) {
+                    $existingImages = explode(',', $treatment_type->image);
+                    $imagePaths = array_merge($existingImages, $imagePaths);
+                }
 
+                $treatment_type->image = implode(',', $imagePaths);
+            }
             $treatment_type->save();
 
             return redirect()->back()->with('success', 'Data uploaded successfully');
@@ -68,7 +89,6 @@ class TreatmentTypeController extends Controller
 
     public function update(Request $request, TreatmentType $treatmentType, $id)
     {
-
         try {
             $treatment_type =  TreatmentType::find($id);
 
@@ -77,20 +97,32 @@ class TreatmentTypeController extends Controller
             $treatment_type->question = $request->question;
             $treatment_type->answer = $request->answer;
             $treatment_type->status = $request->status;
-            $image = $request->image;
+            
 
-            if ($image) {
+            if ($request->hasFile('image')) {
                 $allowedExtensions = ['png', 'jpg', 'jpeg'];
-
-                // Check if the file extension is allowed
-                $extension = strtolower($image->getClientOriginalExtension());
-                if (!in_array($extension, $allowedExtensions)) {
-                    return redirect()->back()->withErrors(['delete' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                $imagePaths = [];
+    
+                // Process and save new images
+                foreach ($request->file('image') as $image) {
+                    $extension = strtolower($image->getClientOriginalExtension());
+                    if (!in_array($extension, $allowedExtensions)) {
+                        return redirect()->back()->withErrors(['error' => 'Only PNG, JPG, and JPEG images are allowed.']);
+                    }
+    
+                    $imageName = $image->getClientOriginalName();
+                    $imagePath = 'public/assets/uploads/' . $imageName;
+                    $image->move(public_path('assets/uploads'), $imagePath);
+                    $imagePaths[] = $imageName;
                 }
-                $imageName = $image->getClientOriginalName();
-                $imagePath = 'public/assets/uploads/' . $imageName;
-                $image->move(public_path('assets/uploads'), $imagePath);
-                $treatment_type->image = $imageName;
+    
+                // Combine new and existing image filenames
+                if ($treatment_type->image) {
+                    $existingImages = explode(',', $treatment_type->image);
+                    $imagePaths = array_merge($existingImages, $imagePaths);
+                }
+    
+                $treatment_type->image = implode(',', $imagePaths);
             }
             $treatment_type->update();
 
@@ -105,5 +137,35 @@ class TreatmentTypeController extends Controller
         $treatment_type = TreatmentType::find($id);
         $treatment_type->delete();
         return redirect()->back()->with('delete', 'Treatment Type Deleted Successfully');
+    }
+    public function delete_image_treatment(Request $request)
+    {
+        $itemId = $request->itemId;
+        $index = $request->index;
+        $treatment_type = TreatmentType::find($itemId);
+
+        $imageArray = explode(',', $treatment_type->image);
+
+        $imageIndexToDelete = $index; 
+
+        
+        if ($imageIndexToDelete >= 0 && $imageIndexToDelete < count($imageArray)) {
+            
+            $deletedImage = array_splice($imageArray, $imageIndexToDelete, 1)[0];
+
+            
+            $treatment_type->image = implode(',', $imageArray);
+            $treatment_type->save();
+
+            
+            $deletedImagePath = public_path('assets/uploads/') . $deletedImage;
+            if (file_exists($deletedImagePath)) {
+                unlink($deletedImagePath);
+            }
+        }
+
+        return response()->json([
+            'success' => true,
+        ]);
     }
 }
