@@ -42,6 +42,7 @@
                                         <th scope="col">Name</th>
                                         <th scope="col">What's App No. </th>
                                         <th scope="col">Comment </th>
+                                        <th scope="col">Display In Home</th>
                                         <th scope="col">Action </th>
                                     </tr>
                                 </thead>
@@ -56,6 +57,12 @@
                                                 <textarea class="form-control" cols="10" row="3">{{ $item->comment }}</textarea>
                                             </td>
                                             <td>
+                                                {{ $item->display }}  
+                                            </td>
+                                            <td>
+                                                <a href="{{ url('comment/edit/' . $item->id) }}"
+                                                    onclick="return confirm('Are you sure you want edit this Comment ') "
+                                                    class="btn btn-info badge mx-2">Edit</a>
                                                 <a href="{{ url('comment/delete/' . $item->id) }}"
                                                     onclick="return confirm('Are you sure you want delete this Comment ') "
                                                     class="btn btn-danger badge mx-2">Delete</a>

@@ -84,8 +84,8 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="image"> Image </label>
-                                        <input type="file" class="form-control" id="image" 
-                                            name="image[]" required multiple>
+                                        <input type="file" class="form-control"id="image" name="image[]"
+                                        multiple>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>

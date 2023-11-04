@@ -105,4 +105,25 @@ class TestimonialCategoryController extends Controller
         $comment->delete();
         return redirect()->back()->with('delete', 'Comment  Deleted Successfully');
     }
+    public function edit_comment(Comment $comment, $id)
+    {
+        $comment = Comment::find($id);
+
+        return view('admin.pages.update_comment', compact('comment'));
+    }
+    public function update_comment(Request $request, Comment $comment, $id)
+    {
+        try {
+            $comment =  Comment::find($id);
+
+            $comment->display = $request->display;
+           
+
+            $comment->update();
+
+            return redirect('/comment')->with('success', 'Data Updated successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
+        }
+    }
 }
