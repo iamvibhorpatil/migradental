@@ -18,7 +18,7 @@
     <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
         <div class="container">
             <div class="row d-flex align-items-stretch no-gutters">
-                <div class="col-md-7 p-4 p-md-4 bg-light">
+                <div class="col-md-7 p-md-4 bg-light">
                     <form action="store_contact" method="POST">
                         @csrf
                         @if (session('contact_success'))

@@ -24,7 +24,7 @@
             <div class="col-md-9 col-sm-12 col-lg-9 ">
                 <div class="row testim">
                     @foreach ($adm_blog_first as $item)
-                        <div class="col-md-4 col-sm-12 col-lg-4 wow fadeInUp blog_id" data-blog-id="{{ $item->id }}"
+                        <div class="col-md-6 col-sm-12 col-lg-4 wow fadeInUp blog_id" data-blog-id="{{ $item->id }}"
                             style="cursor: pointer;">
                             <div class="card mx-auto" style="min-height: 100%;">
                                 <img src="{{ asset('assets/uploads/' . $item->image) }}" class="card-img-top p-2"

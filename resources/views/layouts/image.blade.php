@@ -27,7 +27,7 @@
             <div class="col-md-9 col-sm-12 col-lg-9 ">
                 <div class="row testi-img-video-blog-cmn testim">
                     @foreach ($adm_image_first as $item)
-                        <div class="col-md-4 col-sm-12 col-lg-4 wow fadeInUp">
+                        <div class="col-md-6 col-sm-12 col-lg-4 wow fadeInUp">
                             <div class="card mx-auto">
                                 <div class="gallery-item p-0 img-fluid">
                                     <a href="{{ url('assets/uploads/' . $item->image) }}" target="_blank" class="image-link"
