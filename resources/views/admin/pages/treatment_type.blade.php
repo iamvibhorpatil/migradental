@@ -33,11 +33,16 @@
                                         {{ session('success') }}
                                     </div>
                                 @endif
-                                @if (session('error'))
-                                    <div class="text-white alert alert-warming">
-                                        {{ session('error') }}
+                                @if ($errors->has('delete'))
+                                    <div class="text-white alert alert-danger">
+                                        {{ $errors->first('delete') }}
                                     </div>
                                 @endif
+                                @if (session('error'))
+                                <div class="text-white alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
                                 @if (session('delete'))
                                     <div class="text-white alert alert-danger">
                                         {{ session('delete') }}
@@ -51,7 +56,8 @@
                                             required>
                                             <option selected>Select Category</option>
                                             <option value="Treatment">Treatment</option>
-                                            <option value="Special Treatment">Special Treatment</option>
+                                            <option value="Elite Treatment">Elite Treatment</option>
+                                            <option value="Migraine">Migraine</option>
                                         </select>
                                         <span id="category-error" style="color: red;"></span>
                                     </div>
@@ -78,8 +84,8 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="image"> Image </label>
-                                        <input type="file" class="form-control" id="image" name="image"
-                                            required>
+                                        <input type="file" class="form-control" id="image" 
+                                            name="image[]" required multiple>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="status">Status</label>
@@ -121,7 +127,6 @@
                                         <th scope="col">Treatment Type</th>
                                         <th scope="col">Question</th>
                                         <th scope="col">Answer</th>
-                                        <th scope="col">Image</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">Action</th>
                                     </tr>
@@ -136,7 +141,7 @@
                                             <td>{{ $item->Treatment->treatment_type }}</td>
                                             <td><textarea class="form-control-sm" cols="15">{{ $item->question }}</textarea></td>
                                             <td><textarea class="form-control-sm" cols="30">{{ $item->answer }}</textarea></td>
-                                            <td><img src="{{ url('assets/uploads/' . $item->image) }}" width="50px" alt=""></td>
+                                
 
                                             <td>{{ $item->status }}</td>
                                             <td>

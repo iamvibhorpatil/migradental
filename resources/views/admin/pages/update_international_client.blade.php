@@ -80,16 +80,15 @@
                                             @endphp
 
                                             @foreach ($imageArray as $key => $imageName)
-                                                <div class="position-relative ">
-                                                    <span
-                                                        onclick="return confirm('Are you sure you want to delete this image')"
-                                                        data-id="{{ $international_client->id }}"
-                                                        data-index="{{ $key }}"
-                                                        class="btn badge delete_img btn-info position-absolute img-thumbnail rounded-circle"
-                                                        style="left: 90px;">x</span>
-                                                    <img src="{{ url('assets/uploads/' . $imageName) }}" width="100px"
-                                                        class="mx-2 img-thumbnail" alt="">
-                                                </div>
+                                            <div class="position-relative">
+                                                <span data-id="{{ $international_client->id }}"
+                                                    data-index="{{ $key }}"
+                                                    class="btn badge delete_img btn-info position-absolute img-thumbnail rounded-circle"
+                                                    style="right: 0%;">x</span>
+                                                <img src="{{ url('assets/uploads/' . $imageName) }}" width="100px"
+                                                    class="mx-2 img-thumbnail" alt="image">
+                                            </div>
+                                            
                                             @endforeach
                                         @endif
                                     </div>
@@ -123,32 +122,37 @@
                 var clickedElement = $(this);
                 var itemId = clickedElement.data('id');
                 var index = clickedElement.data('index');
-                $.ajax({
-                    method: 'get',
-                    url: '/delete_image',
-                    data: {
-                        itemId: itemId,
-                        index: index
-                    },
-                    success: function(response) {
-                        if (response.success) {
-                            Swal.fire({
-                                title: 'Deleted',
-                                icon: 'success',
-                            }).then(() => {
-                                location.reload();
-                            });
 
-                        } else {
-                            Swal.fire({
-                                title: 'error',
-                                icon: 'error',
-                            }).
-                            console.error('Error: Image deletion was not successful');
+                var confirmDelete = confirm('Are you sure you want to delete this image?');
+
+                if (confirmDelete) {
+                    $.ajax({
+                        method: 'get',
+                        url: '/delete_image',
+                        data: {
+                            itemId: itemId,
+                            index: index
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                Swal.fire({
+                                    title: 'Deleted',
+                                    icon: 'success',
+                                }).then(() => {
+                                    location.reload();
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Error',
+                                    icon: 'error',
+                                });
+                                console.error('Error: Image deletion was not successful');
+                            }
                         }
-                    }
-                });
+                    });
+                }
             });
+
 
             $('#answer').on('input', function() {
                 var maxChars = 555;
