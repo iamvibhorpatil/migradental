@@ -6,13 +6,13 @@
             </a>
         </div>
 
-        <div class="col-md-3 ps-0 ps-lg-2 ps-md-2 text-center d-none d-md-block">
+        <div class="col-lg-2 ps-0 ps-lg-2 ps-md-2 text-center d-none d-md-block">
             <a class="navbar-brand py-0" href="{{ route('/') }}">
                 <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" class="logo-lg-css">
             </a>
         </div>
 
-        <div class="col-md-6 col-12 text-center d-none d-md-block" style="color: #47b0ab;">
+        <div class="col-lg-5 col-12 text-center d-none d-md-none d-lg-block" style="color: #47b0ab;">
             <a href="#" target="_blank" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; color: #47b0ab;">
                 <i class="fa fa-phone px-1"></i>Call: +917276976729
@@ -22,8 +22,7 @@
                 <i class="fa-brands fa-whatsapp px-1"></i>Whatsapp No.: +919594369752
             </a>
         </div>
-
-        <div class="col-md-3 end-sec-icon align-self-center d-none d-md-block">
+        <div class="col-lg-3 col-12 text-center d-none d-md-none d-lg-block" style="color: #47b0ab;">
             <a href="#" class="text-decoration-none px-2">
                 <i class="fa-brands fa-facebook-f" style="color: #47b0ab;"></i>
             </a>
@@ -39,6 +38,8 @@
             <a href="#" class="text-decoration-none px-2">
                 <i class="fa-brands fa-youtube" style="color: #47b0ab;"></i>
             </a>
+        </div>
+        <div class="col-lg-2 end-sec-icon align-self-center d-none d-md-block">
             <button type="button" class="btn custom-btn my-1" data-toggle="modal" data-target="#exampleModal">
                 Request a Callback
             </button>
