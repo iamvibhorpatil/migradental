@@ -6,7 +6,7 @@
         </div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
+                <div class="col-md-9 ftco-animate text-center wow bounceInUp" data-wow-delay="1.3s">
                     <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Images </h2>
                 </div>
             </div>
@@ -14,20 +14,20 @@
     </section>
     <div class="container my-2">
         <div class="row">
-            <div class="col-md-3 col-sm-12 col-lg-3">
+            <div class="col-md-3 col-sm-12 col-lg-3 wow fadeInLeft" data-wow-delay="1.5s">
                 @foreach ($images_category as $item)
                     <button type="button" value="{{ $item->id }}"
-                        class="images_category btn web_bg px-5 rounded-0 w-100 wow fadeInLeft">{{ $item->category }}</button>
+                        class="images_category btn web_bg px-5 rounded-0 w-100">{{ $item->category }}</button>
                     <hr class="m-0">
                 @endforeach
 
 
 
             </div>
-            <div class="col-md-9 col-sm-12 col-lg-9 ">
+            <div class="col-md-9 col-sm-12 col-lg-9 mb-4">
                 <div class="row testi-img-video-blog-cmn testim">
                     @foreach ($adm_image_first as $item)
-                        <div class="col-md-6 col-sm-12 col-lg-4 wow fadeInUp">
+                        <div class="col-md-6 col-sm-12 col-lg-4 wow fadeInUp" data-wow-delay="1.5s">
                             <div class="card mx-auto">
                                 <div class="gallery-item p-0 img-fluid">
                                     <a href="{{ url('assets/uploads/' . $item->image) }}" target="_blank" class="image-link"

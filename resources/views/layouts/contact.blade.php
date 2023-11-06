@@ -6,7 +6,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
+                <div class="col-md-9 text-center wow bounceInUp" data-wow-delay="1.3s">
                     <h2 class="mb-2 bread font-weight-normal"> Contact Us</h2>
                 </div>
             </div>
@@ -18,7 +18,7 @@
     <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
         <div class="container">
             <div class="row d-flex align-items-stretch no-gutters">
-                <div class="col-md-7 p-md-4 bg-light">
+                <div class="col-md-7 p-md-4 bg-light wow fadeInLeft" data-wow-delay="1.5s">
                     <form action="store_contact" method="POST">
                         @csrf
                         @if (session('contact_success'))
@@ -36,38 +36,38 @@
                             </script>
                         @endif
                         <div class="d-flex form-group justify-content-between">
-                            <div class="pr-3 w-50">
+                            <div class="pr-3 w-50 mx-1">
                                 <label for="name" class="font-weight-normal text-uppercase">Full Name</label>
                                 <input type="text" class="form-control" name="name" placeholder="Name" required="">
                             </div>
-                            <div class="pr-3 w-50">
+                            <div class="pr-3 w-50 mx-1">
                                 <label for="number" class="font-weight-normal text-uppercase">Mobile No.</label>
                                 <input type="tel" class="form-control" name="mobile" id="mobileNo"
                                     placeholder="Mobile No." required="">
                             </div>
                         </div>
                         <div class="d-flex form-group justify-content-between">
-                            <div class="pr-3 w-50">
+                            <div class="pr-3 w-50 mx-1">
                                 <label for="number" class="font-weight-normal text-uppercase">Whastaap No.</label>
                                 <input type="tel" id="whatsappNo" name="whats_app" class="form-control"
                                     placeholder="Whastaap No." required="">
                             </div>
-                            <div class="pr-3 w-50">
+                            <div class="pr-3 w-50 mx-1">
                                 <label for="subject" class="font-weight-normal text-uppercase">Subject</label>
                                 <input type="text" class="form-control" name="subject" placeholder="Subject"
                                     required="">
                             </div>
                         </div>
-                        <div class="form-group pr-3">
+                        <div class="form-group pr-3 mx-1">
                             <label for="message" class="font-weight-normal text-uppercase">Message</label>
                             <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mx-1">
                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
                         </div>
                     </form>
                 </div>
-                <div class="col-md-5 d-flex align-items-stretch">
+                <div class="col-md-5 d-flex align-items-stretch wow fadeInRight" data-wow-delay="1.5s">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.55550850929333!2d79.10666979137251!3d21.156849611477455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0cd9e822dc9%3A0x9629aed98fbc52e!2sManorama%20Tower!5e0!3m2!1sen!2sin!4v1697445535202!5m2!1sen!2sin"
                         width="100%" height="450" style="border:0;" loading="lazy"

@@ -1,22 +1,12 @@
 @extends('layouts.includes.main')
 @section('content')
-    <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg-common-img-slider.jpg');" data-stellar-background-ratio="0.5">
-                            <div class="overlay"></div>
-                            <div class="container">
-                                <div class="row no-gutters slider-text align-items-center justify-content-center">
-                                    <div class="col-md-9 ftco-animate text-center">
-                                        <h1 class="mb-2 bread">International Client</h1>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </section> -->
+   
     <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/cmn-bg.jpg');background-size: cover;"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
+                <div class="col-md-9 ftco-animate text-center wow bounceInUp" data-wow-delay="1.3s">
                     <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Videos </h2>
                 </div>
             </div>
@@ -24,7 +14,7 @@
     </section>
     <div class="container">
         <div class="row my-2 testi-img-video-blog-cmn">
-            <div class="col-md-3 col-sm-12 col-lg-3">
+            <div class="col-md-3 col-sm-12 col-lg-3 wow fadeInLeft" data-wow-delay="1.5s">
                 @foreach ($videos_category as $item)
                     <button type="button" value="{{ $item->id }}"
                         class="videos_category btn web_bg px-5 rounded-0 w-100 wow fadeInLeft">{{ $item->category }}</button>
@@ -33,10 +23,10 @@
 
 
             </div>
-            <div class="col-md-9 col-sm-12 col-lg-9 ">
+            <div class="col-md-9 col-sm-12 col-lg-9 mb-4">
                 <div class="row testim">
                     @foreach ($adm_videos_first as $item)
-                        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp">
+                        <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp mb-3" data-wow-delay="1.5s">
                             <div class="card mx-auto">
                                 <iframe width="300" height="170"
                                     src="{{ url('https://www.youtube.com/embed/' . $item->video) }}"
