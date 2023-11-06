@@ -40,12 +40,11 @@
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">
-                                        <th scope="col">Sr.No</th>
+                                        {{-- <th scope="col">Sr.No</th> --}}
                                         <th scope="col">Patient Number</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Mobile Number</th>
                                         <th scope="col">Email ID</th>
-                                        <th scope="col">View</th>
                                         {{-- <th scope="col">Update</th> --}}
                                         <th scope="col">Action</th>
                                     </tr>
@@ -54,22 +53,20 @@
                                     <?php $p = 1; ?>
                                     @foreach ($patientForm as $item)
                                         <tr class="align-baseline">
-                                            <td><?php echo $p++; ?></td>
                                             <td>{{ $item->patient_number }}</td>
                                             <td>{{ $item->patient_name }}</td>
                                             <td>{{ $item->mobile_no }}</td>
                                             <td>{{ $item->email_id }}</td>
-                                            <td>
+                                            
+                                            <td class="d-flex justify-content-around">
                                                 <a href="{{ route('patient_detail_view', ['id' => $item->id]) }}"
-                                                    class="btn btn-info badge">View</a><br>
+                                                    ><i class="fa-solid fa-eye img-thumbnail" style="color: #0d50c5;"></i></a><br>
                                                 <a href="{{ route('export', ['id' => $item->id]) }}"
-                                                    class="btn btn-secondary badge">Export</a>
-                                            </td>
-                                            <td>
+                                                    ><i class="fa-solid fa-file-export img-thumbnail"  style="color: #000000;"></i></a>
                                                 <a href="{{ url('patient_form/edit/' . $item->id) }}"
-                                                    class="btn btn-behance badge">Edit</a><br>
+                                                    ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a><br>
                                                 <a href="{{ url('patient_form/delete/' . $item->id) }}"
-                                                    class="btn btn-danger badge">Delete</a>
+                                                    ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

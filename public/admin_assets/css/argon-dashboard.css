@@ -22488,6 +22488,9 @@ hr.horizontal.gray-light {
   font-weight: 500;
   color: #67748e;
 }
+.dashboard-aside-active{
+  color:#47b0ab!important;
+}
 
 .navbar-vertical .navbar-nav .nav-link>i {
   min-width: 1.8rem;

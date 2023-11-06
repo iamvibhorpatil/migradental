@@ -91,7 +91,6 @@
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">
-                                        <th scope="col">Sr.No</th>
                                         <th scope="col">Category</th>
                                         <th scope="col">Treatment Type</th>
                                         <th scope="col">Status</th>
@@ -102,15 +101,14 @@
                                     <?php $p = 1; ?>
                                     @foreach ($treatment as $item)
                                         <tr class="align-baseline">
-                                            <td><?php echo $p++; ?></td>
                                             <td>{{ $item->category }}</td>
                                             <td>{{ $item->treatment_type }}</td>
                                             <td>{{ $item->status }}</td>
                                             <td>
                                                 <a href="{{ url('treatment/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Treatment') "
-                                                    class="btn btn-behance badge mx-2">Edit</a>
+                                                    ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('treatment/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Treatment') "
-                                                    class="btn btn-danger badge mx-2">Delete</a>
+                                                    ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

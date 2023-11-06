@@ -105,7 +105,6 @@
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">
-                                        <th scope="col">Sr.No</th>
                                         <th scope="col">Category</th>
                                         <th scope="col">Title </th>
                                         <th scope="col">Video</th>
@@ -119,7 +118,6 @@
                                     @foreach ($adm_videos as $item)
                         
                                         <tr class="">
-                                            <td><?php echo $p++; ?></td>
                                             <td>{{ $item->VideosCategory->category }}</td>
                                             <td>{{ $item->title }}</td>
                                             <td><iframe width="100" height="50"
@@ -133,9 +131,9 @@
                                             <td>{{ $item->status }}</td>
                                             <td>
                                                 <a href="{{ url('adm_videos/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Video') "
-                                                    class="btn btn-behance badge mx-2">Edit</a>
+                                                    ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('adm_videos/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Video ') "
-                                                    class="btn btn-danger badge mx-2">Delete</a>
+                                                    ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

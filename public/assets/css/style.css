@@ -4822,7 +4822,7 @@ a .nav-hvr:hover {
     z-index: 3!important; 
     left: 61px!important;
      position: absolute!important; 
-     top: -11px!important;
+     top: 0;
  } 
 
 /* Logo End*/

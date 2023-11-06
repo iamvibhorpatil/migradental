@@ -38,7 +38,6 @@
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">
-                                        <th scope="col">Sr.No</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">What's App No. </th>
                                         <th scope="col">Comment </th>
@@ -50,7 +49,6 @@
                                     <?php $p = 1; ?>
                                     @foreach ($comment as $item)
                                         <tr class="">
-                                            <td><?php echo $p++; ?></td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->mobile }}</td>
                                             <td>
@@ -62,10 +60,10 @@
                                             <td>
                                                 <a href="{{ url('comment/edit/' . $item->id) }}"
                                                     onclick="return confirm('Are you sure you want edit this Comment ') "
-                                                    class="btn btn-info badge mx-2">Edit</a>
+                                                    ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('comment/delete/' . $item->id) }}"
                                                     onclick="return confirm('Are you sure you want delete this Comment ') "
-                                                    class="btn btn-danger badge mx-2">Delete</a>
+                                                    ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

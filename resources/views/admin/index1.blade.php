@@ -217,9 +217,9 @@
                     </a>
                     <ul class="navbar-nav ps-5" id="Videos" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
-                        <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('videos_category') }}">
-                                <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
+                        <li class="nav-item ">
+                            <a class="nav-link dashboard-aside-active" href="{{ Route('videos_category') }}">
+                                <span class="nav-link-text ms-1 "><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>

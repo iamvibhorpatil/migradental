@@ -103,7 +103,6 @@
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">
-                                        <th scope="col">Sr.No</th>
                                         <th scope="col">Category</th>
                                         <th scope="col">Title </th>
                                         <th scope="col">Image</th>
@@ -116,7 +115,6 @@
                                     @foreach ($adm_testimonial as $item)
                         
                                         <tr class="">
-                                            <td><?php echo $p++; ?></td>
                                             <td>{{ $item->TestimonialCategory->category }}</td>
                                             <td>{{ $item->title }}</td>
                                             <td><img src="{{ url('assets/uploads/' . $item->image) }}" width="50px" alt=""></td>
@@ -124,9 +122,9 @@
                                             <td>{{ $item->status }}</td>
                                             <td>
                                                 <a href="{{ url('adm_testimonial/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Testimonial') "
-                                                    class="btn btn-behance badge mx-2">Edit</a>
+                                                    ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('adm_testimonial/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Testimonial ') "
-                                                    class="btn btn-danger badge mx-2">Delete</a>
+                                                    ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach

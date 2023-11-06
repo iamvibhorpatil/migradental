@@ -38,7 +38,6 @@
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">
-                                        <th scope="col">Sr.No</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Mobile No. </th>
                                         <th scope="col">What's App No. </th>
@@ -51,7 +50,6 @@
                                     <?php $p = 1; ?>
                                     @foreach ($contact as $item)
                                         <tr class="">
-                                            <td><?php echo $p++; ?></td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->mobile }}</td>
                                             <td>{{ $item->whats_app }}</td>
@@ -62,7 +60,7 @@
                                             <td>
                                                 <a href="{{ url('contact/delete/' . $item->id) }}"
                                                     onclick="return confirm('Are you sure you want delete this Contact ') "
-                                                    class="btn btn-danger badge mx-2">Delete</a>
+                                                    ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach
