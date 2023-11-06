@@ -9,6 +9,7 @@ use App\Http\Controllers\TreatmentTypeController;
 use App\Http\Controllers\InternationalController;
 use App\Http\Controllers\TestimonialCategoryController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\VideoTestimonialController;
 use App\Http\Controllers\ImagesCategoryController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\VideosCategoryController;
@@ -67,6 +68,7 @@ Route::get('/optimize', function () {
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('international', [InternationalController::class, 'international'])->name('international');
 Route::get('testimonial', [TestimonialController::class, 'testimonial'])->name('testimonial');
+Route::get('video_testimonial', [VideoTestimonialController::class, 'video_testimonial'])->name('video_testimonial');
 Route::get('image', [ImageController::class, 'image'])->name('image');
 Route::get('video', [VideoController::class, 'video'])->name('video');
 Route::get('about', [HomeController::class, 'about'])->name('about');
@@ -76,6 +78,7 @@ Route::get('get_blog_id', [BlogController::class, 'get_blog_id']);
 Route::get('blog_info', [BlogController::class, 'blog_info'])->name('blog_info');
 Route::post('store_comment', [TestimonialCategoryController::class, 'store_comment']);
 Route::get('get_category_id', [TestimonialController::class, 'get_category_id']);
+Route::get('get_video_category_id', [VideoTestimonialController::class, 'get_video_category_id']);
 Route::get('get_images_category_id', [ImageController::class, 'get_images_category_id']);
 Route::get('get_videos_category_id', [VideoController::class, 'get_videos_category_id']);
 Route::get('get_blog_category_id', [BlogController::class, 'get_blog_category_id']);
@@ -141,6 +144,12 @@ Route::middleware('auth')->group(function () {
     Route::get('adm_testimonial/edit/{id}', [TestimonialController::class, 'edit']);
     Route::post('adm_testimonial/update/{id}', [TestimonialController::class, 'update']);
     Route::get('adm_testimonial/delete/{id}', [TestimonialController::class, 'destroy']);
+    //adm_ video testimonial
+    Route::get('adm_video_testimonial', [VideoTestimonialController::class, 'index'])->name('adm_video_testimonial');
+    Route::post('store_adm_video_testimonial', [VideoTestimonialController::class, 'store']);
+    Route::get('adm_video_testimonial/edit/{id}', [VideoTestimonialController::class, 'edit']);
+    Route::post('adm_video_testimonial/update/{id}', [VideoTestimonialController::class, 'update']);
+    Route::get('adm_video_testimonial/delete/{id}', [VideoTestimonialController::class, 'destroy']);
     //TestimonialCategory
     Route::get('testimonial_category', [TestimonialCategoryController::class, 'index'])->name('testimonial_category');
     Route::post('store_testimonial_category', [TestimonialCategoryController::class, 'store']);

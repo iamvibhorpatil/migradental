@@ -17,7 +17,7 @@
 
     <div class="container container-treatment my-2">
 
-        <div class="left-side-treatment bg-white align-self-baseline w-100" style="max-width: 100%;">
+        <div class="left-side-treatment bg-white align-self-baseline w-100 wow bounceInLeft" style="max-width: 100%;" data-wow-delay="1.5s">
             <div class="custom-images w-100" style="max-width-100%;">
                 @foreach ($international_client as $key => $item)
                     <div class="image {{ $key === 0 ? '' : 'd-none' }} image-slider" id="image{{ $key }}">
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <div class="right-side-treatment pt-0">
+        <div class="right-side-treatment pt-0 wow bounceInRight" data-wow-delay="1.5s"">
             <div class="right-side-content-treatment">
                 <div id="accordion">
                     @foreach ($international_client as $key => $item)

@@ -1,12 +1,12 @@
 <div class="container-fluid header1-css" style="background-color: #fff;">
     <div class="row align-items-center">
-        <div class="col-12 text-center d-md-none">
+        <div class="col-12 text-center d-md-none wow bounceInLeft">
             <a class="navbar-brand py-0" href="{{ route('/') }}">
                 <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" style="max-width: 180px;">
             </a>
         </div>
 
-        <div class="col-lg-2 ps-0 ps-lg-2 ps-md-2 text-center d-none d-md-block">
+        <div class="col-lg-2 ps-0 ps-lg-2 ps-md-2 text-center d-none d-md-block wow bounceInLeft">
             <a class="navbar-brand py-0" href="{{ route('/') }}">
                 <img src="assets/images/logo.png" alt="logo" width="180" height="86.46" class="logo-lg-css">
             </a>
@@ -124,7 +124,7 @@
                                 class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
                         @foreach ($treatment as $item)
-                            <li class="treatment" data-treatment-id="{{ $item->id }}"><a class="dropdown-item"
+                            <li class="treatment dropdown-li" data-treatment-id="{{ $item->id }}"><a class="dropdown-item"
                                     href="#">{{ $item->treatment_type }}</a></li>
                         @endforeach
 
@@ -159,7 +159,7 @@
                         class="nav-link" data-bs-toggle="dropdown">Testimonial
                         <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('testimonial') }}">Images Testimonial</a></li>
+                        <li><a class="dropdown-item" href="{{ route('video_testimonial') }}">Images Testimonial</a></li>
                         <li><a class="dropdown-item" href="">Videos Testimonial</a></li>
                     </ul>
                 </li>

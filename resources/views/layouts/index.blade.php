@@ -107,7 +107,7 @@
                 </div>
 
                 <div class="row services-row">
-                    <div class=" col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class=" col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/orofacial-pain.png"> </div>
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/migrane-tmj.png"> </div>
@@ -123,7 +123,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
@@ -131,7 +131,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png">
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png">
@@ -159,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/full-mouth-rehabilation.png">
@@ -178,7 +178,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/veneers-laminates.png"> </div>
@@ -186,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/smile-design.png"> </div>
@@ -194,7 +194,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/dental-implant.png"> </div>
@@ -202,7 +202,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/laser-teeth-whitening.png">
@@ -213,7 +213,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png">
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png">
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3 py-3">
+                    <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
                                 <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
@@ -333,36 +333,18 @@
                     Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
             </div>
             <div class="row people">
+                @foreach ($comment as $item)
                 <div class="col-md-6 col-lg-4 col-xl-4 item">
                     <div class="box">
-                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent
-                            aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+                        <p class="description">{{$item->comment}}</p>
                     </div>
                     <div class="author"><img class="rounded-circle" src="{{ asset('assets/images/dummyuser.png') }}">
-                        <h5 class="name">Ben Johnson</h5>
-                        <p class="title">CEO of Company Inc.</p>
+                        <h5 class="name">{{$item->name}}</h5>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 col-xl-4 item">
-                    <div class="box">
-                        <p class="description">Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et
-                            interdum justo suscipit id.</p>
-                    </div>
-                    <div class="author"><img class="rounded-circle" src="{{ asset('assets/images/dummyuser.png') }}">
-                        <h5 class="name">Carl Kent</h5>
-                        <p class="title">Founder of Style Co.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-4 item">
-                    <div class="box">
-                        <p class="description">Aliquam varius finibus est, et interdum justo suscipit. Vulputate quis leo
-                            in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p>
-                    </div>
-                    <div class="author"><img class="rounded-circle" src="{{ asset('assets/images/dummyuser.png') }}">
-                        <h5 class="name">Emily Clark</h5>
-                        <p class="title">Owner of Creative Ltd.</p>
-                    </div>
-                </div>
+                @endforeach
+               
+                
             </div>
         </div>
     </div>

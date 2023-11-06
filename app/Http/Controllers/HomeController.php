@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Comment;
 use App\Models\Video;
 
 class HomeController extends Controller
@@ -12,7 +13,8 @@ class HomeController extends Controller
     {
         
         $video = Video::where('display','Yes')->take('3')->get();
-        return view('layouts.index',compact('video'));
+        $comment = Comment::where('display','Yes')->take('3')->get();
+        return view('layouts.index',compact('video','comment'));
     }
 
     public function about()

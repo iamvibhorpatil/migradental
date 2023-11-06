@@ -163,7 +163,13 @@
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
                             <a class="nav-link " href="{{ Route('adm_testimonial') }}">
-                                <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Image Data<i
+                                        class="fa-solid fa-arrow-right ms-2 "></i></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ Route('adm_video_testimonial') }}">
+                                <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Video Data<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>

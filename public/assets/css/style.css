@@ -2441,8 +2441,8 @@ h4,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
-    color: #095c66;
-    /* background-color: white; */
+    color: gray;
+    border-bottom: solid 1px white;
 }
 
 
@@ -2463,11 +2463,8 @@ h4,
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu {
     border: none;
     margin-top: 10px;
-    /* padding:0; */
+    border-radius: 0!important;
     background: #fff;
-      */
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
     -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
@@ -2475,6 +2472,7 @@ h4,
 
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item {
     font-size: 17px;
+    border-radius: 0!important;
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item:hover,
@@ -2484,7 +2482,8 @@ h4,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.active>a {
-    color: #095c66;
+    color: gray;
+    border-bottom: solid 1px white;
 }
 
 @media (max-width: 991.98px) {
@@ -4822,7 +4821,7 @@ a .nav-hvr:hover {
     z-index: 3!important; 
     left: 61px!important;
      position: absolute!important; 
-     top: -11px!important;
+     top: 0px!important;
  } 
 
 /* Logo End*/

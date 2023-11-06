@@ -5,7 +5,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
-                <div class="col-md-9 ftco-animate text-center">
+                <div class="col-md-9 text-center wow bounceInUp" data-wow-delay="1.3s">
                     <h2 class="mb-2 bread font-weight-normal" style="color:white;"> Blogs </h2>
                 </div>
             </div>
@@ -13,18 +13,18 @@
     </section>
     <div class="container my-2">
         <div class="row testi-img-video-blog-cmn">
-            <div class="col-md-3 col-sm-12 col-lg-3">
+            <div class="col-md-3 col-sm-12 col-lg-3 wow fadeInLeft" data-wow-delay="1.5s">
                 @foreach ($blog_category as $item)
                     <button type="button" value="{{ $item->id }}"
-                        class="blog_category btn web_bg px-5 rounded-0 w-100 wow fadeInLeft">{{ $item->category }}</button>
+                        class="blog_category btn web_bg px-5 rounded-0 w-100">{{ $item->category }}</button>
                     <hr class="m-0">
                 @endforeach
 
             </div>
-            <div class="col-md-9 col-sm-12 col-lg-9 ">
+            <div class="col-md-9 col-sm-12 col-lg-9 mb-4">
                 <div class="row testim">
                     @foreach ($adm_blog_first as $item)
-                        <div class="col-md-6 col-sm-12 col-lg-4 wow fadeInUp blog_id" data-blog-id="{{ $item->id }}"
+                        <div class="col-md-6 col-sm-12 col-lg-4 wow fadeInUp blog_id mb-3" data-wow-delay="1.5s" data-blog-id="{{ $item->id }}"
                             style="cursor: pointer;">
                             <div class="card mx-auto" style="min-height: 100%;">
                                 <img src="{{ asset('assets/uploads/' . $item->image) }}" class="card-img-top p-2"
