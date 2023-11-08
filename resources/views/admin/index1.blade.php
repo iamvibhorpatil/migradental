@@ -83,7 +83,7 @@
                     <ul class="navbar-nav ps-5" id="users" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('patient_form') }}">
+                            <a class="nav-link {{request()->is('patient_form') ? 'dashboard-aside-active' : '' }}" href="{{ Route('patient_form') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-user-plus me-2"></i>New Patient<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -91,7 +91,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('detail') }}">
+                            <a class="nav-link {{request()->is('patient_detail') ? 'dashboard-aside-active' : '' }}" href="{{ Route('detail') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-user-nurse me-2"></i>Patient List<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -114,7 +114,7 @@
                     <ul class="navbar-nav ps-5" id="Treatment" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_treatment') }}">
+                            <a class="nav-link {{request()->is('adm_treatment') ? 'dashboard-aside-active' : '' }}" href="{{ Route('adm_treatment') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -122,7 +122,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('treatment_type') }}">
+                            <a class="nav-link {{request()->is('treatment_type') ? 'dashboard-aside-active' : '' }}" href="{{ Route('treatment_type') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -154,7 +154,7 @@
 
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('testimonial_category') }}">
+                            <a class="nav-link {{request()->is('testimonial_category') ? 'dashboard-aside-active' : '' }}" href="{{ Route('testimonial_category') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -162,13 +162,13 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_testimonial') }}">
+                            <a class="nav-link {{request()->is('adm_testimonial') ? 'dashboard-aside-active' : '' }}" href="{{ Route('adm_testimonial') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Image Data<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_video_testimonial') }}">
+                            <a class="nav-link {{request()->is('adm_video_testimonial') ? 'dashboard-aside-active' : '' }}" href="{{ Route('adm_video_testimonial') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Video Data<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -176,7 +176,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('comment') }}">
+                            <a class="nav-link {{request()->is('comment') ? 'dashboard-aside-active' : '' }}" href="{{ Route('comment') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-comments me-2"></i>Comments<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -196,7 +196,7 @@
                     <ul class="navbar-nav ps-5" id="Images" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('images_category') }}">
+                            <a class="nav-link {{request()->is('images_category') ? 'dashboard-aside-active' : '' }}" href="{{ Route('images_category') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -204,7 +204,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_images') }}">
+                            <a class="nav-link {{request()->is('adm_images') ? 'dashboard-aside-active' : '' }}" href="{{ Route('adm_images') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -224,7 +224,7 @@
                     <ul class="navbar-nav ps-5" id="Videos" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item ">
-                            <a class="nav-link dashboard-aside-active" href="{{ Route('videos_category') }}">
+                            <a class="nav-link {{request()->is('videos_category') ? 'dashboard-aside-active' : '' }}" href="{{ Route('videos_category') }}">
                                 <span class="nav-link-text ms-1 "><i class="fa-brands fa-codepen me-2"></i>Sub Head<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -232,7 +232,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_videos') }}">
+                            <a class="nav-link {{request()->is('adm_videos') ? 'dashboard-aside-active' : '' }}" href="{{ Route('adm_videos') }}">
                                 <span class="nav-link-text ms-1"><i class="fa-solid fa-layer-group me-2"></i>Add Data<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>
@@ -252,7 +252,7 @@
                     <ul class="navbar-nav ps-5" id="Blog" style="display: none;">
                         {{-- @if (Auth::user()->hasPermissionTo('Add User')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('adm_blog') }}">
+                            <a class="nav-link {{request()->is('adm_blog') ? 'dashboard-aside-active' : '' }}" href="{{ Route('adm_blog') }}">
                                 <span class="nav-link-text ms-1">Blog<i
                                         class="fa-solid fa-arrow-right ms-2 "></i></span>
                             </a>
@@ -260,7 +260,7 @@
                         {{-- @endif --}}
                         {{-- @if (Auth::user()->hasPermissionTo('View Users')) --}}
                         <li class="nav-item">
-                            <a class="nav-link " href="{{ Route('blog_category') }}">
+                            <a class="nav-link {{request()->is('blog_category') ? 'dashboard-aside-active' : '' }}" href="{{ Route('blog_category') }}">
                                 <span class="nav-link-text ms-1">Blog Category<i
                                         class="fa-solid fa-arrow-right ms-2"></i></span>
                             </a>

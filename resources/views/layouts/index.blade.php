@@ -105,12 +105,11 @@
                 <div class="text-center my-3">
                     <h1>Our Clinic Services</h1>
                 </div>
-
                 <div class="row services-row">
                     <div class=" col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/orofacial-pain.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/orofacial-pain.png"> </div>
                                 <h4><a href="">Orofacial Pain</a></h4>
                             </div>
                         </div>
@@ -118,7 +117,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/migrane-tmj.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/migrane-tmj.png"> </div>
                                 <h4>Migraine & TMJ</h4>
                             </div>
                         </div>
@@ -126,7 +125,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/tmd.png"> </div>
                                 <h4>TMD</h4>
                             </div>
                         </div>
@@ -134,7 +133,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png">
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/dental-sleep-medicine.png">
                                 </div>
                                 <h4>Dental Sleep Medicine</h4>
                             </div>
@@ -145,7 +144,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/tmd.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/tmd.png"> </div>
                                 <h4>Headaches</h4>
                             </div>
                         </div>
@@ -153,7 +152,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/dental-sleep-medicine.png">
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/dental-sleep-medicine.png">
                                 </div>
                                 <h4>Dental Surgeries with laser</h4>
                             </div>
@@ -162,7 +161,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
                                 <h4>Child Care Dentistry</h4>
                             </div>
                         </div>
@@ -170,7 +169,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/full-mouth-rehabilation.png">
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/full-mouth-rehabilation.png">
                                 </div>
                                 <h4>Full Mouth Rehabilation</h4>
                             </div>
@@ -181,7 +180,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/veneers-laminates.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/veneers-laminates.png"> </div>
                                 <h4>Veneers & Laminates</h4>
                             </div>
                         </div>
@@ -189,7 +188,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/smile-design.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/smile-design.png"> </div>
                                 <h4>Smile Designing</h4>
                             </div>
                         </div>
@@ -197,7 +196,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/dental-implant.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/dental-implant.png"> </div>
                                 <h4>Dental Implants</h4>
                             </div>
                         </div>
@@ -205,7 +204,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/laser-teeth-whitening.png">
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/laser-teeth-whitening.png">
                                 </div>
                                 <h4>Laser Teeth Whitening</h4>
                             </div>
@@ -216,7 +215,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png">
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/root-canal-treetment.png">
                                 </div>
                                 <h4>Root Canal</h4>
                             </div>
@@ -225,7 +224,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/root-canal-treetment.png">
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/root-canal-treetment.png">
                                 </div>
                                 <h4>Root Canal Treatment with Laser</h4>
                             </div>
@@ -234,7 +233,7 @@
                     <div class="col-sm-12 col-md-6 col-xl-3 py-3 wow fadeOutUp">
                         <div class="our-services-box">
                             <div class="our-services speedup">
-                                <div class="icon"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
+                                <div class="icon shake-slow"> <img src="assets/images/services-img/laser-dentistry.png"> </div>
                                 <h4>Orthodontics & Aligners</h4>
                             </div>
                         </div>

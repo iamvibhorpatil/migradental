@@ -5,3 +5,14 @@
   .elec-table.active{
     display: block;
   }
+
+
+
+#myTable8_filter{
+  
+    width:80%;
+}
+#myTable8_filter label, input{
+
+    width:85%;
+}

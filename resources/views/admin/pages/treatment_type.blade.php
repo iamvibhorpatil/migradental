@@ -63,12 +63,10 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="treatment_type_id">Treatment Type</label>
-                                        <select class="form-select treatment_type_id" name="treatment_type_id" aria-label="Default select example" id="treatment_type_id"
-                                            required title="Select Category First">
-                                            <option selected>Select Treatment</option>
+                                        <select class="form-select treatment_type_id" name="treatment_type_id" aria-label="Default select example"
+                                            required>
+                                            <option value="{{ isset($treatment_type->Treatment) ? $treatment_type->Treatment->id : '' }}">{{ isset($treatment_type->Treatment) ? $treatment_type->Treatment->treatment_type : '' }}</option>
                                         </select>
-                                        <span id="treatment-type-error" style="color: red;"></span>
-
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label for="question"> Question ?</label>
@@ -136,7 +134,7 @@
                         
                                         <tr class="">
                                             <td>{{ $item->category }}</td>
-                                            <td>{{ $item->Treatment->treatment_type }}</td>
+                                           <td>{{ isset($item->Treatment) ? $item->Treatment->treatment_type : '' }}</td>
                                             <td><textarea class="form-control-sm" cols="15">{{ $item->question }}</textarea></td>
                                             <td><textarea class="form-control-sm" cols="30">{{ $item->answer }}</textarea></td>
                                 
