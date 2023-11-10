@@ -118,10 +118,8 @@
                                             <td>{{ $item->status }}</td>
                                             <td>
                                                 <a href="{{ url('international_client/edit/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want edit this Treatment Type') "
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('international_client/delete/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want delete this Treatment Type') "
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>

@@ -49,7 +49,6 @@
                                             <td>{{ $item->mobile }}</td>
                                             <td>
                                                 <a href="{{ url('call_request/delete/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want delete this Call Request ') "
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>

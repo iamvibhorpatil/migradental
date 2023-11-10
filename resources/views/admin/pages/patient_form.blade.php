@@ -32,15 +32,11 @@
                             @endif
                             <div class="form-group">
                                 <label for="form_date" class="fs-6">Date:</label>
-                                <input type="date" class="form-control w-25" id="form_date" name="form_date" required
+                                <input type="date" class="form-control w-25" id="form_date" name="form_date" 
                                     value="{{ now()->setTimezone('Asia/Kolkata')->format('Y-m-d') }}">
                             </div>
                             <div class="row input_field" style="">
-                                <div class="col-sm-12 col-md-4">
-                                    <label for="patient_name"class="fs-6">Name:</label>
-                                    <input type="text" class="form-control" id="patient_name" name="patient_name"
-                                        required>
-                                </div>
+                               
                                 <div class="col-sm-12 col-md-4">
                                     <label for="patient_number"class="fs-6">Patient No.:</label>
                                     <input type="number" class="form-control" id="patient_number" name="patient_number"
@@ -49,85 +45,95 @@
                                 <div class="col-sm-12 col-md-4">
                                     <label for="family_card_number"class="fs-6">Family Card No.:</label>
                                     <input type="number" class="form-control" id="family_card_number"
-                                        name="family_card_number" required>
+                                        name="family_card_number" >
+                                </div>
+                                 <div class="col-sm-12 col-md-4">
+                                    <label for="patient_name"class="fs-6">Name:</label>
+                                    <input type="text" class="form-control" id="patient_name" name="patient_name"
+                                        required>
                                 </div>
 
                             </div>
                             <div class="row input_field" style="">
-                                <div class="col-sm-12 col-md-4">
-                                    <label for="aadhar_no"class="fs-6">Aadhar No.:</label>
-                                    <input type="text" class="form-control" id="aadhar_no" name="aadhar_no" required>
+                                 <div class="col-sm-12 col-md-3">
+                                    <label for="dob" class="fs-6">Date of Birth:</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" oninput="calculateAge()"
+                                        >
                                 </div>
+                                <div class="col-sm-12 col-md-1">
+                                    <label for="age" class="fs-6">Age:</label>
+                                    <input type="number" class="form-control" id="age" name="age"
+                                        oninput="calculateDOB()" >
+                                </div>
+                              
                                 <div class="col-sm-12 col-md-4">
                                     <label for="mobile_no"class="fs-6">Mobile No.:</label>
                                     <input type="tel" class="form-control" id="mobile_no" name="mobile_no" required>
                                 </div>
-                                <div class="col-sm-12 col-md-4">
+                                 <div class="col-sm-12 col-md-4">
                                     <label for="email_id"class="fs-6">Email ID:</label>
-                                    <input type="email" class="form-control" id="email_id" name="email_id" required>
+                                    <input type="email" class="form-control" id="email_id" name="email_id" >
                                 </div>
+                               
                             </div>
 
                             <div class="row" style="">
+                                
+                                  <div class="col-sm-12 col-md-6">
+                                    <label for="aadhar_no"class="fs-6">Aadhar No.:</label>
+                                    <input type="text" class="form-control" id="aadhar_no" name="aadhar_no" >
+                                </div>
                                 <div class="col-sm-12 col-md-6">
                                     <label for="profession" class="fs-6">Profession:</label>
-                                    <input type="text" class="form-control" id="profession" name="profession" required>
+                                    <input type="text" class="form-control" id="profession" name="profession" >
                                 </div>
-                                <div class="col-sm-12 col-md-3">
-                                    <label for="dob" class="fs-6">Date of Birth:</label>
-                                    <input type="date" class="form-control" id="dob" name="dob" oninput="calculateAge()"
-                                        required>
-                                </div>
-                                <div class="col-sm-12 col-md-3">
-                                    <label for="age" class="fs-6">Age:</label>
-                                    <input type="number" class="form-control" id="age" name="age"
-                                        oninput="calculateDOB()" required>
-                                </div>
+                               
+                            </div>
+                             <div class="form-group">
+                                <label for="address" class="fs-6">Address:</label>
+                                <textarea id="address" class="form-control" name="address" ></textarea>
                             </div>
                             <div class="row" style="">
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
                                         <label for="city" class="fs-6">City:</label>
                                         <input type="text" class="form-control" id="city" name="city" value="Nagpur"
-                                            required>
+                                            >
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
                                         <label for="state" class="fs-6">State:</label>
                                         <input type="text" class="form-control" id="state" name="state"
-                                            value="Maharashtra" required>
+                                            value="Maharashtra" >
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
                                         <label for="country" class="fs-6">Country:</label>
                                         <input type="text" class="form-control" id="country" name="country"
-                                            value="India" required>
+                                            value="India" >
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="address" class="fs-6">Address:</label>
-                                <textarea id="address" class="form-control" name="address" required></textarea>
-                            </div>
+                           
 
                             <div class="d-flex">
                                 <label class="fs-6">Gender</label>
                                 <div class="form-check ps-5">
                                     <input class="form-check-input" type="radio" name="gender" id="flexRadioDefaultMale"
-                                        value="Male">
+                                        value="Male" required>
                                     <label class="form-check-label" for="flexRadioDefaultMale">Male</label>
                                 </div>
                                 <div class="form-check ps-5">
                                     <input class="form-check-input" type="radio" name="gender"
-                                        id="flexRadioDefaultFemale" value="Female">
+                                        id="flexRadioDefaultFemale" value="Female" required>
                                     <label class="form-check-label" for="flexRadioDefaultFemale">Female</label>
                                 </div>
                                 <div class="form-check ps-5">
                                     <input class="form-check-input" type="radio" name="gender"
-                                        id="flexRadioDefaultOther" value="Other">
+                                        id="flexRadioDefaultOther" value="Other" required>
                                     <label class="form-check-label" for="flexRadioDefaultOther">Other</label>
                                 </div>
                             </div>
@@ -142,17 +148,17 @@
                                 <div class="col-sm-12 col-md-4">
                                     <label for="guardian_name" class="fs-6">Name:</label>
                                     <input type="text" class="form-control" id="guardian_name" name="guardian_name"
-                                        required>
+                                        >
                                 </div>
 
                                 <div class="col-sm-12 col-md-4">
                                     <label for="guardian_no" class="fs-6">Mobile No.:</label>
-                                    <input type="tel" class="form-control" id="guardian_no" name="guardian_no" required>
+                                    <input type="tel" class="form-control" id="guardian_no" name="guardian_no" >
                                 </div>
                                 <div class="col-sm-12 col-md-4">
                                     <label for="guardian_city" class="fs-6">City:</label>
                                     <input type="text" class="form-control" value="Nagpur" id="guardian_city"
-                                        name="guardian_city" required>
+                                        name="guardian_city">
                                 </div>
                             </div>
                            
@@ -192,17 +198,22 @@
                                         value="Print Media">
                                     <label class="form-check-label fs-6" for="print_media">Print Media</label>
                                 </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="referred_by" id="none"
+                                        value="None">
+                                    <label class="form-check-label fs-6" for="none">None</label>
+                                </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="referred_name" class="fs-6">Name:</label>
                                         <input type="text" id="referred_name" class="form-control" name="referred_name"
-                                            required>
+                                            >
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-12">
                                     <div class="my-2">
                                         <label for="time" class="pe-4 fs-6">Your Preffered Time Of Treatment :</label>
                                         <div class="form-check form-check-inline">
@@ -225,8 +236,39 @@
                                                 id="inlineCheckbox4" value="5pm to 8pm">
                                             <label class="form-check-label" for="radio">5pm to 8pm</label>
                                         </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="time"
+                                                id="inlineCheckbox5" value="None">
+                                            <label class="form-check-label" for="radio">None</label>
+                                        </div>
                                     </div>
                                 </div>
+                                    <!--<div class="col-md-12">-->
+                                    <!--    <div class="my-2">-->
+                                    <!--        <label for="time" class="pe-4 fs-6">Your Preferred Time Of Treatment :</label>-->
+                                    <!--        <div class="form-check form-check-inline">-->
+                                    <!--            <input class="form-check-input" type="checkbox" name="time" id="inlineCheckbox1" value="8am to 10 am">-->
+                                    <!--            <label class="form-check-label" for="inlineCheckbox1">8am to 10 am</label>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="form-check form-check-inline">-->
+                                    <!--            <input class="form-check-input" type="checkbox" name="time" id="inlineCheckbox2" value="10am to 2pm">-->
+                                    <!--            <label class="form-check-label" for="inlineCheckbox2">10am to 2pm</label>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="form-check form-check-inline">-->
+                                    <!--            <input class="form-check-input" type="checkbox" name="time" id="inlineCheckbox3" value="2pm to 5pm">-->
+                                    <!--            <label class="form-check-label" for="inlineCheckbox3">2pm to 5pm</label>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="form-check form-check-inline">-->
+                                    <!--            <input class="form-check-input" type="checkbox" name="time" id="inlineCheckbox4" value="5pm to 8pm">-->
+                                    <!--            <label class="form-check-label" for="inlineCheckbox4">5pm to 8pm</label>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="form-check form-check-inline">-->
+                                    <!--            <input class="form-check-input" type="checkbox" name="time" id="inlineCheckbox5" value="None">-->
+                                    <!--            <label class="form-check-label" for="inlineCheckbox5">None</label>-->
+                                    <!--        </div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+
                             </div>
 
                             <div class="row input_field mt-4" style="">

@@ -141,9 +141,9 @@
 
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('treatment_type/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Treatment Type') "
+                                                <a href="{{ url('treatment_type/edit/' . $item->id) }}" 
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
-                                                <a href="{{ url('treatment_type/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Treatment Type') "
+                                                <a href="{{ url('treatment_type/delete/' . $item->id) }}"
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>

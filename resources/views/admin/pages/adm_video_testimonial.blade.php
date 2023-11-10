@@ -125,9 +125,9 @@
 
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('adm_video_testimonial/edit/' . $item->id) }}" onclick="return confirm('Are you sure you want edit this Testimonial') "
+                                                <a href="{{ url('adm_video_testimonial/edit/' . $item->id) }}" 
                                                     class="btn btn-behance badge mx-2">Edit</a>
-                                                <a href="{{ url('adm_video_testimonial/delete/' . $item->id) }}" onclick="return confirm('Are you sure you want delete this Testimonial ') "
+                                                <a href="{{ url('adm_video_testimonial/delete/' . $item->id) }}" 
                                                     class="btn btn-danger badge mx-2">Delete</a>
                                             </td>
                                         </tr>

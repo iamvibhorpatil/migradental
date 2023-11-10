@@ -102,10 +102,8 @@
                                             <td>{{ $item->status }}</td>
                                             <td>
                                                 <a href="{{ url('blog_category/edit/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want edit this Category Type') "
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('blog_category/delete/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want delete this Category Type') "
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
