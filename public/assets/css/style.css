@@ -2429,11 +2429,8 @@ h4,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
-    /* padding-block:1rem; */
-    padding-left: 13px;
-    padding-right: 13px;
-    font-size: 16px;
-    /* font-weight: 600; */
+    padding-left: 20px;
+    font-size: 15px;
     color: #ffffff;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2445,6 +2442,87 @@ h4,
     border-bottom: solid 1px white;
 }
 
+
+@media (max-width: 1431px) {
+    .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 1371px) {
+    .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+        padding-left: 15px;
+    }
+
+}
+
+@media (max-width: 1276px) {
+    .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+        padding-left: 8px;
+    }
+
+}
+
+@media (max-width: 1180px) {
+    .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+        padding-left: 0px;
+    }
+
+}
+
+@media (max-width: 1161px) {
+    .whatsappno{
+        display:block!important;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        justify-content: end!important;
+    }
+   
+}
+
+@media (max-width: 820px) {
+    .banner_image{
+        height: 350px!important;
+    }
+   
+}
+
+@media (max-width: 820px) {
+    .banner_image{
+        height: 350px!important;
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        justify-content: space-between!important;
+    }
+   
+}
+@media (max-width: 991px) {
+
+    .logo-lg-css {
+        top: 11px!important;
+    }
+
+}
+
+@media (max-width: 1331px) {
+    .logo-lg-css{
+        max-width: 180px;
+        z-index: 3!important; 
+        left: 14px!important;
+         position: absolute!important; 
+         top: 0px;
+     } 
+
+}
 
 @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
@@ -4755,6 +4833,13 @@ a .nav-hvr:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background-color: #7ed3ed;
 }
+.our-services-box:hover .speedup h4 {
+    color: rgb(255 249 249);
+
+}
+.our-services-box:hover .shake-slow img{
+    filter: invert(1);
+}
 
 .services-row {
     display: flex;
@@ -4818,10 +4903,10 @@ a .nav-hvr:hover {
 }
  .logo-lg-css{
     max-width: 180px;
-    z-index: 3!important; 
-    left: 61px!important;
-     position: absolute!important; 
-     top: 0px!important;
+    z-index: 3; 
+    left: 61px;
+     position: absolute; 
+     top: 0px;
  } 
 
 /* Logo End*/

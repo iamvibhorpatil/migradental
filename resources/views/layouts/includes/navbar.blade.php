@@ -12,12 +12,12 @@
             </a>
         </div>
 
-        <div class="col-lg-5 col-12 text-center d-none d-md-none d-lg-block" style="color: #47b0ab;">
+        <div class="col-lg-5 col-12 text-center d-none d-md-none d-lg-block text-nowrap" style="color: #47b0ab;">
             <a href="#" target="_blank" class="text-decoration-none px-3"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; color: #47b0ab;">
                 <i class="fa fa-phone px-1"></i>Call: +917276976729
             </a>
-            <a href="#" class="text-decoration-none px-3"
+            <a href="#" class="text-decoration-none px-3 whatsappno"
                 style="border-left: 1px solid rgba(250, 250, 250, 0.3); padding: 10px 20px; border-right: 1px solid rgba(250, 250, 250, 0.3); color: #47b0ab;">
                 <i class="fa-brands fa-whatsapp px-1"></i>Whatsapp No.: +919594369752
             </a>
