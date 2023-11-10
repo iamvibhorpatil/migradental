@@ -49,11 +49,12 @@
                                             <option value="Migraine" {{$treatment_type->category === 'Migraine' ? 'selected':''}}>Migraine</option>
                                           </select>
                                     </div>
-                                    <div class="col-sm-12 col-md-6">
+                                   
+                                     <div class="col-sm-12 col-md-6">
                                         <label for="treatment_type_id">Treatment Type</label>
                                         <select class="form-select treatment_type_id" name="treatment_type_id" aria-label="Default select example"
                                             required>
-                                            <option value="{{$treatment_type->Treatment->id}}">{{$treatment_type->Treatment->treatment_type}}</option>
+                                            <option value="{{ isset($treatment_type->Treatment) ? $treatment_type->Treatment->id : '' }}">{{ isset($treatment_type->Treatment) ? $treatment_type->Treatment->treatment_type : '' }}</option>
                                         </select>
                                     </div>
                                     <div class="col-sm-12 col-md-12">
@@ -196,9 +197,9 @@
                 var itemId = clickedElement.data('id');
                 var index = clickedElement.data('index');
 
-                var confirmDelete = confirm('Are you sure you want to delete this image?');
+                
 
-                if (confirmDelete) {
+              
                     $.ajax({
                         method: 'get',
                         url: '/delete_image_treatment',
@@ -208,12 +209,9 @@
                         },
                         success: function(response) {
                             if (response.success) {
-                                Swal.fire({
-                                    title: 'Deleted',
-                                    icon: 'success',
-                                }).then(() => {
+                               
                                     location.reload();
-                                });
+                                
                             } else {
                                 Swal.fire({
                                     title: 'Error',
@@ -223,7 +221,7 @@
                             }
                         }
                     });
-                }
+                
             });
 
 

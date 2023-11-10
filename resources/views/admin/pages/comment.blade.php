@@ -59,10 +59,8 @@
                                             </td>
                                             <td>
                                                 <a href="{{ url('comment/edit/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want edit this Comment ') "
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('comment/delete/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want delete this Comment ') "
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>

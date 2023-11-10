@@ -59,7 +59,6 @@
                                             </td>
                                             <td>
                                                 <a href="{{ url('contact/delete/' . $item->id) }}"
-                                                    onclick="return confirm('Are you sure you want delete this Contact ') "
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
