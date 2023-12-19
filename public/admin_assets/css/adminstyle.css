@@ -1,18 +1,33 @@
 .elec-table {
-    display: none;
-  }
-  
-  .elec-table.active{
-    display: block;
-  }
+  display: none;
+}
 
-
+.elec-table.active{
+  display: block;
+}
 
 #myTable8_filter{
-  
+
     width:80%;
 }
 #myTable8_filter label, input{
 
     width:85%;
 }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* For Chrome, Safari, and Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Edge */
+input[type="number"] {
+  -ms-inner-appearance: none;
+}
+

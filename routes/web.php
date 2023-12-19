@@ -57,11 +57,16 @@ Route::get('/optimize', function () {
 // });
 
 // Route::get('/add_column', function () {
-//     DB::statement('ALTER TABLE comments ADD display VARCHAR(255) AFTER comment');
+//     DB::statement('ALTER TABLE internationals ADD other_description VARCHAR(255) AFTER preliminary_dental');
 
 //         return 'Column added successfully.';
 
 // });
+
+Route::get('/create-mail', function () {
+    $exitCode = Artisan::call('make:mail', ['name' => 'RequestCallMail']); 
+    return "done";
+});
 
 // Home Controller
 
@@ -131,25 +136,30 @@ Route::middleware('auth')->group(function () {
     Route::get('treatment_type/delete/{id}', [TreatmentTypeController::class, 'destroy']);
     Route::get('get_treatment_type', [TreatmentTypeController::class, 'get_treatment_type']);
     Route::get('delete_image_treatment', [TreatmentTypeController::class, 'delete_image_treatment']);
+    
     //international_client
+    Route::get('/international_detail_view/{id}', [InternationalController::class, 'international_detail_view']);
     Route::get('international_client', [InternationalController::class, 'index'])->name('international_client');
     Route::post('store_international_client', [InternationalController::class, 'store']);
     Route::get('international_client/edit/{id}', [InternationalController::class, 'edit']);
     Route::post('international_client/update/{id}', [InternationalController::class, 'update']);
     Route::get('international_client/delete/{id}', [InternationalController::class, 'destroy']);
     Route::get('delete_image', [InternationalController::class, 'delete_image']);
+
     //adm_testimonial
     Route::get('adm_testimonial', [TestimonialController::class, 'index'])->name('adm_testimonial');
     Route::post('store_adm_testimonial', [TestimonialController::class, 'store']);
     Route::get('adm_testimonial/edit/{id}', [TestimonialController::class, 'edit']);
     Route::post('adm_testimonial/update/{id}', [TestimonialController::class, 'update']);
     Route::get('adm_testimonial/delete/{id}', [TestimonialController::class, 'destroy']);
+
     //adm_ video testimonial
     Route::get('adm_video_testimonial', [VideoTestimonialController::class, 'index'])->name('adm_video_testimonial');
     Route::post('store_adm_video_testimonial', [VideoTestimonialController::class, 'store']);
     Route::get('adm_video_testimonial/edit/{id}', [VideoTestimonialController::class, 'edit']);
     Route::post('adm_video_testimonial/update/{id}', [VideoTestimonialController::class, 'update']);
     Route::get('adm_video_testimonial/delete/{id}', [VideoTestimonialController::class, 'destroy']);
+
     //TestimonialCategory
     Route::get('testimonial_category', [TestimonialCategoryController::class, 'index'])->name('testimonial_category');
     Route::post('store_testimonial_category', [TestimonialCategoryController::class, 'store']);
@@ -160,36 +170,42 @@ Route::middleware('auth')->group(function () {
     Route::get('testimonial_category/edit/{id}', [TestimonialCategoryController::class, 'edit']);
     Route::post('testimonial_category/update/{id}', [TestimonialCategoryController::class, 'update']);
     Route::get('testimonial_category/delete/{id}', [TestimonialCategoryController::class, 'destroy']);
+
     //adm Images
     Route::get('adm_images', [ImageController::class, 'index'])->name('adm_images');
     Route::post('store_adm_images', [ImageController::class, 'store']);
     Route::get('adm_images/edit/{id}', [ImageController::class, 'edit']);
     Route::post('adm_images/update/{id}', [ImageController::class, 'update']);
     Route::get('adm_images/delete/{id}', [ImageController::class, 'destroy']);
+
     //Images
     Route::get('images_category', [ImagesCategoryController::class, 'index'])->name('images_category');
     Route::post('store_images_category', [ImagesCategoryController::class, 'store']);
     Route::get('images_category/edit/{id}', [ImagesCategoryController::class, 'edit']);
     Route::post('images_category/update/{id}', [ImagesCategoryController::class, 'update']);
     Route::get('images_category/delete/{id}', [ImagesCategoryController::class, 'destroy']);
+
     //adm Videos
     Route::get('adm_videos', [VideoController::class, 'index'])->name('adm_videos');
     Route::post('store_adm_videos', [VideoController::class, 'store']);
     Route::get('adm_videos/edit/{id}', [VideoController::class, 'edit']);
     Route::post('adm_videos/update/{id}', [VideoController::class, 'update']);
     Route::get('adm_videos/delete/{id}', [VideoController::class, 'destroy']);
+
     //Videos
     Route::get('videos_category', [VideosCategoryController::class, 'index'])->name('videos_category');
     Route::post('store_videos_category', [VideosCategoryController::class, 'store']);
     Route::get('videos_category/edit/{id}', [VideosCategoryController::class, 'edit']);
     Route::post('videos_category/update/{id}', [VideosCategoryController::class, 'update']);
     Route::get('videos_category/delete/{id}', [VideosCategoryController::class, 'destroy']);
+
     //adm Blog
     Route::get('adm_blog', [BlogController::class, 'index'])->name('adm_blog');
     Route::post('store_adm_blog', [BlogController::class, 'store']);
     Route::get('adm_blog/edit/{id}', [BlogController::class, 'edit']);
     Route::post('adm_blog/update/{id}', [BlogController::class, 'update']);
     Route::get('adm_blog/delete/{id}', [BlogController::class, 'destroy']);
+
     //Blog
     Route::get('blog_category', [BlogCategoryController::class, 'index'])->name('blog_category');
     Route::post('store_blog_category', [BlogCategoryController::class, 'store']);

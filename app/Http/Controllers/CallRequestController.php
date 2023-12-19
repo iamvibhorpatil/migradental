@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
+use App\Mail\ContactMail;
+use App\Mail\RequestCallMail;
 use App\Models\CallRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
@@ -34,6 +37,7 @@ class CallRequestController extends Controller
 
     public function store(Request $request)
     {
+         
         try {
             $call = new CallRequest();
 
@@ -42,13 +46,26 @@ class CallRequestController extends Controller
 
             $call->save();
 
+
+        $calldata = $request->all();
+
+        // dd($calldata);
+        // die();
+
+         $recipients = ['abhibante003@gmail.com'];
+             Mail::to($recipients)->send(new RequestCallMail($calldata));
+
+
             return redirect()->back()->with('request_callback_success', 'Submitted: You will be contacted soon.');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());
         }
     }
+    
     public function store_contact(Request $request)
     {
+        // dd($request);
+        // die();
         try {
             $contact = new Contact();
 
@@ -60,6 +77,13 @@ class CallRequestController extends Controller
 
             $contact->save();
 
+        $contactdata = $request->all();
+        // dd($contactdata);
+        // die();
+
+         $recipients = ['abhibante003@gmail.com','bawanesumit01@gmail.com'];
+             Mail::to($recipients)->send(new ContactMail($contactdata));
+            
             return redirect()->back()->with('contact_success', 'Your data is Submitted');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred while saving data: ' . $e->getMessage());

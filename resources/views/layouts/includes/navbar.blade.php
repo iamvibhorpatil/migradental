@@ -1,3 +1,64 @@
+
+<!--loader code -->
+
+ <style>
+    /* Preloader styles */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #preloader .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+   
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+    {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    } 
+  </style>
+
+
+
+ <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        document.getElementById("preloader").style.display = "none";
+      }, 1000);
+        
+    });
+  </script>
+<!--loader code -->
+<div class="sticky-top">
 <div class="container-fluid header1-css" style="background-color: #fff;">
     <div class="row align-items-center">
         <div class="col-12 text-center d-md-none wow bounceInLeft">
@@ -22,21 +83,21 @@
                 <i class="fa-brands fa-whatsapp px-1"></i>Whatsapp No.: +919594369752
             </a>
         </div>
-        <div class="col-lg-3 col-12 text-center d-none d-md-none d-lg-block" style="color: #47b0ab;">
-            <a href="#" class="text-decoration-none px-2">
-                <i class="fa-brands fa-facebook-f" style="color: #47b0ab;"></i>
+        <div class="col-lg-3 col-12 text-center d-none d-md-none d-lg-block social-icon">
+            <a href="#" class="text-decoration-none px-2 ">
+                <i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i>
             </a>
             <a href="#" class="text-decoration-none px-2">
-                <i class="fa-brands fa-twitter" style="color: #47b0ab;"></i>
+                <i class="fa-brands fa-x-twitter" style="color: #000000;"></i>
             </a>
             <a href="#" class="text-decoration-none px-2">
-                <i class="fa-brands fa-linkedin" style="color: #47b0ab;"></i>
+                <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
             </a>
             <a href="#" class="text-decoration-none px-2">
-                <i class="fa-brands fa-instagram" style="color: #47b0ab;"></i>
+                <i class="fa-brands fa-instagram" style="color: #c32aa3;"></i>
             </a>
             <a href="#" class="text-decoration-none px-2">
-                <i class="fa-brands fa-youtube" style="color: #47b0ab;"></i>
+                <i class="fa-brands fa-youtube" style="color:  #ff0000;"></i>
             </a>
         </div>
         <div class="col-lg-2 end-sec-icon align-self-center d-none d-md-block">
@@ -60,38 +121,6 @@
         });
     </script>
 @endif
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Request form</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="request_callback_store" method="POST">
-                @csrf
-                <div class="modal-body">
-                    <div class="form-group-rc">
-                        <input type="text" id="name" name="name" placeholder="Your Name *" required>
-                        <input type="tel" id="mobile" name="mobile" pattern=".{10}" placeholder="Mobile No *"
-                            required>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco-navbar-light nav-head-css">
     <div class="container-fluid">
@@ -159,8 +188,8 @@
                         class="nav-link" data-bs-toggle="dropdown">Testimonial
                         <span><i class="fa-solid fa-caret-down nav-item"></i></span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('video_testimonial') }}">Images Testimonial</a></li>
-                        <li><a class="dropdown-item" href="">Videos Testimonial</a></li>
+                        <li><a class="dropdown-item" href="{{ route('testimonial') }}">Images Testimonial</a></li>
+                        <li><a class="dropdown-item" href="{{ route('video_testimonial') }}">Videos Testimonial</a></li>
                     </ul>
                 </li>
 
@@ -173,9 +202,10 @@
                     </ul>
                 </li>
 
-                <li class="nav-item wow bounceInUp {{ request()->is('blogs') ? 'active' : '' }}"
+                <li class="nav-item wow bounceInUp {{ request()->is('blog') ? 'active' : '' }}"
                     data-wow-delay="0.9s"><a href="{{ route('blog') }}" class="nav-link">Blogs</a></li>
 
+                    
                 <li class="nav-item wow bounceInUp {{ request()->is('contact') ? 'active' : '' }}"
                     data-wow-delay="1.0s"><a href="{{ route('contact') }}" class="nav-link">Contact Us</a></li>
             </ul>
@@ -186,6 +216,39 @@
         </button>
     </div>
 </nav>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Request form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="request_callback_store" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group-rc">
+                        <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                        <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Mobile No *" required onwheel="disableNumberInputScroll(event)"
+                           oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
@@ -212,4 +275,9 @@
 
         });
     });
+</script>
+ <script>
+    function disableNumberInputScroll(event) {
+        event.preventDefault();
+    }
 </script>

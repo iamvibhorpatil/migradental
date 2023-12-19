@@ -11,7 +11,7 @@
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Pages</a></li>
                         <li class="breadcrumb-item text-sm text-white active" aria-current="page">Dashboard</li>
                     </ol>
-                    <h6 class="font-weight-bolder text-white mb-0">Patient Form</h6>
+                    <h6 class="font-weight-bolder text-white mb-0">Update Patient Form</h6>
                 </nav>
                 {{-- half-nav  --}}
                 @include('admin.half_nav')
@@ -34,103 +34,75 @@
                                         {{ session('success') }}
                                     </div>
                                 @endif
-                                <div class="form-group">
-                                    <label for="form_date" class="fs-6">Date:</label>
-                                    <input type="date" class="form-control w-25" id="form_date" name="form_date"
-                                        value="{{ $patientForm->form_date }}">
-                                </div>
-                                <div class="row input_field" style="">
 
-                                    <div class="col-sm-12 col-md-4">
-                                        <label for="patient_number"class="fs-6">Patient No.:</label>
-                                        <input type="number" class="form-control" id="patient_number"
-                                            value="{{ $patientForm->patient_number }}" name="patient_number" required>
+                                <h4 class="mt-2 text-white">
+                                    <span style="background-color: #47b0ab; padding: 10px; border-radius: 5px;">Personal
+                                        Details</span>
+                                </h4>
+                                <div class="form-group mt-4">
+                                    <div class="row input_field" style="">
+
+                                        <div class="col-sm-12 col-md-3">
+                                            <label for="form_date" class="fs-6 mb-0">Date:</label>
+                                            <input type="date" class="form-control" id="form_date" name="form_date"
+                                                onload="openDateInput()" value="{{ $patientForm->form_date }}">
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-4">
+                                            <label for="patient_number"class="fs-6 mb-0">Patient No.:</label>
+                                            <input type="number" class="form-control" id="patient_number"
+                                                oninput="javascript: if (this.value.length > 4) this.value = this.value.slice(0, 4);"
+                                                value="{{ $patientForm->patient_number }}" name="patient_number"
+                                                onwheel="disableNumberInputScroll(event)" required>
+                                        </div>
+
                                     </div>
+                                </div>
+
+                                <div class="row input_field mt-3" style="">
                                     <div class="col-sm-12 col-md-4">
-                                        <label for="family_card_number"class="fs-6">Family Card No.:</label>
-                                        <input type="number" class="form-control"
-                                            value="{{ $patientForm->family_card_number }}" id="family_card_number"
-                                            name="family_card_number">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4">
-                                        <label for="patient_name"class="fs-6">Name:</label>
-                                        <input type="text" class="form-control" id="patient_name"
+                                        <label for="patient_name"class="fs-6 mb-0">Name:</label>
+                                        <input type="text" class="form-control text-capitalize" id="patient_name"
                                             value="{{ $patientForm->patient_name }}" name="patient_name" required>
                                     </div>
-
-                                </div>
-
-                                <div class="row input_field" style="">
                                     <div class="col-sm-12 col-md-3">
-                                        <label for="dob" class="fs-6">Date of Birth:</label>
-                                        <input type="date" class="form-control" id="dob" name="dob"
-                                            value="{{ $patientForm->dob }}" oninput="calculateAge()">
+                                        <label for="mobile_no"class="fs-6 mb-0">Mobile No.:</label>
+                                        <input type="number" class="form-control" id="mobile_no"
+                                            oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);"
+                                            value="{{ $patientForm->mobile_no }}" onwheel="disableNumberInputScroll(event)"
+                                            name="mobile_no">
                                     </div>
-                                    <div class="col-sm-12 col-md-1">
-                                        <label for="age" class="fs-6">Age:</label>
-                                        <input type="number" class="form-control" value="{{ $patientForm->age }}"
-                                            id="age" name="age" oninput="calculateDOB()">
-                                    </div>
-
-                                    <div class="col-sm-12 col-md-4">
-                                        <label for="mobile_no"class="fs-6">Mobile No.:</label>
-                                        <input type="tel" class="form-control" id="mobile_no"
-                                            value="{{ $patientForm->mobile_no }}" name="mobile_no" required>
-                                    </div>
-                                    <div class="col-sm-12 col-md-4">
-                                        <label for="email_id"class="fs-6">Email ID:</label>
+                                    <div class="col-sm-12 col-md-5">
+                                        <label for="email_id"class="fs-6 mb-0">Email ID:</label>
                                         <input type="email" class="form-control" id="email_id"
                                             value="{{ $patientForm->email_id }}" name="email_id">
                                     </div>
 
                                 </div>
 
-                                <div class="row" style="">
-
-                                    <div class="col-sm-12 col-md-6">
-                                        <label for="aadhar_no"class="fs-6">Aadhar No.:</label>
-                                        <input type="text" class="form-control" id="aadhar_no"
-                                            value="{{ $patientForm->aadhar_no }}" name="aadhar_no">
+                                <div class="row input_field mt-3" style="">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label for="dob" class="fs-6 mb-0">Date of Birth:</label>
+                                        <input type="date" class="form-control" id="dob" name="dob" value="{{ $patientForm->dob }}">
                                     </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <label for="profession" class="fs-6">Profession:</label>
-                                        <input type="text" class="form-control" id="profession"
+                                    <div class="col-sm-12 col-md-2">
+                                        <label for="age" class="fs-6 mb-0">Age:</label>
+                                        <input type="number" class="form-control" value="{{ $patientForm->age }}" id="age" name="age" onwheel="disableNumberInputScroll(event)">
+                                    </div>
+                                    <div class="col-sm-12 col-md-3">
+                                        <label for="aadhar_no"class="fs-6 mb-0">Aadhar No.:</label>
+                                        <input type="number" class="form-control" id="aadhar_no"
+                                            value="{{ $patientForm->aadhar_no }}" onwheel="disableNumberInputScroll(event)"
+                                            name="aadhar_no">
+                                    </div>
+                                    <div class="col-sm-12 col-md-3">
+                                        <label for="profession" class="fs-6 mb-0">Profession:</label>
+                                        <input type="text" class="form-control text-capitalize" id="profession"
                                             value="{{ $patientForm->profession }}" name="profession">
                                     </div>
-
                                 </div>
-                                <div class="form-group">
-                                    <label for="address" class="fs-6">Address:</label>
-                                    <textarea id="address" class="form-control" name="address">{{ $patientForm->address }}</textarea>
-                                </div>
-
-
-                                <div class="row" style="">
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="form-group">
-                                            <label for="city" class="fs-6">City:</label>
-                                            <input type="text" class="form-control" id="city"
-                                                value="{{ $patientForm->city }}" name="city" value="Nagpur">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="form-group">
-                                            <label for="state" class="fs-6">State:</label>
-                                            <input type="text" class="form-control" id="state"
-                                                value="{{ $patientForm->state }}" name="state" value="Maharashtra">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="form-group">
-                                            <label for="country" class="fs-6">Country:</label>
-                                            <input type="text" class="form-control" id="country"
-                                                value="{{ $patientForm->country }}" name="country" value="India">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex">
-                                    <label class="fs-6">Gender</label>
+                                <div class="d-flex  mt-3">
+                                    <label class="fs-6 mb-0">Gender</label>
                                     <div class="form-check ps-5">
                                         <input class="form-check-input" type="radio" name="gender"
                                             id="flexRadioDefaultMale" value="Male" required
@@ -152,33 +124,83 @@
                                 </div>
 
                                 <h4 class="mt-5 text-white">
+                                    <span
+                                        style="background-color: #47b0ab; padding: 10px; border-radius: 5px;">Address</span>
+                                </h4>
+
+                                <div class="row input_field mt-4" style="">
+
+                                    <div class="col-sm-12 col-md-3">
+                                        <div class="form-group">
+                                            <label for="address" class="fs-6 mb-0">Address:</label>
+                                            <textarea id="address" class="form-control text-capitalize" name="address">{{ $patientForm->address }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-2">
+                                        <div class="form-group">
+                                            <label for="city" class="fs-6 mb-0">City:</label>
+                                            <input type="text" class="form-control text-capitalize" id="city"
+                                                value="{{ $patientForm->city }}" name="city" value="Nagpur">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-3">
+                                        <div class="form-group">
+                                            <label for="state" class="fs-6 mb-0">State:</label>
+                                            <input type="text" class="form-control text-capitalize" id="state"
+                                                value="{{ $patientForm->state }}" name="state" value="Maharashtra">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-2">
+                                        <div class="form-group">
+                                            <label for="pincode" class="fs-6 mb-0">Pin Code:</label>
+                                            <input type="number" class="form-control" id="pincode" name="pincode"
+                                                oninput="javascript: if (this.value.length > 6) this.value = this.value.slice(0, 6);"
+                                                value="{{ $patientForm->pincode }}"
+                                                onwheel="disableNumberInputScroll(event)">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-2">
+                                        <div class="form-group">
+                                            <label for="country" class="fs-6 mb-0">Country:</label>
+                                            <input type="text" class="form-control text-capitalize" id="country"
+                                                value="{{ $patientForm->country }}" name="country" value="India">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <h4 class="mt-5 text-white">
                                     <span style="background-color: #47b0ab; padding: 10px; border-radius: 5px;">Guardian
                                         For Reference If: Minor/Old Age/Spouse</span>
                                 </h4>
                                 <div class="row input_field mt-4">
                                     <div class="col-sm-12 col-md-4">
-                                        <label for="guardian_name" class="fs-6">Name:</label>
-                                        <input type="text" class="form-control" id="guardian_name"
+                                        <label for="guardian_name" class="fs-6 mb-0">Name:</label>
+                                        <input type="text" class="form-control text-capitalize" id="guardian_name"
                                             name="guardian_name" value="{{ $patientForm->guardian_name }}">
                                     </div>
 
                                     <div class="col-sm-12 col-md-4">
-                                        <label for="guardian_no" class="fs-6">Mobile No.:</label>
-                                        <input type="tel" class="form-control" id="guardian_no"
-                                            value="{{ $patientForm->guardian_no }}" name="guardian_no">
+                                        <label for="guardian_no" class="fs-6 mb-0">Mobile No.:</label>
+                                        <input type="number" class="form-control" id="guardian_no"
+                                            oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);"
+                                            value="{{ $patientForm->guardian_no }}"
+                                            onwheel="disableNumberInputScroll(event)" name="guardian_no">
                                     </div>
                                     <div class="col-sm-12 col-md-4">
-                                        <label for="guardian_city" class="fs-6">City:</label>
-                                        <input type="text" class="form-control" value="Nagpur"
+                                        <label for="guardian_city" class="fs-6 mb-0">City:</label>
+                                        <input type="text" class="form-control text-capitalize" value="Nagpur"
                                             value="{{ $patientForm->guardian_city }}" id="guardian_city"
                                             name="guardian_city">
                                     </div>
                                 </div>
 
-                                <h5 class="mt-5 text-white">
+                                <h4 class="mt-5 text-white">
                                     <span style="background-color: #47b0ab; padding: 10px; border-radius: 5px;">Referred
                                         By:</span>
-                                </h5>
+                                </h4>
                                 <div class="my-3 mt-3">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="referred_by" id="doctor"
@@ -212,29 +234,32 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="referred_by"
-                                            id="print_media" value="Print Media">
+                                            id="print_media" value="Print Media"
+                                            {{ old('referred_by', $patientForm->referred_by) === 'Print Media' ? 'checked' : '' }}>>
                                         <label class="form-check-label fs-6" for="print_media">Print Media</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="referred_by" id="none"
                                             value="None"
-                                            {{ old('referred_by', $patientForm->referred_by) === 'Print Media' ? 'checked' : '' }}>
+                                            {{ old('referred_by', $patientForm->referred_by) === 'None' ? 'checked' : '' }}>
                                         <label class="form-check-label fs-6" for="none">None</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="referred_name" class="fs-6">Name:</label>
-                                            <input type="text" id="referred_name" class="form-control"
+                                            <label for="referred_name" class="fs-6 mb-0">Name:</label>
+                                            <input type="text" id="referred_name" class="form-control text-capitalize"
                                                 value="{{ $patientForm->referred_name }}" name="referred_name">
                                         </div>
                                     </div>
 
+                                    <h4 class="mt-3 text-white">
+                                        <span style="background-color: #47b0ab; padding: 10px; border-radius: 5px;">Your
+                                            Preferred Time Of Treatment</span>
+                                    </h4>
                                     <div class="col-md-12">
                                         <div class="my-2">
-                                            <label for="time" class="pe-4 fs-6">Your Preferred Time Of Treatment
-                                                :</label>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="time"
                                                     id="inlineCheckbox1" value="8am to 10 am"
@@ -270,9 +295,14 @@
 
                                 </div>
 
+
+                                <h4 class="mt-5 text-white">
+                                    <span style="background-color: #47b0ab; padding: 10px; border-radius: 5px;">Do You
+                                        Prefer Appointment On Sunday</span>
+                                </h4>
                                 <div class="row input_field mt-4" style="">
                                     <div class="col-sm-12 col-md-6 d-flex">
-                                        <label class="fs-6">Do You Prefer Appointment On Sunday</label>
+                                        <!--<label class="fs-6">Do You Prefer Appointment On Sunday</label>-->
                                         <div class="form-check ps-5">
                                             <input class="form-check-input" type="radio" name="appointment_sunday"
                                                 id="flexRadioDefault1" value="Yes"
@@ -288,10 +318,32 @@
                                     </div>
                                 </div>
 
+                                <!--24-11-2023-->
+                                <div class="row input_field mt-4">
+                                    <div class="col-sm-12 col-md-4">
+                                        <label for="remark1" class="fs-6 mb-0">Remark1:</label>
+                                        <textarea id="remark1" class="form-control" name="remark1">{{ $patientForm->remark1 }}</textarea>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <label for="remark2" class="fs-6 mb-0">Remark2:</label>
+                                        <textarea id="remark2" class="form-control" name="remark2">{{ $patientForm->remark2 }}</textarea>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <label for="remark3" class="fs-6 mb-0">Remark3:</label>
+                                        <textarea id="remark3" class="form-control" name="remark3">{{ $patientForm->remark3 }}</textarea>
+                                    </div>
+                                </div>
+                                <!--24-11-2023-->
 
+                                <div class="col-sm-12 col-md-4 mt-2">
+                                    <label for="family_card_number"class="fs-6 mb-0">Family Card No.:</label>
+                                    <input type="number" class="form-control"
+                                        value="{{ $patientForm->family_card_number }}" id="family_card_number"
+                                        onwheel="disableNumberInputScroll(event)" name="family_card_number">
+                                </div>
                                 <div class="form-group">
-                                    <div class="col-sm-12 d-flex justify-content-center">
-                                        <a href="{{ route('patient_form') }}" class="mx-3"><button type="button"
+                                    <div class="col-sm-12 mt-1 d-flex justify-content-center">
+                                        <a href="{{ route('detail') }}" class="mx-3"><button type="button"
                                                 class="btn btn-dark mx-auto mx-md-0 text-white">Back</button></a>
                                         <button type="submit"
                                             class="btn btn-primary mx-auto mx-md-0 text-white">Update</button>
@@ -319,39 +371,38 @@
         });
     </script>
     <script>
-        function calculateAge() {
-            const dobInput = document.getElementById('dob');
-            const ageInput = document.getElementById('age');
+        // Function to calculate age from date of birth
+    function calculateAge() {
+        // Get the date of birth input value
+        var dobInput = document.getElementById('dob').value;
+        
+        // If the date of birth is not empty
+        if (dobInput) {
+            // Create a Date object from the input value
+            var dobDate = new Date(dobInput);
 
-            // Get the selected date of birth
-            const dobValue = new Date(dobInput.value);
+            // Get the current date
+            var currentDate = new Date();
 
-            // Calculate age based on the selected date of birth
-            const today = new Date();
-            const age = today.getFullYear() - dobValue.getFullYear();
-            const monthDiff = today.getMonth() - dobValue.getMonth();
+            // Calculate the age
+            var age = currentDate.getFullYear() - dobDate.getFullYear();
 
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dobValue.getDate())) {
+            // Adjust the age if the birthday hasn't occurred yet this year
+            if (currentDate.getMonth() < dobDate.getMonth() || (currentDate.getMonth() === dobDate.getMonth() && currentDate.getDate() < dobDate.getDate())) {
                 age--;
             }
 
-            // Set the calculated age in the "Age" input field
-            ageInput.value = age;
+            // Set the calculated age to the age input field
+            document.getElementById('age').value = age;
         }
+    }
 
-        function calculateDOB() {
-            const dobInput = document.getElementById('dob');
-            const ageInput = document.getElementById('age');
+    // Attach the calculateAge function to the onload event of the window
+    window.onload = function () {
+        calculateAge();
+    };
 
-            // Get the entered age
-            const age = parseInt(ageInput.value, 10);
-
-            // Calculate the date of birth based on the entered age
-            const today = new Date();
-            const dobYear = today.getFullYear() - age;
-
-            // Set the calculated date of birth to January 1st of the birth year
-            dobInput.value = dobYear + '-01-01';
-        }
+    // Optional: Add an event listener to recalculate age when the date of birth changes
+    document.getElementById('dob').addEventListener('change', calculateAge);
     </script>
 @endsection

@@ -115,15 +115,17 @@
                                     @foreach ($adm_images as $item)
                         
                                         <tr class="">
-                                            <td>{{ $item->ImagesCategory->category }}</td>
+                                            <td>@if($item->ImagesCategory && $item->ImagesCategory->category != null)
+                                                {{ $item->ImagesCategory->category }}
+                                            @endif</td>
                                             <td>{{ $item->title }}</td>
                                             <td><img src="{{ url('assets/uploads/' . $item->image) }}" width="50px" alt=""></td>
 
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('adm_images/edit/' . $item->id) }}"
+                                                <a href="{{ url('adm_images/edit/' . $item->id) }}" 
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
-                                                <a href="{{ url('adm_images/delete/' . $item->id) }}" 
+                                                <a href="{{ url('adm_images/delete/' . $item->id) }}"
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>

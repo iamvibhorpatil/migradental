@@ -118,7 +118,12 @@
                                     @foreach ($adm_videos as $item)
                         
                                         <tr class="">
-                                            <td>{{ $item->VideosCategory->category }}</td>
+                                            <td>@if($item->VideosCategory && $item->VideosCategory->category != null)
+                                                   
+                                               
+                                                {{ $item->VideosCategory->category }}
+                                                 @endif
+                                            </td>
                                             <td>{{ $item->title }}</td>
                                             <td><iframe width="100" height="50"
                                                 src="{{ url('https://www.youtube.com/embed/'.$item->video)}}"
@@ -130,9 +135,9 @@
                                             <td>{{ $item->display }}</td>
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('adm_videos/edit/' . $item->id) }}" 
+                                                <a href="{{ url('adm_videos/edit/' . $item->id) }}"
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
-                                                <a href="{{ url('adm_videos/delete/' . $item->id) }}" 
+                                                <a href="{{ url('adm_videos/delete/' . $item->id) }}"
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>

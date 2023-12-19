@@ -115,7 +115,11 @@
                                     @foreach ($adm_video_testimonial as $item)
                         
                                         <tr class="">
-                                            <td>{{ $item->TestimonialCategory->category }}</td>
+                                            <td>
+                                                @if($item->TestimonialCategory && $item->TestimonialCategory->category != null)
+                                                    {{ $item->TestimonialCategory->category }}
+                                                @endif
+                                            </td>
                                             <td>{{ $item->title }}</td>
                                             <td><iframe width="100" height="50"
                                                 src="{{ url('https://www.youtube.com/embed/'.$item->video)}}"

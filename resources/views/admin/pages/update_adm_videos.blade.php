@@ -48,9 +48,7 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="title"> Title</label>
-                                        <input type="text" class="form-control" value="{{$adm_videos->title}}" id="title" name="title"
-                                            required pattern=".{0,255}"
-                                            title="Please enter up to 255 characters for the Title field">
+                                        <input type="text" class="form-control" value="{{$adm_videos->title}}" id="title" name="title">
                                     </div>
 
                                     
@@ -76,8 +74,7 @@
 
                                     <div class="col-sm-12 col-md-6">
                                         <label for="video"> Video</label>
-                                        <input type="text" class="form-control" value="{{$adm_videos->video}}" id="video" name="video" required pattern=".{0,30}"
-                                        title="Please enter up to 30 characters for the Video link field">
+                                        <input type="text" class="form-control" value="{{$adm_videos->video}}" id="video" name="video">
 
                                             <iframe width="300" height="150"
                                             class="mt-3"

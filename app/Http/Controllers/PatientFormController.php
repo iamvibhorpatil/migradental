@@ -33,29 +33,81 @@ class PatientFormController extends Controller
     {
         try {
             $patientForm = new PatientForm();
-            $patientForm->form_date = $request->form_date;
             $patientForm->patient_number = $request->patient_number;
-            $patientForm->family_card_number = $request->family_card_number;
             $patientForm->patient_name = $request->patient_name;
-            $patientForm->dob = $request->dob;
-            $patientForm->age = $request->age;
             $patientForm->mobile_no = $request->mobile_no;
-            $patientForm->email_id = $request->email_id;
-            $patientForm->aadhar_no = $request->aadhar_no;
-            $patientForm->address = $request->address;
-            $patientForm->profession = $request->profession;
-            $patientForm->city = $request->city;
-            $patientForm->state = $request->state;
-            $patientForm->country = $request->country;
-            $patientForm->gender = $request->gender;
-            $patientForm->guardian_name = $request->guardian_name;
-            $patientForm->guardian_no = $request->guardian_no;
-            $patientForm->guardian_city = $request->guardian_city;
-            $patientForm->referred_by = $request->referred_by;
-            $patientForm->referred_name = $request->referred_name;
-            $patientForm->time = $request->time;
-            $patientForm->appointment_sunday = $request->appointment_sunday;
+            if ($request->form_date) {
+                $patientForm->form_date = $request->form_date;
+            }
+            if ($request->family_card_number) {
+                $patientForm->family_card_number = $request->family_card_number;
+            }
+            if ($request->age) {
+                $patientForm->age = $request->age;
+            }
+            if ($request->dob) {
+                $patientForm->dob = $request->dob;
+            }
+            if ($request->email_id) {
+                $patientForm->email_id = $request->email_id;
+            }
+            if ($request->aadhar_no) {
+                $patientForm->aadhar_no = $request->aadhar_no;
+            }
+            if ($request->address) {
+                $patientForm->address = $request->address;
+            }
+            if ($request->profession) {
+                $patientForm->profession = $request->profession;
+            }
+            if ($request->city) {
+                $patientForm->city = $request->city;
+            }
+            if ($request->pincode) {
+                $patientForm->pincode = $request->pincode;
+            }
+            if ($request->state) {
+                $patientForm->state = $request->state;
+            }
+            if ($request->country) {
+                $patientForm->country = $request->country;
+            }
+            if ($request->gender) {
+                $patientForm->gender = $request->gender;
+            }
+            if ($request->guardian_name) {
+                $patientForm->guardian_name = $request->guardian_name;
+            }
+            if ($request->guardian_no) {
+                $patientForm->guardian_no = $request->guardian_no;
+            }
+            if ($request->guardian_city) {
+                $patientForm->guardian_city = $request->guardian_city;
+            }
+            if ($request->referred_by) {
+                $patientForm->referred_by = $request->referred_by;
+            }
+            if ($request->referred_name) {
+                $patientForm->referred_name = $request->referred_name;
+            }
+            if ($request->has('time')) {
+                $patientForm->time = implode(', ', $request->input('time'));
+            }
 
+            if ($request->appointment_sunday) {
+                $patientForm->appointment_sunday = $request->appointment_sunday;
+            }
+            if ($request->remark1) {
+                $patientForm->remark1 = $request->remark1;
+            }
+            if ($request->remark2) {
+                $patientForm->remark2 = $request->remark2;
+            }
+            if ($request->remark3) {
+                $patientForm->remark3 = $request->remark3;
+            }
+            
+            
             $patientForm->save();
             return redirect('patient_form')->with('success', 'Patient Details Added successfully');
         } catch (\Exception $e) {
@@ -120,6 +172,9 @@ class PatientFormController extends Controller
             $patientForm->referred_name = $request->referred_name;
             $patientForm->time = $request->time;
             $patientForm->appointment_sunday = $request->appointment_sunday;
+            $patientForm->remark1 = $request->remark1;
+            $patientForm->remark2 = $request->remark2;
+            $patientForm->remark3 = $request->remark3;
 
             $patientForm->update();
             return redirect('patient_detail')->with('success', 'Patient Details Updated successfully');

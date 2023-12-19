@@ -40,8 +40,8 @@
 
                                 @foreach ($imageArray as $k => $imageName)
                                     <img src="{{ url('assets/uploads/' . $imageName) }}"
-                                        class="{{ $k === 0 ? '' : 'd-none' }} w-100" alt=""
-                                        style="height:64vh;">
+                                        class="{{ $k === 0 ? '' : 'd-none' }} w-100 left-side-image" alt=""
+                                        style="height:31vw;">
                                 @endforeach
                           
                         @endif

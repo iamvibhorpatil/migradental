@@ -29,7 +29,7 @@
                     @foreach ($adm_testimonial_first as $item)
                         <div class="col-md-6 col-sm-12 col-lg-6 col-xl-4 wow fadeInUp mb-3" data-wow-delay="1.5s">
                             <div class="card mx-auto">
-                                <iframe width="300" height="170"
+                                <iframe width="100%" height="200"
                                     src="{{ url('https://www.youtube.com/embed/' . $item->video) }}"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

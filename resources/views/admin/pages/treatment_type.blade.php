@@ -63,10 +63,12 @@
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <label for="treatment_type_id">Treatment Type</label>
-                                        <select class="form-select treatment_type_id" name="treatment_type_id" aria-label="Default select example"
-                                            required>
-                                            <option value="{{ isset($treatment_type->Treatment) ? $treatment_type->Treatment->id : '' }}">{{ isset($treatment_type->Treatment) ? $treatment_type->Treatment->treatment_type : '' }}</option>
+                                        <select class="form-select treatment_type_id" name="treatment_type_id" aria-label="Default select example" id="treatment_type_id"
+                                            required title="Select Category First">
+                                            <option selected>Select Treatment</option>
                                         </select>
+                                        <span id="treatment-type-error" style="color: red;"></span>
+
                                     </div>
                                     <div class="col-sm-12 col-md-12">
                                         <label for="question"> Question ?</label>
@@ -141,7 +143,7 @@
 
                                             <td>{{ $item->status }}</td>
                                             <td>
-                                                <a href="{{ url('treatment_type/edit/' . $item->id) }}" 
+                                                <a href="{{ url('treatment_type/edit/' . $item->id) }}"
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
                                                 <a href="{{ url('treatment_type/delete/' . $item->id) }}"
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
@@ -163,13 +165,24 @@
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
+            var currentDate = new Date();
+            var formattedDate = currentDate.getFullYear() + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getDate();
+        
             $('#myTable8').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                    'excel', 'pdf'
+                    {
+                        extend: 'excel',
+                        filename: 'Treatment_Type_List_' + formattedDate
+                    },
+                    {
+                        extend: 'pdf',
+                        filename: 'Treatment_Type_List_' + formattedDate
+                    }
                 ]
             });
         });
+
     </script>
     <script>
         $(document).ready(function(){

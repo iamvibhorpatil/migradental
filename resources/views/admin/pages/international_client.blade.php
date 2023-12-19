@@ -19,74 +19,7 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <div class="container-fluid py-4">
-            <div class="row justify-content-center">
-
-                <div class="col-lg-12 col-xlg-9 col-md-7 px-5">
-                    <div class="card">
-                        <div class="mt-3 px-4">
-
-                            <form action="store_international_client" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                @if (session('success'))
-                                    <div class="text-white alert alert-success">
-                                        {{ session('success') }}
-                                    </div>
-                                @endif
-                                @if (session('error'))
-                                    <div class="text-white alert alert-warming">
-                                        {{ session('error') }}
-                                    </div>
-                                @endif
-                                @if (session('delete'))
-                                    <div class="text-white alert alert-danger">
-                                        {{ session('delete') }}
-                                    </div>
-                                @endif
-                                <div class="row input_field" style="">
-
-
-                                    <div class="col-sm-12 col-md-12">
-                                        <label for="question"> Question ?</label>
-                                        <input type="text" class="form-control" id="question" name="question" required
-                                            pattern=".{0,255}"
-                                            title="Please enter up to 255 characters for the Question field">
-                                    </div>
-                                    <div class="col-sm-12 col-md-12">
-                                        <label for="answer"> Answer </label>
-                                        <textarea type="text" class="form-control" id="answer" name="answer" required></textarea>
-                                        <p id="description-error" style="color: red;"></p>
-
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <label for="image"> Image </label>
-                                        <input type="file" class="form-control" id="image" accept="image/*"
-                                            name="image[]" required multiple>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <label for="status">Status</label>
-                                        <select class="form-select" name="status" aria-label="Default select example"
-                                            required>
-                                            <option value="Active" selcted>Active</option>
-                                            <option value="Deactive">Deactive</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-sm-12 my-3 d-flex justify-content-end">
-
-                                        <button type="submit" id="submit-button"
-                                            class="btn btn-primary mx-auto mx-md-0 text-white">Submit</button>
-
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
-            </div>
-        </div>
+        
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -98,9 +31,26 @@
                             <table class="table" id="myTable8">
                                 <thead>
                                     <tr class="text-center">
-                                        <th scope="col">Question</th>
-                                        <th scope="col">Answer</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Sr No.</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Mobile No</th>
+                                        <th scope="col">Email </th>
+                                        <th scope="col">DOB </th>
+                                        <th scope="col">preliminary_dental</th>
+                                        <th scope="col">other_description</th>
+                                        <th scope="col">preliminary_dental_other</th>
+                                        <th scope="col">files</th>
+                                        <th scope="col">whatsaap_booking</th>
+                                        <th scope="col">treatment_duration</th>
+                                        <th scope="col">td_startDate</th>
+                                        <th scope="col">td_endDate</th>
+                                        <th scope="col">accomodating_plan</th>
+                                        <th scope="col">ap_startDate</th>
+                                        <th scope="col">ap_endDate</th>
+                                        <th scope="col">ap_text</th>
+                                        <th scope="col">additional_service</th>
+                                        <th scope="col">special_request</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -109,16 +59,41 @@
                                     @foreach ($international_client as $item)
                                         <tr class="">
                                             <td>
-                                                <textarea class="form-control-sm" cols="15">{{ $item->question }}</textarea>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <?php echo $p++; ?>
+                                                    </div>
+                                                </div>
                                             </td>
-                                            <td>
-                                                <textarea class="form-control-sm" cols="30">{{ $item->answer }}</textarea>
+                                            <td>{{ $item->first_name }}</td>
+                                            <td>{{ $item->last_name }}</td>
+                                            <td>{{ $item->number }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->dob }}</td>
+                                            <td><textarea class="form-control-sm" cols="20">{{ $item->preliminary_dental }}</textarea></td>
+                                            <td><textarea class="form-control-sm" cols="15">{{ $item->other_description }}</textarea></td>
+                                            <td><textarea class="form-control-sm" cols="15">{{ $item->preliminary_dental_other }}</textarea></td>
+                                            <td> 
+                                                @foreach(explode(',', $item->files) as $file)
+                                                   <img src="{{ url('assets/uploads/' . trim($file)) }}" width="50px" alt="">
+                                                @endforeach
                                             </td>
-                                           
-                                            <td>{{ $item->status }}</td>
+                                            <td>{{ $item->whatsaap_booking }}</td>
+                                            <td>{{ $item->treatment_duration }}</td>
+                                            <td>{{ $item->td_startDate }}</td>
+                                            <td>{{ $item->td_endDate }}</td>
+                                            <td>{{ $item->accomodating_plan }}</td>
+                                            <td>{{ $item->ap_startDate }}</td>
+                                            <td>{{ $item->ap_endDate }}</td>
+                                            <td><textarea class="form-control-sm" cols="15">{{ $item->ap_text }}</textarea></td>
+                                            <td><textarea class="form-control-sm" cols="15">{{ $item->additional_service }}</textarea></td>
+                                            <td><textarea class="form-control-sm" cols="15">{{ $item->special_request }}</textarea></td>
                                             <td>
-                                                <a href="{{ url('international_client/edit/' . $item->id) }}"
-                                                    ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
+                                                {{-- <a href="{{ url('international_client/edit/' . $item->id) }}"
+                                                    ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a> --}}
+                                                    <a href="{{ url('international_detail_view/' . $item->id) }}">
+                                                        <i class="fa-solid fa-eye img-thumbnail" style="color: #0d50c5;"></i>
+                                                    </a>
                                                 <a href="{{ url('international_client/delete/' . $item->id) }}"
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>

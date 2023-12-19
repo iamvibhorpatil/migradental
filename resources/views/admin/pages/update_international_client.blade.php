@@ -1,4 +1,4 @@
- @extends('admin.index1')
+@extends('admin.index1')
 
 @section('content')
     <main class="main-content position-relative border-radius-lg ">

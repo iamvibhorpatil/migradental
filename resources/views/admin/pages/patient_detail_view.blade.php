@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="row input_field" style="width: 100%;">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 text-capitalize">
                                         <label for="patient_name">Name :</label>
                                         <span>{{ $patientDetail->patient_name }}</span>
                                     </div>
@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div class="row input_field" style="width: 100%;">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 text-capitalize">
                                         <label for="address">Address :</label>
                                         <span>{{ $patientDetail->address }}</span>
                                     </div>
@@ -95,7 +95,7 @@
 
                                 <h5>Guardian for Reference if:Minor/ Old Age / spouse</h5>
                                 <div class="row input_field" style="width: 100%;">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 text-capitalize">
                                         <label for="guardian_name">Guardian Name :</label>
                                         <span>{{ $patientDetail->guardian_name }}</span>
                                     </div>
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                                 <div class="row input_field" style="width: 100%;">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 text-capitalize">
                                         <label for="guardian_city">Guardian City :</label>
                                         <span>{{ $patientDetail->guardian_city }}</span>
                                     </div>
@@ -115,7 +115,7 @@
                                     </div>
                                 </div>
                                 <div class="row input_field" style="width: 100%;">
-                                    <div class="col-sm-12 col-md-6">
+                                    <div class="col-sm-12 col-md-6 text-capitalize">
                                         <label for="referred_name">Name:</label>
                                         <span>{{ $patientDetail->referred_name }}</span>
                                     </div>
@@ -127,6 +127,20 @@
                                 <div>
                                     <label>Do you prefer appointment on sunday</label>
                                     <span>{{ $patientDetail->appointment_sunday }}</span>
+                                </div>
+                                 <div class="row input_field" style="width: 100%;">
+                                    <div class="col-sm-12 col-md-6">
+                                        <label for="remark1">Remark1 :</label>
+                                        <span>{{ $patientDetail->remark1 }}</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <label for="remark2">Remark2 :</label>
+                                        <span>{{ $patientDetail->remark2 }}</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <label for="remark3">Remark3 :</label>
+                                        <span>{{ $patientDetail->remark3 }}</span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 d-flex">

@@ -107,7 +107,7 @@
                                             <td>
                                                 <a href="{{ url('treatment/edit/' . $item->id) }}" 
                                                     ><i class="fa-solid fa-pen-to-square img-thumbnail" style="color: #1964e6;"></i></a>
-                                                <a href="{{ url('treatment/delete/' . $item->id) }}" 
+                                                <a href="{{ url('treatment/delete/' . $item->id) }}"
                                                     ><i class="fa-solid fa-trash img-thumbnail" style="color: #d11527;"></i></a>
                                             </td>
                                         </tr>
@@ -126,12 +126,24 @@
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
+             $(document).ready(function() {
+            var currentDate = new Date();
+            var formattedDate = currentDate.getFullYear() + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getDate();
+        
             $('#myTable8').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                    'excel', 'pdf'
+                    {
+                        extend: 'excel',
+                        filename: 'Treatment_Type_' + formattedDate
+                    },
+                    {
+                        extend: 'pdf',
+                        filename: 'Treatment_Type_' + formattedDate
+                    }
                 ]
             });
+        });
             $('#category_id').on('change', function() {
                 var selectedValue = $(this).val();
                 

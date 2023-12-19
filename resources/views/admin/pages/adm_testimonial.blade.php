@@ -114,8 +114,13 @@
                                     <?php $p = 1; ?>
                                     @foreach ($adm_testimonial as $item)
                         
-                                        <tr class="">
-                                            <td>{{ $item->TestimonialCategory->category }}</td>
+                                       <td>
+                                            @if($item->TestimonialCategory && $item->TestimonialCategory->category != null)
+                                                {{ $item->TestimonialCategory->category }}
+                                            @endif
+                                        </td>
+
+
                                             <td>{{ $item->title }}</td>
                                             <td><img src="{{ url('assets/uploads/' . $item->image) }}" width="50px" alt=""></td>
 
